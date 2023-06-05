@@ -67,6 +67,8 @@ namespace GameLauncher
         {
             if (string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtPassword.Text))
             {
+                txtEmail.BorderColor = Color.Red;
+                txtPassword.BorderColor = Color.Red;
                 MessageBox.Show("Please input both Email and Password", "Error");
             }
 
@@ -91,7 +93,10 @@ namespace GameLauncher
                     }
                     MyConn2.Close();
 
+                    txtEmail.BorderColor= Color.LimeGreen;
+                    txtPassword.BorderColor = Color.LimeGreen;
                     MessageBox.Show("Login Successful!");
+
                     this.Hide();
                     Store frm2 = new Store();
                     frm2.ShowDialog();
@@ -99,7 +104,8 @@ namespace GameLauncher
                 }
                 else
                 {
-
+                    txtEmail.BorderColor= Color.Red;
+                    txtPassword.BorderColor= Color.Red;
                     MessageBox.Show("Incorrect Login Information! Try again.");
                 }
 
@@ -109,7 +115,9 @@ namespace GameLauncher
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            sendcode frmcode = new sendcode();
+            frmcode.ShowDialog();
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
@@ -120,6 +128,28 @@ namespace GameLauncher
         }
 
         private void guna2DateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ToggleSwitch1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(shwPass.Checked == true)
+            {
+                txtPassword.PasswordChar = default;
+            }
+            else if(shwPass.Checked == false)
+            {
+                txtPassword.PasswordChar = '*';
+            }
+        }
+
+        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
         {
 
         }

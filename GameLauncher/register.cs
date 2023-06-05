@@ -130,17 +130,27 @@ namespace GameLauncher
         {
             if (!this.txtEmail.Text.Contains('@') || !this.txtEmail.Text.Contains('.'))
             {
+                txtEmail.BorderColor = Color.Red;
                 MessageBox.Show("Please Enter A Valid Email", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (txtPassword.Text != txtCPassword.Text)
             {
+                txtPassword.BorderColor = Color.Red;
+                txtCPassword.BorderColor = Color.Red;
                 MessageBox.Show("Password doesn't match!", "Error");
                 return;
             }
 
             if (string.IsNullOrEmpty(txtFName.Text) || string.IsNullOrEmpty(txtLName.Text) || string.IsNullOrEmpty(cboGender.Text) || string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text) || string.IsNullOrEmpty(txtCPassword.Text))
             {
+                txtFName.BorderColor = Color.Red;
+                txtLName.BorderColor = Color.Red;
+                cboGender.BorderColor = Color.Red;
+                txtEmail.BorderColor = Color.Red;
+                txtUsername.BorderColor = Color.Red;
+                txtPassword.BorderColor = Color.Red;
+                txtCPassword.BorderColor = Color.Red;
                 MessageBox.Show("Please fill out all information!", "Error");
                 return;
             }
@@ -182,6 +192,13 @@ namespace GameLauncher
                         MessageBox.Show(ex.Message);
                     }
 
+                    txtFName.BorderColor = Color.LimeGreen;
+                    txtLName.BorderColor = Color.LimeGreen;
+                    cboGender.BorderColor = Color.LimeGreen;
+                    txtEmail.BorderColor = Color.LimeGreen;
+                    txtUsername.BorderColor = Color.LimeGreen;
+                    txtPassword.BorderColor = Color.LimeGreen;
+                    txtCPassword.BorderColor = Color.LimeGreen;
                     MessageBox.Show("Account Successfully Created!");
 
                 }
