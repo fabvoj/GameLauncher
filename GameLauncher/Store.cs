@@ -53,5 +53,10 @@ namespace GameLauncher
             login frm1 = new login();
             frm1.ShowDialog();
         }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
