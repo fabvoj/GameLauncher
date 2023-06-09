@@ -17,6 +17,8 @@ namespace GameLauncher
         MySqlCommand command;
         MySqlDataReader mdr;
 
+        public static string userEmail;
+
         public login()
         {
             InitializeComponent();
@@ -97,8 +99,10 @@ namespace GameLauncher
                     txtPassword.BorderColor = Color.LimeGreen;
                     MessageBox.Show("Login Successful!");
 
+
+                    userEmail = txtEmail.Text;
                     this.Hide();
-                    Store frm2 = new Store();
+                    home frm2 = new home();
                     frm2.ShowDialog();
 
                 }

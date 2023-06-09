@@ -177,8 +177,8 @@ namespace GameLauncher
 
                 if (!(userExists || mailExists))
                 {
-
-                    string iquery = "INSERT INTO loginform.userinfo(`ID`,`FirstName`,`LastName`,`Gender`,`Birthday`,`Email`,`Username`, `Password`) VALUES (NULL, '" + txtFName.Text + "', '" + txtLName.Text + "', '" + cboGender.Text + "', '" + DateTimePicker1.Value.Date + "', '" + txtEmail.Text + "', '" + txtUsername.Text + "', '" + txtPassword.Text + "')";
+                    string defaultPfp = "GameLauncher/assets/pfp/default.jpg";
+                    string iquery = "INSERT INTO loginform.userinfo(`ID`,`FirstName`,`LastName`,`Gender`,`Birthday`,`Email`,`Username`, `Password`, `ProfilePic`) VALUES (NULL, '" + txtFName.Text + "', '" + txtLName.Text + "', '" + cboGender.Text + "', '" + DateTimePicker1.Value.Date + "', '" + txtEmail.Text + "', '" + txtUsername.Text + "', '" + txtPassword.Text + "', '"+defaultPfp+"')";
                     MySqlCommand commandDatabase = new MySqlCommand(iquery, connection);
                     commandDatabase.CommandTimeout = 60;
 

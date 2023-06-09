@@ -1,18 +1,23 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GameLauncher
 {
-    public partial class Store : Form
+    public partial class home : Form
     {
-        public Store()
+        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=");
+
+        public static string pfp_path;
+        public home()
         {
             InitializeComponent();
         }
@@ -57,6 +62,20 @@ namespace GameLauncher
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pfpCircle_Click(object sender, EventArgs e)
+        {
+            /*MySqlCommand pfpcmd = new MySqlCommand("SELECT ProfilePic FROM loginform.userinfo WHERE Email='"+login.userEmail+"';");
+            MySqlDataReader pfpread;
+
+            connection.Open();
+            pfpread = pfpcmd.ExecuteReader();
+            while (pfpread.Read()) 
+            {
+                pfp_path = pfpread["ProfilePic"].ToString();
+                pfpCircle.ImageLocation = pfp_path;
+            }*/
         }
     }
 }

@@ -16,7 +16,7 @@ namespace GameLauncher
 {
     public partial class sendcode : Form
     {
-        string randomcode, sentcode;
+        string randomcode;
         public static string to, inTable, sameCode, CodeDelete;
         MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=");
         public sendcode()
