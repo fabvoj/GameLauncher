@@ -16,7 +16,7 @@ namespace GameLauncher
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new home()); //nechaj login pokial nejdes skusat iny file alebo sa ti nechce prihlasovat
+            Application.Run(new login()); //nechaj login pokial nejdes skusat iny file alebo sa ti nechce prihlasovat
         }
     }
 }

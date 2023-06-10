@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -181,6 +183,16 @@ namespace GameLauncher
                     string iquery = "INSERT INTO loginform.userinfo(`ID`,`FirstName`,`LastName`,`Gender`,`Birthday`,`Email`,`Username`, `Password`, `ProfilePic`) VALUES (NULL, '" + txtFName.Text + "', '" + txtLName.Text + "', '" + cboGender.Text + "', '" + DateTimePicker1.Value.Date + "', '" + txtEmail.Text + "', '" + txtUsername.Text + "', '" + txtPassword.Text + "', '"+defaultPfp+"')";
                     MySqlCommand commandDatabase = new MySqlCommand(iquery, connection);
                     commandDatabase.CommandTimeout = 60;
+
+                    /*MailMessage mail = new MailMessage("eclipse.gethelp@gmail.com", txtEmail.Text, "Registration in Eclipse", "Thank you for your registration at Eclipse, at eclipse we appreciate every user that register at us and helps create Eclipse a better place for everyone! We hope you will enjoy your time with us and we wish you a good day!");
+                    using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                    {
+                        smtp.UseDefaultCredentials = false;
+                        smtp.Credentials = new NetworkCredential("eclipse.gethelp@gmail.com", "zpccpmcdvwovoprs");
+                        smtp.EnableSsl = true;
+
+                        smtp.Send(mail);                    toto sa odkomenti pred odovzdavanim nech to neposiela maily vzdy jak prijebane
+                    }*/
 
                     try
                     {

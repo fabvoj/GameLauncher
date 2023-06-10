@@ -79,5 +79,15 @@ namespace GameLauncher.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eclipse_logo100x100 {
+            get {
+                object obj = ResourceManager.GetObject("eclipse-logo100x100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

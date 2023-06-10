@@ -64,18 +64,20 @@ namespace GameLauncher
 
         }
 
-        private void pfpCircle_Click(object sender, EventArgs e)
+        private void guna2Button3_Click(object sender, EventArgs e)
         {
-            /*MySqlCommand pfpcmd = new MySqlCommand("SELECT ProfilePic FROM loginform.userinfo WHERE Email='"+login.userEmail+"';");
-            MySqlDataReader pfpread;
+            homeBtn.Checked = false;
+            this.Hide();
+            store obchod = new store();
+            obchod.ShowDialog();
+        }
 
-            connection.Open();
-            pfpread = pfpcmd.ExecuteReader();
-            while (pfpread.Read()) 
-            {
-                pfp_path = pfpread["ProfilePic"].ToString();
-                pfpCircle.ImageLocation = pfp_path;
-            }*/
+        private void libraryBtn_Click(object sender, EventArgs e)
+        {
+            homeBtn.Checked = false;
+            this.Hide();
+            library kniznica = new library();
+            kniznica.ShowDialog();
         }
     }
 }

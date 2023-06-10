@@ -157,5 +157,15 @@ namespace GameLauncher
         {
 
         }
+
+        private void logoName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logoImg_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

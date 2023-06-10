@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
@@ -40,7 +41,10 @@
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.logoName = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.logoImg = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoImg)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2ControlBox2
@@ -117,13 +121,15 @@
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
             this.guna2Panel1.BorderRadius = 6;
+            this.guna2Panel1.Controls.Add(this.logoImg);
+            this.guna2Panel1.Controls.Add(this.logoName);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel2);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2Panel1.Controls.Add(this.btnCreate);
+            this.guna2Panel1.Controls.Add(this.btnLogin);
             this.guna2Panel1.Controls.Add(this.shwPass);
             this.guna2Panel1.Controls.Add(this.DateTimePicker1);
             this.guna2Panel1.Controls.Add(this.guna2Button2);
-            this.guna2Panel1.Controls.Add(this.btnLogin);
             this.guna2Panel1.Controls.Add(this.txtEmail);
             this.guna2Panel1.Controls.Add(this.txtPassword);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
@@ -175,7 +181,7 @@
             this.btnCreate.HoverState.BorderColor = System.Drawing.Color.White;
             this.btnCreate.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
             this.btnCreate.IndicateFocus = true;
-            this.btnCreate.Location = new System.Drawing.Point(94, 318);
+            this.btnCreate.Location = new System.Drawing.Point(206, 318);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(130, 36);
             this.btnCreate.TabIndex = 8;
@@ -204,6 +210,7 @@
             // DateTimePicker1
             // 
             this.DateTimePicker1.Checked = true;
+            this.DateTimePicker1.CheckedState.ForeColor = System.Drawing.Color.White;
             this.DateTimePicker1.Enabled = false;
             this.DateTimePicker1.FillColor = System.Drawing.Color.Transparent;
             this.DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -254,7 +261,7 @@
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.IndicateFocus = true;
-            this.btnLogin.Location = new System.Drawing.Point(230, 318);
+            this.btnLogin.Location = new System.Drawing.Point(94, 318);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(106, 36);
             this.btnLogin.TabIndex = 6;
@@ -277,6 +284,30 @@
             this.guna2ControlBox3.TabIndex = 6;
             this.guna2ControlBox3.UseTransparentBackground = true;
             // 
+            // logoName
+            // 
+            this.logoName.BackColor = System.Drawing.Color.Transparent;
+            this.logoName.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.logoName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
+            this.logoName.Location = new System.Drawing.Point(94, 49);
+            this.logoName.Name = "logoName";
+            this.logoName.Size = new System.Drawing.Size(154, 42);
+            this.logoName.TabIndex = 14;
+            this.logoName.Text = "E C L I P S E";
+            this.logoName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.logoName.Click += new System.EventHandler(this.logoName_Click);
+            // 
+            // logoImg
+            // 
+            this.logoImg.Image = global::GameLauncher.Properties.Resources.eclipse_logo;
+            this.logoImg.ImageRotate = 0F;
+            this.logoImg.Location = new System.Drawing.Point(288, 49);
+            this.logoImg.Name = "logoImg";
+            this.logoImg.Size = new System.Drawing.Size(48, 48);
+            this.logoImg.TabIndex = 15;
+            this.logoImg.TabStop = false;
+            this.logoImg.Click += new System.EventHandler(this.logoImg_Click);
+            // 
             // login
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -286,6 +317,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2ControlBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -293,6 +325,7 @@
             this.Load += new System.EventHandler(this.login_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoImg)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -310,6 +343,8 @@
         private Guna.UI2.WinForms.Guna2ToggleSwitch shwPass;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel logoName;
+        private Guna.UI2.WinForms.Guna2PictureBox logoImg;
     }
 }
 

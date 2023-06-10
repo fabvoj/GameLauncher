@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(register));
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnCreate = new Guna.UI2.WinForms.Guna2Button();
             this.cboGender = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtFName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2CheckBox1 = new Guna.UI2.WinForms.Guna2CheckBox();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.labelCPassword = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labelPassword = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -52,7 +52,10 @@
             this.btnBackToLogin = new Guna.UI2.WinForms.Guna2Button();
             this.txtCPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.logoImg = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.logoName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoImg)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2ControlBox3
@@ -92,10 +95,11 @@
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
             this.guna2Panel1.BorderRadius = 6;
+            this.guna2Panel1.Controls.Add(this.logoName);
+            this.guna2Panel1.Controls.Add(this.logoImg);
             this.guna2Panel1.Controls.Add(this.btnCreate);
             this.guna2Panel1.Controls.Add(this.cboGender);
             this.guna2Panel1.Controls.Add(this.txtFName);
-            this.guna2Panel1.Controls.Add(this.guna2CheckBox1);
             this.guna2Panel1.Controls.Add(this.guna2VSeparator1);
             this.guna2Panel1.Controls.Add(this.labelCPassword);
             this.guna2Panel1.Controls.Add(this.labelPassword);
@@ -185,25 +189,6 @@
             this.txtFName.Size = new System.Drawing.Size(284, 36);
             this.txtFName.TabIndex = 0;
             this.txtFName.TextChanged += new System.EventHandler(this.txtFName_TextChanged);
-            // 
-            // guna2CheckBox1
-            // 
-            this.guna2CheckBox1.AutoSize = true;
-            this.guna2CheckBox1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox1.CheckedState.BorderRadius = 0;
-            this.guna2CheckBox1.CheckedState.BorderThickness = 0;
-            this.guna2CheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox1.ForeColor = System.Drawing.Color.White;
-            this.guna2CheckBox1.Location = new System.Drawing.Point(72, 238);
-            this.guna2CheckBox1.Name = "guna2CheckBox1";
-            this.guna2CheckBox1.Size = new System.Drawing.Size(89, 17);
-            this.guna2CheckBox1.TabIndex = 25;
-            this.guna2CheckBox1.Text = "semka logo ?";
-            this.guna2CheckBox1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CheckBox1.UncheckedState.BorderRadius = 0;
-            this.guna2CheckBox1.UncheckedState.BorderThickness = 0;
-            this.guna2CheckBox1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CheckBox1.CheckedChanged += new System.EventHandler(this.guna2CheckBox1_CheckedChanged);
             // 
             // guna2VSeparator1
             // 
@@ -488,6 +473,28 @@
             this.txtPassword.TabIndex = 6;
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
+            // logoImg
+            // 
+            this.logoImg.Image = global::GameLauncher.Properties.Resources.eclipse_logo100x100;
+            this.logoImg.ImageRotate = 0F;
+            this.logoImg.Location = new System.Drawing.Point(68, 153);
+            this.logoImg.Name = "logoImg";
+            this.logoImg.Size = new System.Drawing.Size(100, 100);
+            this.logoImg.TabIndex = 27;
+            this.logoImg.TabStop = false;
+            // 
+            // logoName
+            // 
+            this.logoName.BackColor = System.Drawing.Color.Transparent;
+            this.logoName.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.logoName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
+            this.logoName.Location = new System.Drawing.Point(43, 271);
+            this.logoName.Name = "logoName";
+            this.logoName.Size = new System.Drawing.Size(154, 42);
+            this.logoName.TabIndex = 28;
+            this.logoName.Text = "E C L I P S E";
+            this.logoName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -498,12 +505,14 @@
             this.Controls.Add(this.guna2ControlBox3);
             this.Controls.Add(this.guna2ControlBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "register";
             this.Load += new System.EventHandler(this.register_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoImg)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -529,10 +538,11 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel labeblLName;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelFName;
         private Guna.UI2.WinForms.Guna2TextBox txtLName;
-        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox1;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
         private Guna.UI2.WinForms.Guna2TextBox txtFName;
         private Guna.UI2.WinForms.Guna2ComboBox cboGender;
         private Guna.UI2.WinForms.Guna2Button btnCreate;
+        private Guna.UI2.WinForms.Guna2PictureBox logoImg;
+        private Guna.UI2.WinForms.Guna2HtmlLabel logoName;
     }
 }
