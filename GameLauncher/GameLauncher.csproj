@@ -116,11 +116,17 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
-    <Compile Include="register.cs">
+    <Compile Include="register_bio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="register.Designer.cs">
-      <DependentUpon>register.cs</DependentUpon>
+    <Compile Include="register_bio.Designer.cs">
+      <DependentUpon>register_bio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="register_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="register_info.Designer.cs">
+      <DependentUpon>register_info.cs</DependentUpon>
     </Compile>
     <Compile Include="resetpass.cs">
       <SubType>Form</SubType>
@@ -157,8 +163,11 @@
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="register.resx">
-      <DependentUpon>register.cs</DependentUpon>
+    <EmbeddedResource Include="register_bio.resx">
+      <DependentUpon>register_bio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="register_info.resx">
+      <DependentUpon>register_info.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="resetpass.resx">
       <DependentUpon>resetpass.cs</DependentUpon>

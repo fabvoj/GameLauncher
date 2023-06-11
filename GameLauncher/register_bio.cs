@@ -13,11 +13,11 @@ using MySql.Data.MySqlClient;
 
 namespace GameLauncher
 {
-    public partial class register : Form
+    public partial class register_bio : Form
     {
-        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=");
-
-        public register()
+        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=; database=Eclipse");
+        public static string newEmail;
+        public register_bio()
         {
             InitializeComponent();
         }
@@ -136,23 +136,13 @@ namespace GameLauncher
                 MessageBox.Show("Please Enter A Valid Email", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (txtPassword.Text != txtCPassword.Text)
-            {
-                txtPassword.BorderColor = Color.Red;
-                txtCPassword.BorderColor = Color.Red;
-                MessageBox.Show("Password doesn't match!", "Error");
-                return;
-            }
 
-            if (string.IsNullOrEmpty(txtFName.Text) || string.IsNullOrEmpty(txtLName.Text) || string.IsNullOrEmpty(cboGender.Text) || string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text) || string.IsNullOrEmpty(txtCPassword.Text))
+            if (string.IsNullOrEmpty(txtFName.Text) || string.IsNullOrEmpty(txtLName.Text) || string.IsNullOrEmpty(cboGender.Text) || string.IsNullOrEmpty(txtEmail.Text))
             {
                 txtFName.BorderColor = Color.Red;
                 txtLName.BorderColor = Color.Red;
                 cboGender.BorderColor = Color.Red;
                 txtEmail.BorderColor = Color.Red;
-                txtUsername.BorderColor = Color.Red;
-                txtPassword.BorderColor = Color.Red;
-                txtCPassword.BorderColor = Color.Red;
                 MessageBox.Show("Please fill out all information!", "Error");
                 return;
             }
@@ -161,38 +151,20 @@ namespace GameLauncher
             {
                 connection.Open();
 
-                MySqlCommand cmd1 = new MySqlCommand("SELECT * FROM loginform.userinfo WHERE Username = @UserName", connection),
-                cmd2 = new MySqlCommand("SELECT * FROM loginform.userinfo WHERE Email = @UserEmail", connection);
-
-
-                cmd1.Parameters.AddWithValue("@UserName", txtUsername.Text);
+                MySqlCommand cmd2 = new MySqlCommand("SELECT * FROM userinfo WHERE Email = @UserEmail", connection);
                 cmd2.Parameters.AddWithValue("@UserEmail", txtEmail.Text);
 
-                bool userExists = false, mailExists = false;
-
-                using (var dr1 = cmd1.ExecuteReader())
-                    if (userExists = dr1.HasRows) MessageBox.Show("Username not available!");
+                bool mailExists = false;
 
                 using (var dr2 = cmd2.ExecuteReader())
                     if (mailExists = dr2.HasRows) MessageBox.Show("Email not available!");
+                
 
-
-                if (!(userExists || mailExists))
+                if (!(mailExists))
                 {
-                    string defaultPfp = "GameLauncher/assets/pfp/default.jpg";
-                    string iquery = "INSERT INTO loginform.userinfo(`ID`,`FirstName`,`LastName`,`Gender`,`Birthday`,`Email`,`Username`, `Password`, `ProfilePic`) VALUES (NULL, '" + txtFName.Text + "', '" + txtLName.Text + "', '" + cboGender.Text + "', '" + DateTimePicker1.Value.Date + "', '" + txtEmail.Text + "', '" + txtUsername.Text + "', '" + txtPassword.Text + "', '"+defaultPfp+"')";
+                    string iquery = "INSERT INTO userinfo(`ID`,`FirstName`,`LastName`,`Gender`,`Email`) VALUES (NULL, '" + txtFName.Text + "', '" + txtLName.Text + "', '" + cboGender.Text + "', '" + txtEmail.Text + "')";
                     MySqlCommand commandDatabase = new MySqlCommand(iquery, connection);
                     commandDatabase.CommandTimeout = 60;
-
-                    /*MailMessage mail = new MailMessage("eclipse.gethelp@gmail.com", txtEmail.Text, "Registration in Eclipse", "Thank you for your registration at Eclipse, at eclipse we appreciate every user that register at us and helps create Eclipse a better place for everyone! We hope you will enjoy your time with us and we wish you a good day!");
-                    using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
-                    {
-                        smtp.UseDefaultCredentials = false;
-                        smtp.Credentials = new NetworkCredential("eclipse.gethelp@gmail.com", "zpccpmcdvwovoprs");
-                        smtp.EnableSsl = true;
-
-                        smtp.Send(mail);                    toto sa odkomenti pred odovzdavanim nech to neposiela maily vzdy jak prijebane
-                    }*/
 
                     try
                     {
@@ -208,12 +180,15 @@ namespace GameLauncher
                     txtLName.BorderColor = Color.LimeGreen;
                     cboGender.BorderColor = Color.LimeGreen;
                     txtEmail.BorderColor = Color.LimeGreen;
-                    txtUsername.BorderColor = Color.LimeGreen;
-                    txtPassword.BorderColor = Color.LimeGreen;
-                    txtCPassword.BorderColor = Color.LimeGreen;
-                    MessageBox.Show("Account Successfully Created!");
+
+                    newEmail = txtEmail.Text;
 
                 }
+
+                
+                this.Hide();
+                register_info register2 = new register_info();
+                register2.ShowDialog();
 
                 connection.Close();
             }
@@ -233,9 +208,24 @@ namespace GameLauncher
 
         private void register_Load(object sender, EventArgs e)
         {
-            cboGender.Items.Add("Female");
             cboGender.Items.Add("Male");
+            cboGender.Items.Add("Female");
             cboGender.Items.Add("Mental Disorder");
+        }
+
+        private void registerProgressBar_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsername_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmail_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

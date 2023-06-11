@@ -18,7 +18,7 @@ namespace GameLauncher
     {
         string randomcode;
         public static string to, inTable, sameCode, CodeDelete;
-        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=");
+        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=; database=Eclipse");
         public sendcode()
         {
             InitializeComponent();
@@ -60,7 +60,7 @@ namespace GameLauncher
         {
             connection.Open();
             MySqlDataReader reader = null;
-            string qry = "SELECT Email FROM loginform.userinfo WHERE Email='"+rstEmail.Text+"';";
+            string qry = "SELECT Email FROM userinfo WHERE Email='"+rstEmail.Text+"';";
             
             MySqlCommand command = new MySqlCommand(qry, connection);
             reader = command.ExecuteReader();
@@ -73,8 +73,8 @@ namespace GameLauncher
                     Random rand = new Random();                                                                                                     //
                     randomcode = (rand.Next(999999)).ToString();
 
-                    string con2_string = "datasource=localhost;port=3306;username=root;password=";
-                    string qryverify = "INSERT INTO loginform.verifycodes(`Email`,`Code`) VALUES ('"+rstEmail.Text+"','"+randomcode+"')";
+                    string con2_string = "datasource=localhost;port=3306;username=root;password=; database=Eclipse";
+                    string qryverify = "INSERT INTO verifycodes(`Email`,`Code`) VALUES ('"+rstEmail.Text+"','"+randomcode+"')";
 
                     MySqlConnection con2 = new MySqlConnection(con2_string);
                     MySqlCommand cmdverify = new MySqlCommand(qryverify, con2);
@@ -123,8 +123,8 @@ namespace GameLauncher
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            string codecheck_string = "datasource=localhost;port=3306;username=root;password=";
-            string qrycodecheck = "SELECT Code FROM loginform.verifycodes WHERE Email='"+rstEmail.Text+"';";
+            string codecheck_string = "datasource=localhost;port=3306;username=root;password=; database=Eclipse";
+            string qrycodecheck = "SELECT Code FROM verifycodes WHERE Email='"+rstEmail.Text+"';";
 
             MySqlConnection codecheck_con = new MySqlConnection(codecheck_string);
             MySqlCommand codeverify = new MySqlCommand(qrycodecheck, codecheck_con);
@@ -139,8 +139,8 @@ namespace GameLauncher
                 {
                     CodeDelete = sameCode;
 
-                    string delete_verifycodes_string = "datasource=localhost;port=3306;username=root;password=";
-                    string delete_verifycodes_qry = "DELETE FROM loginform.verifycodes WHERE Email='"+rstEmail.Text+"' AND Code='"+CodeDelete+"'";
+                    string delete_verifycodes_string = "datasource=localhost;port=3306;username=root;password=; database=Eclipse";
+                    string delete_verifycodes_qry = "DELETE FROM verifycodes WHERE Email='"+rstEmail.Text+"' AND Code='"+CodeDelete+"'";
 
                     MySqlConnection delete_verifycodes_con = new MySqlConnection(delete_verifycodes_string);
                     MySqlCommand delete_verifycodes = new MySqlCommand(delete_verifycodes_qry, delete_verifycodes_con);
