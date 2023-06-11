@@ -13,7 +13,7 @@ namespace GameLauncher
 {
     public partial class login : Form
     {
-        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=");
+        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=; database=Eclipse");
         MySqlCommand command;
         MySqlDataReader mdr;
 
@@ -77,13 +77,13 @@ namespace GameLauncher
             else
             {
                 connection.Open();
-                string selectQuery = "SELECT * FROM loginform.userinfo WHERE Email = '" + txtEmail.Text + "' AND Password = '" + txtPassword.Text + "';";
+                string selectQuery = "SELECT * FROM userinfo WHERE Email = '" + txtEmail.Text + "' AND Password = '" + txtPassword.Text + "';";
                 command = new MySqlCommand(selectQuery, connection);
                 mdr = command.ExecuteReader();
                 if (mdr.Read())
                 {
-                    string MyConnection2 = "datasource=localhost;port=3306;username=root;password=";
-                    string Query = "update loginform.userinfo set LastLogin='" + DateTimePicker1.Value + "' where Email='" + this.txtEmail.Text + "';";
+                    string MyConnection2 = "datasource=localhost;port=3306;username=root;password=; database=Eclipse";
+                    string Query = "update userinfo set LastLogin='" + DateTimePicker1.Value + "' where Email='" + this.txtEmail.Text + "';";
                     MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
 
                     MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
@@ -127,7 +127,7 @@ namespace GameLauncher
         private void guna2Button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            register frm3 = new register();
+            register_bio frm3 = new register_bio();
             frm3.ShowDialog();
         }
 

@@ -20,7 +20,7 @@ namespace GameLauncher
         static readonly string pass = "";
         public static string connection_str = "server='" + server + "'; user='" + user +"'; password='" + pass +"'";
         */
-        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=");
+        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=; database=Eclipse");
         string email = sendcode.to;
         public resetpass()
         {
@@ -55,7 +55,7 @@ namespace GameLauncher
             {
                 string password = changeConfirm.Text;
                 connection.Open();
-                string q = "UPDATE loginform.userinfo SET Password = '" + password + "' WHERE Email='" + email + "'";
+                string q = "UPDATE userinfo SET Password = '" + password + "' WHERE Email='" + email + "'";
                 MySqlCommand cmd = new MySqlCommand(q, connection
                     );
 
