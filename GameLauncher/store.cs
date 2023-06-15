@@ -81,10 +81,10 @@ namespace GameLauncher
 
         private void populateItems()
         {
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=");
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=; database=eclipse");
             connection.Open();
 
-            string query = "SELECT * FROM eclipse.games";
+            string query = "SELECT * FROM games";
             MySqlCommand command = new MySqlCommand(query, connection);
 
             MySqlDataReader reader = command.ExecuteReader();
@@ -93,7 +93,7 @@ namespace GameLauncher
                 string title = reader["game_name"].ToString();
                 string price = reader["game_price"].ToString();
                 string picturePath = reader["game_picture"].ToString();
-                string image = Path.Combine(Application.StartupPath, "assets", "gamePicture", picturePath);
+                string image = Path.Combine("../../", "assets", "gamePicture", picturePath);
                 Console.WriteLine(picturePath);
 
                 Image picture = Image.FromFile(image);
