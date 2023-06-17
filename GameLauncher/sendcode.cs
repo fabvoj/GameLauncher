@@ -70,7 +70,7 @@ namespace GameLauncher
                 inTable = (string)reader["Email"]; //premenna s outputom mysql qry, ktore hladalo ci je v db zadany email
                 if(inTable == rstEmail.Text)
                 {
-                    Random rand = new Random();                                                                                                     //
+                    Random rand = new Random();                                                                                                     
                     randomcode = (rand.Next(999999)).ToString();
 
                     string con2_string = "datasource=localhost;port=3306;username=root;password=; database=Eclipse";
@@ -84,7 +84,7 @@ namespace GameLauncher
                     con2Reader = cmdverify.ExecuteReader();
                     while(con2Reader.Read())
                     {
-                    }                                                                                                                               // tento usek je len na zapisanie do db :))))
+                    }                                                                                                                               
                     con2.Close();
 
                     rstEmail.Enabled = false;

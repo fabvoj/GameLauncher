@@ -14,7 +14,7 @@ namespace GameLauncher
 {
     public partial class home : Form
     {
-        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=");
+        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=; database=eclipse");
 
         public static string pfp_path;
         public home()
@@ -24,7 +24,7 @@ namespace GameLauncher
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            get_pfpPath();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -78,6 +78,42 @@ namespace GameLauncher
             this.Hide();
             library kniznica = new library();
             kniznica.ShowDialog();
+        }
+
+        private void pfpBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            settings nastavenia = new settings();
+            nastavenia.ShowDialog();
+        }
+
+        private void get_pfpPath()
+        {
+            connection.Open();
+            string qry = "SELECT Gender FROM userinfo WHERE Email='" + login.userEmail + "';";
+            MySqlCommand cmd = new MySqlCommand(qry, connection);
+            MySqlDataReader reader = null;
+            reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string pfpPath = (string)reader["Gender"];
+
+                if (pfpPath == "Male")
+                {
+                    pfpBtn.Image = GameLauncher.Properties.Resources.man_pfp;
+                }
+
+                else if (pfpPath == "Female")
+                {
+                    pfpBtn.Image = GameLauncher.Properties.Resources.woman_pfp;
+                }
+
+                else if (pfpPath == "Other")
+                {
+                    pfpBtn.Image = GameLauncher.Properties.Resources.other_pfp;
+                }
+            }
         }
     }
 }

@@ -180,8 +180,7 @@ namespace GameLauncher
             {
                 connection.Open();
 
-                MySqlCommand cmd2 = new MySqlCommand("SELECT * FROM userinfo WHERE Email = @UserEmail", connection);
-                cmd2.Parameters.AddWithValue("@UserEmail", txtEmail.Text);
+                MySqlCommand cmd2 = new MySqlCommand("SELECT * FROM userinfo WHERE Email = '" + txtEmail.Text + "'", connection);
 
                 bool mailExists = false;
 
@@ -201,7 +200,6 @@ namespace GameLauncher
                     }
                     catch (Exception ex)
                     {
-                        // Show any error message.
                         MessageBox.Show(ex.Message);
                     }
 

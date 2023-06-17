@@ -121,13 +121,22 @@
   <data name="eclipse-logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\icons\eclipse-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\icons\arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="eclipse-logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\icons\eclipse-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="eclipse-logo100x100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\icons\eclipse-logo100x100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\icons\arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="man-pfp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\pfp\man-pfp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="woman-pfp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\pfp\woman-pfp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="other-pfp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\pfp\other-pfp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

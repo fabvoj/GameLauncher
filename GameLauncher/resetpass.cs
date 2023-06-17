@@ -14,12 +14,6 @@ namespace GameLauncher
 {
     public partial class resetpass : Form
     {
-        /*static readonly string server = "127.0.0.1";
-        static readonly string port = "3306";
-        static readonly string user = "root";
-        static readonly string pass = "";
-        public static string connection_str = "server='" + server + "'; user='" + user +"'; password='" + pass +"'";
-        */
         MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=; database=Eclipse");
         string email = sendcode.to;
         public resetpass()

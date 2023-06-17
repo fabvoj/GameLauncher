@@ -34,11 +34,10 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.homeBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.storeBtn = new Guna.UI2.WinForms.Guna2Button();
             this.libraryBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.settingsBtn = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.pfpBtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,10 +74,9 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(11)))));
-            this.guna2Panel1.Controls.Add(this.settingsBtn);
+            this.guna2Panel1.Controls.Add(this.pfpBtn);
             this.guna2Panel1.Controls.Add(this.btnLogout);
             this.guna2Panel1.Controls.Add(this.homeBtn);
-            this.guna2Panel1.Controls.Add(this.guna2ImageButton1);
             this.guna2Panel1.Controls.Add(this.storeBtn);
             this.guna2Panel1.Controls.Add(this.libraryBtn);
             this.guna2Panel1.Controls.Add(this.guna2Button1);
@@ -105,7 +103,7 @@
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.IndicateFocus = true;
-            this.btnLogout.Location = new System.Drawing.Point(66, 560);
+            this.btnLogout.Location = new System.Drawing.Point(109, 563);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(78, 22);
             this.btnLogout.TabIndex = 11;
@@ -130,22 +128,6 @@
             this.homeBtn.TabIndex = 2;
             this.homeBtn.Text = "HOME";
             this.homeBtn.Click += new System.EventHandler(this.homeBtn_Click);
-            // 
-            // guna2ImageButton1
-            // 
-            this.guna2ImageButton1.AnimatedGIF = true;
-            this.guna2ImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Image = global::GameLauncher.Properties.Resources.eclipse_logo1;
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.Location = new System.Drawing.Point(12, 544);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(48, 52);
-            this.guna2ImageButton1.TabIndex = 9;
-            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
             // 
             // storeBtn
             // 
@@ -203,20 +185,21 @@
             this.guna2Button1.Text = "Download manager";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // settingsBtn
+            // pfpBtn
             // 
-            this.settingsBtn.BackColor = System.Drawing.Color.Transparent;
-            this.settingsBtn.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.settingsBtn.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.settingsBtn.Image = ((System.Drawing.Image)(resources.GetObject("settingsBtn.Image")));
-            this.settingsBtn.ImageOffset = new System.Drawing.Point(0, 0);
-            this.settingsBtn.ImageRotate = 0F;
-            this.settingsBtn.Location = new System.Drawing.Point(12, 470);
-            this.settingsBtn.Name = "settingsBtn";
-            this.settingsBtn.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.settingsBtn.Size = new System.Drawing.Size(74, 68);
-            this.settingsBtn.TabIndex = 12;
-            this.settingsBtn.Click += new System.EventHandler(this.settingsBtn_Click);
+            this.pfpBtn.BackColor = System.Drawing.Color.Transparent;
+            this.pfpBtn.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.pfpBtn.HoverState.ImageSize = new System.Drawing.Size(55, 55);
+            this.pfpBtn.Image = global::GameLauncher.Properties.Resources.man_pfp;
+            this.pfpBtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.pfpBtn.ImageRotate = 0F;
+            this.pfpBtn.ImageSize = new System.Drawing.Size(50, 50);
+            this.pfpBtn.Location = new System.Drawing.Point(12, 536);
+            this.pfpBtn.Name = "pfpBtn";
+            this.pfpBtn.PressedState.ImageSize = new System.Drawing.Size(55, 55);
+            this.pfpBtn.Size = new System.Drawing.Size(60, 60);
+            this.pfpBtn.TabIndex = 12;
+            this.pfpBtn.Click += new System.EventHandler(this.pfpBtn_Click);
             // 
             // library
             // 
@@ -244,10 +227,9 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Guna.UI2.WinForms.Guna2Button homeBtn;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Guna.UI2.WinForms.Guna2Button storeBtn;
         private Guna.UI2.WinForms.Guna2Button libraryBtn;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2ImageButton settingsBtn;
+        private Guna.UI2.WinForms.Guna2ImageButton pfpBtn;
     }
 }

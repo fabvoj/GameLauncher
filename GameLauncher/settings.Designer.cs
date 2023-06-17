@@ -179,7 +179,7 @@
             this.changeBackBtn.Name = "changeBackBtn";
             this.changeBackBtn.Size = new System.Drawing.Size(78, 22);
             this.changeBackBtn.TabIndex = 11;
-            this.changeBackBtn.Text = "BACK";
+            this.changeBackBtn.Text = "HOME";
             this.changeBackBtn.Click += new System.EventHandler(this.changeBackBtn_Click);
             // 
             // changeHomeBtn

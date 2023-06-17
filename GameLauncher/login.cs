@@ -83,7 +83,7 @@ namespace GameLauncher
                 if (mdr.Read())
                 {
                     string MyConnection2 = "datasource=localhost;port=3306;username=root;password=; database=Eclipse";
-                    string Query = "update userinfo set LastLogin='" + DateTimePicker1.Value + "' where Email='" + this.txtEmail.Text + "';";
+                    string Query = "UPDATE userinfo SET LastLogin='" + DateTimePicker1.Value + "' WHERE Email='" + txtEmail.Text + "';";
                     MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
 
                     MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);

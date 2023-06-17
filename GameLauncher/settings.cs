@@ -123,6 +123,8 @@ namespace GameLauncher
             changeUsernameBtn.Checked = true;
         }
 
+        
+
         private void changePassBtn_Click(object sender, EventArgs e)
         {
             changeName1.Visible = false;
@@ -163,8 +165,8 @@ namespace GameLauncher
             changeEmail1.Visible = false;
 
             this.Hide();
-            library bookroom = new library();
-            bookroom.ShowDialog();
+            home dom = new home();
+            dom.ShowDialog();
         }
     }
 }

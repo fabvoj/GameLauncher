@@ -108,7 +108,7 @@ namespace GameLauncher
         {
             MySqlConnection connection2 = new MySqlConnection("datasource=localhost;port=3306;username=root;password=; database=Eclipse");
             connection2.Open();
-            string deleteUserqry = "DELETE FROM userinfo WHERE Email='"+register_bio.newEmail+"';";
+            string deleteUserqry = "DELETE FROM userinfo WHERE Email='" + register_bio.newEmail + "';";
             MySqlCommand removedUser = new MySqlCommand(deleteUserqry, connection2);
             removedUser.ExecuteScalar();
 
@@ -169,8 +169,7 @@ namespace GameLauncher
             {
                 connection.Open();
 
-                MySqlCommand cmd1 = new MySqlCommand("SELECT * FROM userinfo WHERE Username = @UserName", connection);
-                cmd1.Parameters.AddWithValue("@UserName", txtUsername.Text);
+                MySqlCommand cmd1 = new MySqlCommand("SELECT * FROM userinfo WHERE Username = '"+txtUsername.Text+"'", connection);
 
                 bool userExists = false;
                 using (var dr1 = cmd1.ExecuteReader())
