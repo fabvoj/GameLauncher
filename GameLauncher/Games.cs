@@ -19,6 +19,8 @@ namespace GameLauncher
 
         #region Properties
 
+        public event EventHandler ClickedGame;
+
         private string _title;
         private string _price;
         private Image _picture;
@@ -46,14 +48,35 @@ namespace GameLauncher
 
         #endregion
 
-        private void gamePicture_Click(object sender, EventArgs e)
+        private void Games_MouseHover(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Games_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void gamePrice_Click(object sender, EventArgs e)
+        private void Games_MouseEnter(object sender, EventArgs e)
         {
+            this.BackColor = Color.FromArgb(39, 49, 56);
+        }
 
+        private void Games_MouseLeave(object sender, EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(16, 23, 28);
+        }
+
+        private void gamePicture_MouseEnter(object sender, EventArgs e)
+        {
+            this.BackColor = Color.White;
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
+        }
+
+        private void Games_Click(object sender, EventArgs e)
+        {
+            ClickedGame?.Invoke(this, EventArgs.Empty);
         }
     }
 }
