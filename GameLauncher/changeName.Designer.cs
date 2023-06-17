@@ -40,7 +40,7 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(192, 55);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(250, 55);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(411, 67);
             this.guna2HtmlLabel1.TabIndex = 0;
@@ -63,7 +63,7 @@
             this.changeFNameBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.changeFNameBtn.ForeColor = System.Drawing.Color.White;
             this.changeFNameBtn.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.changeFNameBtn.Location = new System.Drawing.Point(192, 169);
+            this.changeFNameBtn.Location = new System.Drawing.Point(250, 169);
             this.changeFNameBtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.changeFNameBtn.Name = "changeFNameBtn";
             this.changeFNameBtn.PasswordChar = '\0';
@@ -89,7 +89,7 @@
             this.changeLNameBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.changeLNameBtn.ForeColor = System.Drawing.Color.White;
             this.changeLNameBtn.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.changeLNameBtn.Location = new System.Drawing.Point(192, 295);
+            this.changeLNameBtn.Location = new System.Drawing.Point(250, 295);
             this.changeLNameBtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.changeLNameBtn.Name = "changeLNameBtn";
             this.changeLNameBtn.PasswordChar = '\0';
@@ -121,7 +121,7 @@
             this.changeBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.changeBtn.ForeColor = System.Drawing.Color.White;
             this.changeBtn.IndicateFocus = true;
-            this.changeBtn.Location = new System.Drawing.Point(281, 435);
+            this.changeBtn.Location = new System.Drawing.Point(334, 435);
             this.changeBtn.Name = "changeBtn";
             this.changeBtn.Size = new System.Drawing.Size(243, 60);
             this.changeBtn.TabIndex = 7;

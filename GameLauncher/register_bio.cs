@@ -16,7 +16,7 @@ namespace GameLauncher
     public partial class register_bio : Form
     {
         MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=; database=Eclipse");
-        public static string newEmail;
+        public static string newEmail, newAccGender;
         public register_bio()
         {
             InitializeComponent();
@@ -182,6 +182,7 @@ namespace GameLauncher
                     txtEmail.BorderColor = Color.LimeGreen;
 
                     newEmail = txtEmail.Text;
+                    newAccGender = cboGender.Text;
 
                 }
 
@@ -210,7 +211,7 @@ namespace GameLauncher
         {
             cboGender.Items.Add("Male");
             cboGender.Items.Add("Female");
-            cboGender.Items.Add("Mental Disorder");
+            cboGender.Items.Add("Other");
         }
 
         private void registerProgressBar_ValueChanged(object sender, EventArgs e)

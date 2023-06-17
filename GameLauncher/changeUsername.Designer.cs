@@ -47,7 +47,7 @@
             this.changeBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.changeBtn.ForeColor = System.Drawing.Color.White;
             this.changeBtn.IndicateFocus = true;
-            this.changeBtn.Location = new System.Drawing.Point(321, 401);
+            this.changeBtn.Location = new System.Drawing.Point(316, 366);
             this.changeBtn.Name = "changeBtn";
             this.changeBtn.Size = new System.Drawing.Size(243, 60);
             this.changeBtn.TabIndex = 13;
@@ -69,7 +69,7 @@
             this.changeUsernameBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.changeUsernameBtn.ForeColor = System.Drawing.Color.White;
             this.changeUsernameBtn.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.changeUsernameBtn.Location = new System.Drawing.Point(231, 262);
+            this.changeUsernameBtn.Location = new System.Drawing.Point(226, 227);
             this.changeUsernameBtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.changeUsernameBtn.Name = "changeUsernameBtn";
             this.changeUsernameBtn.PasswordChar = '\0';
@@ -85,7 +85,7 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(187, 155);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(203, 114);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(497, 67);
             this.guna2HtmlLabel1.TabIndex = 11;

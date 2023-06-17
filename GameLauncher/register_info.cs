@@ -16,6 +16,7 @@ namespace GameLauncher
     public partial class register_info : Form
     {
         MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=; database=Eclipse");
+        public static string defaultPfp;
 
         public register_info()
         {
@@ -164,9 +165,21 @@ namespace GameLauncher
 
                 if (!(userExists))
                 {
-                    
 
-                    string defaultPfp = "GameLauncher/assets/pfp/default.jpg";
+                    if(register_bio.newAccGender == "Male") 
+                    { 
+                        defaultPfp = "man-pfp.jpg";
+                    }
+
+                    else if (register_bio.newAccGender == "Female")
+                    {
+                        defaultPfp = "woman-pfp.jpg";
+                    }
+                    else if(register_bio.newAccGender == "Other")
+                    {
+                        defaultPfp = "other-pfp.jpg";
+                    }
+                    
                     string iquery = "UPDATE userinfo SET Username='" + txtUsername.Text + "', Password='" + txtPassword.Text + "', ProfilePic='" + defaultPfp + "' WHERE Email='" + register_bio.newEmail + "'";
                     MySqlCommand commandDatabase = new MySqlCommand(iquery, connection);
                     commandDatabase.CommandTimeout = 60;

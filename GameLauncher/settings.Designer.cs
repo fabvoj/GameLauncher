@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(settings));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.changePfpBtn = new Guna.UI2.WinForms.Guna2Button();
             this.changePassBtn = new Guna.UI2.WinForms.Guna2Button();
             this.changeUsernameBtn = new Guna.UI2.WinForms.Guna2Button();
             this.changeEmailBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -51,7 +50,6 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(11)))));
-            this.guna2Panel1.Controls.Add(this.changePfpBtn);
             this.guna2Panel1.Controls.Add(this.changePassBtn);
             this.guna2Panel1.Controls.Add(this.changeUsernameBtn);
             this.guna2Panel1.Controls.Add(this.changeEmailBtn);
@@ -66,25 +64,6 @@
             this.guna2Panel1.Size = new System.Drawing.Size(200, 608);
             this.guna2Panel1.TabIndex = 10;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
-            // 
-            // changePfpBtn
-            // 
-            this.changePfpBtn.BackColor = System.Drawing.Color.Transparent;
-            this.changePfpBtn.BorderColor = System.Drawing.Color.Transparent;
-            this.changePfpBtn.BorderRadius = 6;
-            this.changePfpBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.changePfpBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.changePfpBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.changePfpBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.changePfpBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
-            this.changePfpBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.changePfpBtn.ForeColor = System.Drawing.Color.White;
-            this.changePfpBtn.Location = new System.Drawing.Point(12, 465);
-            this.changePfpBtn.Name = "changePfpBtn";
-            this.changePfpBtn.Size = new System.Drawing.Size(175, 45);
-            this.changePfpBtn.TabIndex = 17;
-            this.changePfpBtn.Text = "Profile Picture";
-            this.changePfpBtn.Click += new System.EventHandler(this.changePfpBtn_Click);
             // 
             // changePassBtn
             // 
@@ -318,7 +297,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button changePfpBtn;
         private Guna.UI2.WinForms.Guna2Button changePassBtn;
         private Guna.UI2.WinForms.Guna2Button changeUsernameBtn;
         private Guna.UI2.WinForms.Guna2Button changeEmailBtn;

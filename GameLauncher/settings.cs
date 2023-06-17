@@ -40,14 +40,13 @@ namespace GameLauncher
             changeEmail1.Visible = false;
             changeUsername1.Visible = false;
             changePass1.Visible = false;
-            if (changeGenderBtn.Checked == true || changeNameBtn.Checked == true || changeEmailBtn.Checked == true || changeUsernameBtn.Checked == true || changePassBtn.Checked == true || changePfpBtn.Checked == true)
+            if (changeGenderBtn.Checked == true || changeNameBtn.Checked == true || changeEmailBtn.Checked == true || changeUsernameBtn.Checked == true || changePassBtn.Checked == true)
             {
                 changeGenderBtn.Checked = false;
                 changeNameBtn.Checked = false;
                 changeEmailBtn.Checked = false;
                 changeUsernameBtn.Checked = false;
                 changePassBtn.Checked = false;
-                changePfpBtn.Checked = false;
             }
             changeHomeBtn.Checked = true;
         }
@@ -59,14 +58,13 @@ namespace GameLauncher
             changeEmail1.Visible = false;
             changeUsername1.Visible = false;
             changePass1.Visible = false;
-            if (changeGenderBtn.Checked == true || changeHomeBtn.Checked == true || changeEmailBtn.Checked == true || changeUsernameBtn.Checked == true || changePassBtn.Checked == true || changePfpBtn.Checked == true)
+            if (changeGenderBtn.Checked == true || changeHomeBtn.Checked == true || changeEmailBtn.Checked == true || changeUsernameBtn.Checked == true || changePassBtn.Checked == true)
             {
                 changeGenderBtn.Checked = false;
                 changeHomeBtn.Checked = false;
                 changeEmailBtn.Checked = false;
                 changeUsernameBtn.Checked = false;
                 changePassBtn.Checked = false;
-                changePfpBtn.Checked = false;
             }
             changeNameBtn.Checked = true;
         }
@@ -78,14 +76,13 @@ namespace GameLauncher
             changeEmail1.Visible = false;
             changeUsername1.Visible = false;
             changePass1.Visible = false;
-            if (changeNameBtn.Checked == true || changeHomeBtn.Checked == true || changeEmailBtn.Checked == true || changeUsernameBtn.Checked == true || changePassBtn.Checked == true || changePfpBtn.Checked == true)
+            if (changeNameBtn.Checked == true || changeHomeBtn.Checked == true || changeEmailBtn.Checked == true || changeUsernameBtn.Checked == true || changePassBtn.Checked == true)
             {
                 changeNameBtn.Checked = false;
                 changeHomeBtn.Checked = false;
                 changeEmailBtn.Checked = false;
                 changeUsernameBtn.Checked = false;
                 changePassBtn.Checked = false;
-                changePfpBtn.Checked = false;
             }
             changeGenderBtn.Checked = true;
         }
@@ -97,14 +94,13 @@ namespace GameLauncher
             changeEmail1.Visible = true;
             changeUsername1.Visible = false;
             changePass1.Visible = false;
-            if (changeNameBtn.Checked == true || changeHomeBtn.Checked == true || changeGenderBtn.Checked == true || changeUsernameBtn.Checked == true || changePassBtn.Checked == true || changePfpBtn.Checked == true)
+            if (changeNameBtn.Checked == true || changeHomeBtn.Checked == true || changeGenderBtn.Checked == true || changeUsernameBtn.Checked == true || changePassBtn.Checked == true)
             {
                 changeNameBtn.Checked = false;
                 changeHomeBtn.Checked = false;
                 changeGenderBtn.Checked = false;
                 changeUsernameBtn.Checked = false;
                 changePassBtn.Checked = false;
-                changePfpBtn.Checked = false;
             }
             changeEmailBtn.Checked = true;
         }
@@ -116,14 +112,13 @@ namespace GameLauncher
             changeEmail1.Visible = false;
             changeUsername1.Visible = true;
             changePass1.Visible = false;
-            if (changeNameBtn.Checked == true || changeHomeBtn.Checked == true || changeGenderBtn.Checked == true || changeEmailBtn.Checked == true || changePassBtn.Checked == true || changePfpBtn.Checked == true)
+            if (changeNameBtn.Checked == true || changeHomeBtn.Checked == true || changeGenderBtn.Checked == true || changeEmailBtn.Checked == true || changePassBtn.Checked == true)
             {
                 changeNameBtn.Checked = false;
                 changeHomeBtn.Checked = false;
                 changeGenderBtn.Checked = false;
                 changeEmailBtn.Checked = false;
-                changePassBtn.Checked = false;
-                changePfpBtn.Checked = false;
+                changePassBtn.Checked = false;              
             }
             changeUsernameBtn.Checked = true;
         }
@@ -135,14 +130,13 @@ namespace GameLauncher
             changeEmail1.Visible = false;
             changeUsername1.Visible = false;
             changePass1.Visible = true;
-            if (changeNameBtn.Checked == true || changeHomeBtn.Checked == true || changeGenderBtn.Checked == true || changeEmailBtn.Checked == true || changeUsernameBtn.Checked == true || changePfpBtn.Checked == true)
+            if (changeNameBtn.Checked == true || changeHomeBtn.Checked == true || changeGenderBtn.Checked == true || changeEmailBtn.Checked == true || changeUsernameBtn.Checked == true)
             {
                 changeNameBtn.Checked = false;
                 changeHomeBtn.Checked = false;
                 changeGenderBtn.Checked = false;
                 changeEmailBtn.Checked = false;
                 changeUsernameBtn.Checked = false;
-                changePfpBtn.Checked = false;
             }
             changePassBtn.Checked = true;
         }
