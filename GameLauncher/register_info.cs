@@ -10,6 +10,7 @@ using System.Net;
 using System.Net.Mail;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 namespace GameLauncher
 {
@@ -120,6 +121,7 @@ namespace GameLauncher
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
+            string forbidden_user = @"^[a-zA-Z0-9_]+$";
             if (txtPassword.Text != txtCPassword.Text)
             {
                 txtPassword.BorderColor = Color.Red;
@@ -147,6 +149,20 @@ namespace GameLauncher
                 labelTerms.ForeColor = Color.White;
                 labelTerms.UncheckedState.FillColor = default;
                 labelTerms.UncheckedState.BorderColor = default;
+            }
+
+            if (txtPassword.TextLength < 7 ||txtCPassword.TextLength < 7)
+            {
+                txtPassword.BorderColor = Color.Red;
+                txtCPassword.BorderColor = Color.Red;
+                MessageBox.Show("Password too short!", "Error");
+                return;
+            }
+
+            if(!(Regex.IsMatch(txtUsername.Text, forbidden_user)))
+            {
+                txtUsername.BorderColor= Color.Red;
+                MessageBox.Show("Invalid characters in Username!");
             }
 
             else

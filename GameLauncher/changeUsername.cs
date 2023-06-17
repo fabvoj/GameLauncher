@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
@@ -48,19 +49,31 @@ namespace GameLauncher
 
         private void changeBtn_Click(object sender, EventArgs e)
         {
-            con.Open();
-            string qry = "UPDATE userinfo SET Username='" + changeUsernameBtn.Text + "' WHERE Email='" + login.userEmail + "';";
-            MySqlCommand cmd = new MySqlCommand(qry, con);
+            string forbidden_user = @"^[a-zA-Z0-9_]+$";
 
-            MySqlDataReader reader = null;
-            reader = cmd.ExecuteReader();
-            while (reader.Read())
+            if (!(Regex.IsMatch(changeUsernameBtn.Text, forbidden_user)))
             {
-
+                changeUsernameBtn.BorderColor = Color.Red;
+                MessageBox.Show("Invalid characters in Username!");
             }
-            con.Close();
 
-            MessageBox.Show("Username succesfully changed!");
+            else
+            {
+                con.Open();
+                string qry = "UPDATE userinfo SET Username='" + changeUsernameBtn.Text + "' WHERE Email='" + login.userEmail + "';";
+                MySqlCommand cmd = new MySqlCommand(qry, con);
+
+                MySqlDataReader reader = null;
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+
+                }
+                con.Close();
+
+                MessageBox.Show("Username succesfully changed!");
+            }
+            
         }
     }
 }
