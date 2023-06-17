@@ -196,6 +196,9 @@
     <Compile Include="store.Designer.cs">
       <DependentUpon>store.cs</DependentUpon>
     </Compile>
+	<EmbeddedResource Include="Game.resx">
+	  <DependentUpon>Game.cs</DependentUpon>
+	</EmbeddedResource>
     <EmbeddedResource Include="changeEmail.resx">
       <DependentUpon>changeEmail.cs</DependentUpon>
     </EmbeddedResource>
