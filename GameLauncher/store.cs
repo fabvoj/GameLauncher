@@ -18,9 +18,6 @@ namespace GameLauncher
         public store()
         {
             InitializeComponent();
-            //Game hra = new Game();
-            //flowLayoutPanel1.Visible = false;
-            //flowLayoutPanel2.Controls.Add(hra);
             populateItems();
         }
 
@@ -84,6 +81,7 @@ namespace GameLauncher
 
         private void populateItems()
         {
+            flowLayoutPanel3.Visible = false;
             MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=; database=eclipse");
             connection.Open();
 
@@ -158,6 +156,7 @@ namespace GameLauncher
 
                 flowLayoutPanel1.Visible = false;
                 flowLayoutPanel2.Controls.Add(gameska);
+                flowLayoutPanel3.Visible = true;
 
             }
             Console.WriteLine("hotovo");

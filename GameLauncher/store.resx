@@ -117,30 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="settingsBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAA+tJREFUSEvVV0lPVEEQHozrRU1cDgjMmwdi4hXjSeUgMP2AhMSAiRIPGlfidtCD
-        C6JyEL0QfoRLgqAHNAIxLhHh4C8wEZG4Tr8ZFhG3w/h9PTUDM8xjBtREv6Tzpqqr6ntdXd2vxvffIOCE
-        igOO7reU+4IDv58XVoTzZfrvwVL6IMgG+Yz9dt8FlK6X6d9HXt3wMl9TdIGICYC0FWQ3RfQFlHvXctwr
-        Ik4Bvv7S10tFyg5F6lMhVvOGaSyo+miL2gC6bhA1ighi3Qy5S0SDgvKRAH0ZI9XfE4bU0cMY7XDuxHPM
-        qtR7iqvHV1tBfRr7Om4H3R1iDuJwHWxG/co96a8ZWWkHQ7som0wofTsr8pKS6CIa0qG0NLqQOssJHUBq
-        JxDsJ0av7bh7aWccgI110cW0waqfYnwD4aTf0Yc5xxjw6UBWhqb7pAVIe5hOny+aIyqTBdvRm0T0hK0i
-        W1j1IgLRHMbjEIU38st0LohdpPSYqOYNZOAEVhvJ+rhZleGdTJldFVovqjkD9bCBMTBqRZUZdvmHtdib
-        H4VVukRUCdjVkQLs+TUEfCLjaroVWZWhbSQuUu5yUWUGAp9Buh+ImIDfCTtI32fsWR+2ookjdmzccX9l
-        WIlZApxDrKMizgQLAsF4I7Wxck0V4wjJtAFXakiD7vnphRcrIPcCybG6PFEaYH8bEG8UcbsxWsmRtH1Q
-        9iMtrxD4BkjPgrQmfpziYHq50mTSOKI5sroWURgUqZdLeOYRtxEvcQs2g+SSaR4hXPhBfUjEtOB+cmUi
-        zgACXgTxIxHTghzkEjFLYsd9DLsmEWdgXsSSpnd4diIll5meGalG9dLOM9VKDyClSR8Lphp+tZhrxvMO
-        OWLbJeBxwGQ9JlrwvI+3Gk8tLtoYvUl3cnFxtSiisbwqd50oDRCrAWMEL9TF2Lj9ds96mcCIxwnXZjJ4
-        ZFjZXDnTTkIEHpAXqhCzBDDfj1jexykVRer9Gq8LhEfGZAZ7zsH0pq6UsFSoFPNf7bLIClFlBtMMpwl+
-        HEQ1Z8iV+YWfSVHNDn47uV8BJ7xfVPOGrfQRXiBsDETlAbQr3BcYd4jGwDR4Fe5mET0RCIa2cqUiGsSq
-        GachTRuVAPsslPu0RgDXYdA9DudJ6L6jgB7i9760jYDSz7inHPShrzQC7YyZsf8yqSY5O4fYHRsGWW3u
-        9rFV0J8yFYwrVcx9sStRj8VbH7ZCxsf0ZrqDsbLuu2iIYzJEZzYGojZAsF68yDkReWQuobLviWjAKgdh
-        D2NkTRpH6s0VB4jasOrrIlLuRHqTPg5xZOyz5gLetyCbauiVfovx5xp6L6T+hQF536zX4L8Fn+8XkLlW
-        BgqtGzkAAAAASUVORK5CYII=
-</value>
-  </data>
   <metadata name="mySqlCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
@@ -150,6 +126,7 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAMDAAAAEAIACoJQAAFgAAACgAAAAwAAAAYAAAAAEAIAAAAAAAACQAABMLAAATCwAAAAAAAAAA

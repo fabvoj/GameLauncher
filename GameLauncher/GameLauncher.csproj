@@ -98,6 +98,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackBtn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BackBtn.Designer.cs">
+      <DependentUpon>BackBtn.cs</DependentUpon>
+    </Compile>
     <Compile Include="changeEmail.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -196,9 +202,12 @@
     <Compile Include="store.Designer.cs">
       <DependentUpon>store.cs</DependentUpon>
     </Compile>
-	<EmbeddedResource Include="Game.resx">
-	  <DependentUpon>Game.cs</DependentUpon>
-	</EmbeddedResource>
+    <EmbeddedResource Include="BackBtn.resx">
+      <DependentUpon>BackBtn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game.resx">
+      <DependentUpon>Game.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="changeEmail.resx">
       <DependentUpon>changeEmail.cs</DependentUpon>
     </EmbeddedResource>
@@ -270,6 +279,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\icons\eclipse-logo100x100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icons\arrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
