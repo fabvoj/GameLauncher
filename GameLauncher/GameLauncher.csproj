@@ -98,6 +98,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="changeEmail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="changeEmail.Designer.cs">
+      <DependentUpon>changeEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="changeGender.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="changeGender.Designer.cs">
+      <DependentUpon>changeGender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="changeName.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="changeName.Designer.cs">
+      <DependentUpon>changeName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="changePass.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="changePass.Designer.cs">
+      <DependentUpon>changePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="changeUsername.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="changeUsername.Designer.cs">
+      <DependentUpon>changeUsername.cs</DependentUpon>
+    </Compile>
     <Compile Include="Game.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -154,14 +184,32 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="settings.Designer.cs">
+      <DependentUpon>settings.cs</DependentUpon>
+    </Compile>
     <Compile Include="store.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="store.Designer.cs">
       <DependentUpon>store.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Game.resx">
-      <DependentUpon>Game.cs</DependentUpon>
+    <EmbeddedResource Include="changeEmail.resx">
+      <DependentUpon>changeEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changeGender.resx">
+      <DependentUpon>changeGender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changeName.resx">
+      <DependentUpon>changeName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changePass.resx">
+      <DependentUpon>changePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changeUsername.resx">
+      <DependentUpon>changeUsername.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Games.resx">
       <DependentUpon>Games.cs</DependentUpon>
@@ -197,6 +245,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="settings.resx">
+      <DependentUpon>settings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="store.resx">
       <DependentUpon>store.cs</DependentUpon>
     </EmbeddedResource>

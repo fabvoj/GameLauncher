@@ -60,7 +60,16 @@ namespace GameLauncher
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            login frm1 = new login();
+            frm1.ShowDialog();
+        }
 
+        private void settingsBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            settings nastavenia = new settings();
+            nastavenia.ShowDialog();
         }
     }
 }

@@ -32,16 +32,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(home));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
-            this.libraryBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.storeBtn = new Guna.UI2.WinForms.Guna2Button();
             this.homeBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.storeBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.libraryBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.txtWelcome = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,44 +83,6 @@
             this.btnLogout.Text = "LOG OUT";
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // libraryBtn
-            // 
-            this.libraryBtn.BackColor = System.Drawing.Color.Transparent;
-            this.libraryBtn.BorderColor = System.Drawing.Color.Transparent;
-            this.libraryBtn.BorderRadius = 6;
-            this.libraryBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.libraryBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.libraryBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.libraryBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.libraryBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
-            this.libraryBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.libraryBtn.ForeColor = System.Drawing.Color.White;
-            this.libraryBtn.Location = new System.Drawing.Point(12, 238);
-            this.libraryBtn.Name = "libraryBtn";
-            this.libraryBtn.Size = new System.Drawing.Size(175, 45);
-            this.libraryBtn.TabIndex = 4;
-            this.libraryBtn.Text = "LIBRARY";
-            this.libraryBtn.Click += new System.EventHandler(this.libraryBtn_Click);
-            // 
-            // storeBtn
-            // 
-            this.storeBtn.BackColor = System.Drawing.Color.Transparent;
-            this.storeBtn.BorderColor = System.Drawing.Color.Transparent;
-            this.storeBtn.BorderRadius = 6;
-            this.storeBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.storeBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.storeBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.storeBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.storeBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
-            this.storeBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.storeBtn.ForeColor = System.Drawing.Color.White;
-            this.storeBtn.Location = new System.Drawing.Point(12, 178);
-            this.storeBtn.Name = "storeBtn";
-            this.storeBtn.Size = new System.Drawing.Size(175, 45);
-            this.storeBtn.TabIndex = 3;
-            this.storeBtn.Text = "STORE";
-            this.storeBtn.Click += new System.EventHandler(this.guna2Button3_Click);
-            // 
             // homeBtn
             // 
             this.homeBtn.BackColor = System.Drawing.Color.Transparent;
@@ -141,15 +103,59 @@
             this.homeBtn.Text = "HOME";
             this.homeBtn.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
-            // guna2Separator1
+            // guna2ImageButton1
             // 
-            this.guna2Separator1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Separator1.FillColor = System.Drawing.Color.White;
-            this.guna2Separator1.Location = new System.Drawing.Point(285, 550);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(237, 10);
-            this.guna2Separator1.TabIndex = 1;
-            this.guna2Separator1.Click += new System.EventHandler(this.guna2Separator1_Click);
+            this.guna2ImageButton1.AnimatedGIF = true;
+            this.guna2ImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.Image = global::GameLauncher.Properties.Resources.eclipse_logo1;
+            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton1.ImageRotate = 0F;
+            this.guna2ImageButton1.Location = new System.Drawing.Point(12, 544);
+            this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.Size = new System.Drawing.Size(48, 52);
+            this.guna2ImageButton1.TabIndex = 9;
+            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
+            // 
+            // storeBtn
+            // 
+            this.storeBtn.BackColor = System.Drawing.Color.Transparent;
+            this.storeBtn.BorderColor = System.Drawing.Color.Transparent;
+            this.storeBtn.BorderRadius = 6;
+            this.storeBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.storeBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.storeBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.storeBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.storeBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
+            this.storeBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.storeBtn.ForeColor = System.Drawing.Color.White;
+            this.storeBtn.Location = new System.Drawing.Point(12, 178);
+            this.storeBtn.Name = "storeBtn";
+            this.storeBtn.Size = new System.Drawing.Size(175, 45);
+            this.storeBtn.TabIndex = 3;
+            this.storeBtn.Text = "STORE";
+            this.storeBtn.Click += new System.EventHandler(this.guna2Button3_Click);
+            // 
+            // libraryBtn
+            // 
+            this.libraryBtn.BackColor = System.Drawing.Color.Transparent;
+            this.libraryBtn.BorderColor = System.Drawing.Color.Transparent;
+            this.libraryBtn.BorderRadius = 6;
+            this.libraryBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.libraryBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.libraryBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.libraryBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.libraryBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
+            this.libraryBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.libraryBtn.ForeColor = System.Drawing.Color.White;
+            this.libraryBtn.Location = new System.Drawing.Point(12, 238);
+            this.libraryBtn.Name = "libraryBtn";
+            this.libraryBtn.Size = new System.Drawing.Size(175, 45);
+            this.libraryBtn.TabIndex = 4;
+            this.libraryBtn.Text = "LIBRARY";
+            this.libraryBtn.Click += new System.EventHandler(this.libraryBtn_Click);
             // 
             // guna2Button1
             // 
@@ -167,6 +173,16 @@
             this.guna2Button1.TabIndex = 1;
             this.guna2Button1.Text = "Download manager";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Separator1.FillColor = System.Drawing.Color.White;
+            this.guna2Separator1.Location = new System.Drawing.Point(285, 550);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(237, 10);
+            this.guna2Separator1.TabIndex = 1;
+            this.guna2Separator1.Click += new System.EventHandler(this.guna2Separator1_Click);
             // 
             // guna2ControlBox3
             // 
@@ -223,22 +239,6 @@
             this.txtWelcome.SelectedText = "";
             this.txtWelcome.Size = new System.Drawing.Size(361, 51);
             this.txtWelcome.TabIndex = 9;
-            // 
-            // guna2ImageButton1
-            // 
-            this.guna2ImageButton1.AnimatedGIF = true;
-            this.guna2ImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Image = global::GameLauncher.Properties.Resources.eclipse_logo1;
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.Location = new System.Drawing.Point(12, 544);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(48, 52);
-            this.guna2ImageButton1.TabIndex = 9;
-            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
             // 
             // home
             // 
