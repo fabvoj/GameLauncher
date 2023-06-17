@@ -82,5 +82,25 @@ namespace GameLauncher
         {
 
         }
+
+        private void logoName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logoImg_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

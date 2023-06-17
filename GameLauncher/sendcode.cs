@@ -111,6 +111,16 @@ namespace GameLauncher
             connection.Close();
         }
 
+        private void logoName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logoImg_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void rstEmail_TextChanged(object sender, EventArgs e)
         {
 
