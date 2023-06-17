@@ -58,6 +58,7 @@
             // 
             // changeCPassBtn
             // 
+            this.changeCPassBtn.Animated = true;
             this.changeCPassBtn.BorderColor = System.Drawing.Color.White;
             this.changeCPassBtn.BorderRadius = 6;
             this.changeCPassBtn.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -97,6 +98,7 @@
             // 
             // changePassBtn
             // 
+            this.changePassBtn.Animated = true;
             this.changePassBtn.BorderColor = System.Drawing.Color.White;
             this.changePassBtn.BorderRadius = 6;
             this.changePassBtn.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -123,6 +125,7 @@
             // 
             // changeOPassBtn
             // 
+            this.changeOPassBtn.Animated = true;
             this.changeOPassBtn.BorderColor = System.Drawing.Color.White;
             this.changeOPassBtn.BorderRadius = 6;
             this.changeOPassBtn.Cursor = System.Windows.Forms.Cursors.IBeam;

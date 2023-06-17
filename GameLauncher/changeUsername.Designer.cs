@@ -56,6 +56,7 @@
             // 
             // changeUsernameBtn
             // 
+            this.changeUsernameBtn.Animated = true;
             this.changeUsernameBtn.BorderColor = System.Drawing.Color.White;
             this.changeUsernameBtn.BorderRadius = 6;
             this.changeUsernameBtn.Cursor = System.Windows.Forms.Cursors.IBeam;

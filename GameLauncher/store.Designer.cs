@@ -32,6 +32,8 @@
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pfpBtn = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.homeBtn = new Guna.UI2.WinForms.Guna2Button();
             this.storeBtn = new Guna.UI2.WinForms.Guna2Button();
             this.libraryBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -40,10 +42,8 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.backBtn1 = new GameLauncher.BackBtn();
-            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
-            this.pfpBtn = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -98,8 +98,47 @@
             this.guna2Panel1.TabIndex = 9;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
+            // pfpBtn
+            // 
+            this.pfpBtn.BackColor = System.Drawing.Color.Transparent;
+            this.pfpBtn.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.pfpBtn.HoverState.ImageSize = new System.Drawing.Size(55, 55);
+            this.pfpBtn.Image = global::GameLauncher.Properties.Resources.man_pfp;
+            this.pfpBtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.pfpBtn.ImageRotate = 0F;
+            this.pfpBtn.ImageSize = new System.Drawing.Size(50, 50);
+            this.pfpBtn.Location = new System.Drawing.Point(12, 536);
+            this.pfpBtn.Name = "pfpBtn";
+            this.pfpBtn.PressedState.ImageSize = new System.Drawing.Size(55, 55);
+            this.pfpBtn.Size = new System.Drawing.Size(60, 60);
+            this.pfpBtn.TabIndex = 12;
+            this.pfpBtn.Click += new System.EventHandler(this.pfpBtn_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Animated = true;
+            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
+            this.btnLogout.BorderRadius = 6;
+            this.btnLogout.BorderThickness = 1;
+            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.IndicateFocus = true;
+            this.btnLogout.Location = new System.Drawing.Point(109, 563);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(78, 22);
+            this.btnLogout.TabIndex = 11;
+            this.btnLogout.Text = "LOG OUT";
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // homeBtn
             // 
+            this.homeBtn.Animated = true;
             this.homeBtn.BackColor = System.Drawing.Color.Transparent;
             this.homeBtn.BorderColor = System.Drawing.Color.Transparent;
             this.homeBtn.BorderRadius = 6;
@@ -119,6 +158,7 @@
             // 
             // storeBtn
             // 
+            this.storeBtn.Animated = true;
             this.storeBtn.BackColor = System.Drawing.Color.Transparent;
             this.storeBtn.BorderColor = System.Drawing.Color.Transparent;
             this.storeBtn.BorderRadius = 6;
@@ -139,6 +179,7 @@
             // 
             // libraryBtn
             // 
+            this.libraryBtn.Animated = true;
             this.libraryBtn.BackColor = System.Drawing.Color.Transparent;
             this.libraryBtn.BorderColor = System.Drawing.Color.Transparent;
             this.libraryBtn.BorderRadius = 6;
@@ -158,6 +199,7 @@
             // 
             // guna2Button1
             // 
+            this.guna2Button1.Animated = true;
             this.guna2Button1.BorderColor = System.Drawing.Color.Transparent;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -185,7 +227,7 @@
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(11)))));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(231, 39);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(807, 569);
             this.flowLayoutPanel1.TabIndex = 12;
@@ -197,7 +239,7 @@
             this.guna2Panel2.Controls.Add(this.flowLayoutPanel2);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2Panel2.Location = new System.Drawing.Point(198, 0);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(874, 608);
             this.guna2Panel2.TabIndex = 13;
@@ -206,19 +248,10 @@
             // 
             this.flowLayoutPanel3.Controls.Add(this.backBtn1);
             this.flowLayoutPanel3.Location = new System.Drawing.Point(18, 12);
-            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(30, 32);
             this.flowLayoutPanel3.TabIndex = 1;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.AutoScroll = true;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(2, 39);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(872, 569);
-            this.flowLayoutPanel2.TabIndex = 0;
             // 
             // backBtn1
             // 
@@ -229,43 +262,14 @@
             this.backBtn1.Size = new System.Drawing.Size(30, 32);
             this.backBtn1.TabIndex = 0;
             // 
-            // btnLogout
+            // flowLayoutPanel2
             // 
-            this.btnLogout.Animated = true;
-            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogout.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
-            this.btnLogout.BorderRadius = 6;
-            this.btnLogout.BorderThickness = 1;
-            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
-            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.IndicateFocus = true;
-            this.btnLogout.Location = new System.Drawing.Point(109, 563);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(78, 22);
-            this.btnLogout.TabIndex = 11;
-            this.btnLogout.Text = "LOG OUT";
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // pfpBtn
-            // 
-            this.pfpBtn.BackColor = System.Drawing.Color.Transparent;
-            this.pfpBtn.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.pfpBtn.HoverState.ImageSize = new System.Drawing.Size(55, 55);
-            this.pfpBtn.Image = global::GameLauncher.Properties.Resources.man_pfp;
-            this.pfpBtn.ImageOffset = new System.Drawing.Point(0, 0);
-            this.pfpBtn.ImageRotate = 0F;
-            this.pfpBtn.ImageSize = new System.Drawing.Size(50, 50);
-            this.pfpBtn.Location = new System.Drawing.Point(12, 536);
-            this.pfpBtn.Name = "pfpBtn";
-            this.pfpBtn.PressedState.ImageSize = new System.Drawing.Size(55, 55);
-            this.pfpBtn.Size = new System.Drawing.Size(60, 60);
-            this.pfpBtn.TabIndex = 12;
-            this.pfpBtn.Click += new System.EventHandler(this.pfpBtn_Click);
+            this.flowLayoutPanel2.AutoScroll = true;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(2, 39);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(872, 569);
+            this.flowLayoutPanel2.TabIndex = 0;
             // 
             // store
             // 

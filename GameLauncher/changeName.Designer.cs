@@ -50,6 +50,7 @@
             // 
             // changeFNameBtn
             // 
+            this.changeFNameBtn.Animated = true;
             this.changeFNameBtn.BorderColor = System.Drawing.Color.White;
             this.changeFNameBtn.BorderRadius = 6;
             this.changeFNameBtn.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -76,6 +77,7 @@
             // 
             // changeLNameBtn
             // 
+            this.changeLNameBtn.Animated = true;
             this.changeLNameBtn.BorderColor = System.Drawing.Color.White;
             this.changeLNameBtn.BorderRadius = 6;
             this.changeLNameBtn.Cursor = System.Windows.Forms.Cursors.IBeam;

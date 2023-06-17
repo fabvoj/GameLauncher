@@ -39,17 +39,19 @@
             this.changeHomeBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.changePass1 = new GameLauncher.changePass();
             this.changeUsername1 = new GameLauncher.changeUsername();
             this.changeEmail1 = new GameLauncher.changeEmail();
             this.changeGender1 = new GameLauncher.changeGender();
             this.changeName1 = new GameLauncher.changeName();
-            this.changePass1 = new GameLauncher.changePass();
+            this.pfpBtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(11)))));
+            this.guna2Panel1.Controls.Add(this.pfpBtn);
             this.guna2Panel1.Controls.Add(this.changePassBtn);
             this.guna2Panel1.Controls.Add(this.changeUsernameBtn);
             this.guna2Panel1.Controls.Add(this.changeEmailBtn);
@@ -67,6 +69,7 @@
             // 
             // changePassBtn
             // 
+            this.changePassBtn.Animated = true;
             this.changePassBtn.BackColor = System.Drawing.Color.Transparent;
             this.changePassBtn.BorderColor = System.Drawing.Color.Transparent;
             this.changePassBtn.BorderRadius = 6;
@@ -86,6 +89,7 @@
             // 
             // changeUsernameBtn
             // 
+            this.changeUsernameBtn.Animated = true;
             this.changeUsernameBtn.BackColor = System.Drawing.Color.Transparent;
             this.changeUsernameBtn.BorderColor = System.Drawing.Color.Transparent;
             this.changeUsernameBtn.BorderRadius = 6;
@@ -105,6 +109,7 @@
             // 
             // changeEmailBtn
             // 
+            this.changeEmailBtn.Animated = true;
             this.changeEmailBtn.BackColor = System.Drawing.Color.Transparent;
             this.changeEmailBtn.BorderColor = System.Drawing.Color.Transparent;
             this.changeEmailBtn.BorderRadius = 6;
@@ -124,6 +129,7 @@
             // 
             // changeGenderBtn
             // 
+            this.changeGenderBtn.Animated = true;
             this.changeGenderBtn.BackColor = System.Drawing.Color.Transparent;
             this.changeGenderBtn.BorderColor = System.Drawing.Color.Transparent;
             this.changeGenderBtn.BorderRadius = 6;
@@ -143,6 +149,7 @@
             // 
             // changeNameBtn
             // 
+            this.changeNameBtn.Animated = true;
             this.changeNameBtn.BackColor = System.Drawing.Color.Transparent;
             this.changeNameBtn.BorderColor = System.Drawing.Color.Transparent;
             this.changeNameBtn.BorderRadius = 6;
@@ -184,6 +191,7 @@
             // 
             // changeHomeBtn
             // 
+            this.changeHomeBtn.Animated = true;
             this.changeHomeBtn.BackColor = System.Drawing.Color.Transparent;
             this.changeHomeBtn.BorderColor = System.Drawing.Color.Transparent;
             this.changeHomeBtn.BorderRadius = 6;
@@ -229,6 +237,14 @@
             this.guna2ImageButton1.TabIndex = 9;
             this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
             // 
+            // changePass1
+            // 
+            this.changePass1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
+            this.changePass1.Location = new System.Drawing.Point(199, 0);
+            this.changePass1.Name = "changePass1";
+            this.changePass1.Size = new System.Drawing.Size(875, 607);
+            this.changePass1.TabIndex = 16;
+            // 
             // changeUsername1
             // 
             this.changeUsername1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
@@ -261,13 +277,21 @@
             this.changeName1.Size = new System.Drawing.Size(881, 608);
             this.changeName1.TabIndex = 12;
             // 
-            // changePass1
+            // pfpBtn
             // 
-            this.changePass1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
-            this.changePass1.Location = new System.Drawing.Point(199, 0);
-            this.changePass1.Name = "changePass1";
-            this.changePass1.Size = new System.Drawing.Size(875, 607);
-            this.changePass1.TabIndex = 16;
+            this.pfpBtn.BackColor = System.Drawing.Color.Transparent;
+            this.pfpBtn.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.pfpBtn.HoverState.ImageSize = new System.Drawing.Size(55, 55);
+            this.pfpBtn.Image = global::GameLauncher.Properties.Resources.man_pfp;
+            this.pfpBtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.pfpBtn.ImageRotate = 0F;
+            this.pfpBtn.ImageSize = new System.Drawing.Size(50, 50);
+            this.pfpBtn.Location = new System.Drawing.Point(66, 12);
+            this.pfpBtn.Name = "pfpBtn";
+            this.pfpBtn.PressedState.ImageSize = new System.Drawing.Size(55, 55);
+            this.pfpBtn.Size = new System.Drawing.Size(60, 60);
+            this.pfpBtn.TabIndex = 17;
+            this.pfpBtn.Click += new System.EventHandler(this.pfpBtn_Click);
             // 
             // settings
             // 
@@ -311,5 +335,6 @@
         private changeEmail changeEmail1;
         private changeUsername changeUsername1;
         private changePass changePass1;
+        private Guna.UI2.WinForms.Guna2ImageButton pfpBtn;
     }
 }

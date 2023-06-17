@@ -79,6 +79,7 @@
             this.cboGender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cboGender.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cboGender.ForeColor = System.Drawing.Color.White;
+            this.cboGender.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cboGender.ItemHeight = 30;
             this.cboGender.Location = new System.Drawing.Point(247, 225);
             this.cboGender.Name = "cboGender";

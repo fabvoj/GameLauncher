@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,7 @@ namespace GameLauncher
         public settings()
         {
             InitializeComponent();
+            get_pfpPath();
         }
 
         private void settings_Load(object sender, EventArgs e)
@@ -196,6 +198,41 @@ namespace GameLauncher
                     }
                     changePassBtn.Checked = true;
                     break;
+            }
+        }
+
+        private void pfpBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void get_pfpPath()
+        {
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=; database=eclipse");
+            connection.Open();
+            string qry = "SELECT Gender FROM userinfo WHERE Email='" + login.userEmail + "';";
+            MySqlCommand cmd = new MySqlCommand(qry, connection);
+            MySqlDataReader reader = null;
+            reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string pfpPath = (string)reader["Gender"];
+
+                if (pfpPath == "Male")
+                {
+                    pfpBtn.Image = GameLauncher.Properties.Resources.man_pfp;
+                }
+
+                else if (pfpPath == "Female")
+                {
+                    pfpBtn.Image = GameLauncher.Properties.Resources.woman_pfp;
+                }
+
+                else if (pfpPath == "Other")
+                {
+                    pfpBtn.Image = GameLauncher.Properties.Resources.other_pfp;
+                }
             }
         }
     }
