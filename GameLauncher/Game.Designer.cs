@@ -44,7 +44,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.gameRelease = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.gameLibrarybtn = new Guna.UI2.WinForms.Guna2Button();
             this.gamePrice = new Guna.UI2.WinForms.Guna2Button();
+            this.gameName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gameCover)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameLogoInPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gameLogo)).BeginInit();
@@ -80,9 +82,9 @@
             // 
             this.gameDescription.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.gameDescription.ForeColor = System.Drawing.Color.White;
-            this.gameDescription.Location = new System.Drawing.Point(17, 661);
+            this.gameDescription.Location = new System.Drawing.Point(17, 767);
             this.gameDescription.Name = "gameDescription";
-            this.gameDescription.Size = new System.Drawing.Size(562, 712);
+            this.gameDescription.Size = new System.Drawing.Size(562, 606);
             this.gameDescription.TabIndex = 2;
             this.gameDescription.Text = "label1";
             this.gameDescription.Click += new System.EventHandler(this.label1_Click);
@@ -226,6 +228,7 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
+            this.guna2Panel1.Controls.Add(this.gameLibrarybtn);
             this.guna2Panel1.Controls.Add(this.label4);
             this.guna2Panel1.Controls.Add(this.label10);
             this.guna2Panel1.Controls.Add(this.gameRelease);
@@ -243,6 +246,27 @@
             this.guna2Panel1.Size = new System.Drawing.Size(527, 715);
             this.guna2Panel1.TabIndex = 15;
             // 
+            // gameLibrarybtn
+            // 
+            this.gameLibrarybtn.Animated = true;
+            this.gameLibrarybtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
+            this.gameLibrarybtn.BorderColor = System.Drawing.Color.Transparent;
+            this.gameLibrarybtn.BorderRadius = 18;
+            this.gameLibrarybtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.gameLibrarybtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.gameLibrarybtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.gameLibrarybtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.gameLibrarybtn.FillColor = System.Drawing.Color.DimGray;
+            this.gameLibrarybtn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold);
+            this.gameLibrarybtn.ForeColor = System.Drawing.Color.White;
+            this.gameLibrarybtn.IndicateFocus = true;
+            this.gameLibrarybtn.Location = new System.Drawing.Point(37, 609);
+            this.gameLibrarybtn.Name = "gameLibrarybtn";
+            this.gameLibrarybtn.Size = new System.Drawing.Size(469, 65);
+            this.gameLibrarybtn.TabIndex = 15;
+            this.gameLibrarybtn.Text = "In library";
+            this.gameLibrarybtn.Click += new System.EventHandler(this.gameLibrarybtn_Click);
+            // 
             // gamePrice
             // 
             this.gamePrice.Animated = true;
@@ -254,7 +278,7 @@
             this.gamePrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.gamePrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.gamePrice.FillColor = System.Drawing.Color.Gray;
-            this.gamePrice.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.gamePrice.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold);
             this.gamePrice.ForeColor = System.Drawing.Color.White;
             this.gamePrice.IndicateFocus = true;
             this.gamePrice.Location = new System.Drawing.Point(37, 609);
@@ -262,12 +286,25 @@
             this.gamePrice.Size = new System.Drawing.Size(469, 65);
             this.gamePrice.TabIndex = 14;
             this.gamePrice.Text = "Buy now for ";
+            this.gamePrice.Click += new System.EventHandler(this.gamePrice_Click);
+            // 
+            // gameName
+            // 
+            this.gameName.BackColor = System.Drawing.Color.Transparent;
+            this.gameName.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.gameName.ForeColor = System.Drawing.Color.White;
+            this.gameName.Location = new System.Drawing.Point(15, 661);
+            this.gameName.Name = "gameName";
+            this.gameName.Size = new System.Drawing.Size(564, 106);
+            this.gameName.TabIndex = 16;
+            this.gameName.Text = "label1";
             // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(11)))));
+            this.Controls.Add(this.gameName);
             this.Controls.Add(this.gameDescription);
             this.Controls.Add(this.GameLogoInPicture);
             this.Controls.Add(this.gameCover);
@@ -302,5 +339,7 @@
         private System.Windows.Forms.Label gameRelease;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button gamePrice;
+        private System.Windows.Forms.Label gameName;
+        private Guna.UI2.WinForms.Guna2Button gameLibrarybtn;
     }
 }

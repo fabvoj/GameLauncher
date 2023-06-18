@@ -87,7 +87,18 @@ namespace GameLauncher
             MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=; database=eclipse");
             connection.Open();
 
-            string query = "SELECT * FROM games";
+            string user_query = "SELECT user_id FROM userinfo WHERE Email=@Email;";
+            MySqlCommand user_command = new MySqlCommand(user_query, connection);
+            user_command.Parameters.AddWithValue("@Email", login.userEmail);
+            MySqlDataReader user_reader = user_command.ExecuteReader();
+            string user_id = null;
+            while (user_reader.Read())
+            {
+                user_id = user_reader["user_id"].ToString();
+            }
+            user_reader.Close();
+
+            string query = "SELECT games.game_name, games.game_picture, games.game_price FROM games LEFT JOIN user_games ON games.game_id = user_games.game_id AND user_games.user_id =" + user_id + " WHERE user_games.user_id IS NULL;";
             MySqlCommand command = new MySqlCommand(query, connection);
 
             MySqlDataReader reader = command.ExecuteReader();
@@ -109,20 +120,18 @@ namespace GameLauncher
 
                 flowLayoutPanel1.Controls.Add(game);
             }
-            Console.WriteLine("hry su nacitane");
             reader.Close();
             connection.Close();
         }
 
         private void GameClicked(object sender, EventArgs e)
         {
-            Console.WriteLine("robim na tom");
             Games gameclick = (Games)sender;
             string zakliknutahra = gameclick.title;
 
             MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=eclipse");
             connection.Open();
-            
+
             string query = "SELECT * FROM games WHERE game_name = @title";
             MySqlCommand command = new MySqlCommand(query, connection);
             command.Parameters.AddWithValue("@title", zakliknutahra);
@@ -142,7 +151,9 @@ namespace GameLauncher
                 string publisher = reader["game_publisher"].ToString();
                 string release = reader["game_release"].ToString();
                 string castPrice = reader["game_price"].ToString();
+
                 string price = "Buy now for " + castPrice;
+                string name = reader["game_name"].ToString();
 
                 Game gameska = new Game();
                 gameska.cover = imagecover;
@@ -155,13 +166,13 @@ namespace GameLauncher
                 gameska.genre = genre;
                 gameska.features = features;
                 gameska.price = price;
+                gameska.name = name;
 
                 flowLayoutPanel1.Controls.Clear();
                 flowLayoutPanel1.Controls.Add(gameska);
                 flowLayoutPanel3.Visible = true;
 
             }
-            Console.WriteLine("hotovo");
             reader.Close();
             connection.Close();
         }
