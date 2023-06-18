@@ -79,9 +79,10 @@ namespace GameLauncher
         }
 
 
-        private void populateItems()
+        public void populateItems()
         {
             flowLayoutPanel3.Visible = false;
+            flowLayoutPanel1.Controls.Clear();
             MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=; database=eclipse");
             connection.Open();
 
@@ -154,8 +155,8 @@ namespace GameLauncher
                 gameska.features = features;
                 gameska.price = price;
 
-                flowLayoutPanel1.Visible = false;
-                flowLayoutPanel2.Controls.Add(gameska);
+                flowLayoutPanel1.Controls.Clear();
+                flowLayoutPanel1.Controls.Add(gameska);
                 flowLayoutPanel3.Visible = true;
 
             }
@@ -164,8 +165,5 @@ namespace GameLauncher
             connection.Close();
         }
     }
-
-
-
 }
 

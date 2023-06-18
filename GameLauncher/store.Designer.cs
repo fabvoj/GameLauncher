@@ -42,7 +42,6 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.backBtn1 = new GameLauncher.BackBtn();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -231,17 +230,17 @@
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(11)))));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(308, 48);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 46);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1076, 700);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1163, 700);
             this.flowLayoutPanel1.TabIndex = 12;
             // 
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(11)))));
+            this.guna2Panel2.Controls.Add(this.flowLayoutPanel1);
             this.guna2Panel2.Controls.Add(this.flowLayoutPanel3);
-            this.guna2Panel2.Controls.Add(this.flowLayoutPanel2);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2Panel2.Location = new System.Drawing.Point(263, 0);
             this.guna2Panel2.Name = "guna2Panel2";
@@ -251,18 +250,10 @@
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.Controls.Add(this.backBtn1);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(24, 15);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(11, 4);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(40, 40);
             this.flowLayoutPanel3.TabIndex = 1;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.AutoScroll = true;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 48);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1163, 700);
-            this.flowLayoutPanel2.TabIndex = 0;
             // 
             // backBtn1
             // 
@@ -277,7 +268,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1429, 748);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.guna2ControlBox3);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2Panel1);
@@ -310,7 +300,6 @@
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private BackBtn backBtn1;
     }

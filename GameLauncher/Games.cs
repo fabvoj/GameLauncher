@@ -61,17 +61,18 @@ namespace GameLauncher
         private void Games_MouseEnter(object sender, EventArgs e)
         {
             this.BackColor = Color.FromArgb(39, 49, 56);
+            this.Cursor = Cursors.Hand;
         }
 
         private void Games_MouseLeave(object sender, EventArgs e)
         {
             this.BackColor = Color.FromArgb(16, 23, 28);
+            this.Cursor = Cursors.Default;
         }
 
         private void gamePicture_MouseEnter(object sender, EventArgs e)
         {
             this.BackColor = Color.White;
-            this.Cursor = System.Windows.Forms.Cursors.Hand;
         }
 
         private void Games_Click(object sender, EventArgs e)

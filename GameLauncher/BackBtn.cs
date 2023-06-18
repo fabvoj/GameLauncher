@@ -30,7 +30,8 @@ namespace GameLauncher
 
         private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
         {
-            
+            store Form = this.FindForm() as store;
+            Form.populateItems();
         }
     }
 }

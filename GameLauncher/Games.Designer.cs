@@ -36,12 +36,12 @@
             // 
             // gamePicture
             // 
-            this.gamePicture.BorderRadius = 10;
+            this.gamePicture.BorderRadius = 5;
             this.gamePicture.FillColor = System.Drawing.Color.Transparent;
             this.gamePicture.ImageRotate = 0F;
-            this.gamePicture.Location = new System.Drawing.Point(19, 26);
+            this.gamePicture.Location = new System.Drawing.Point(8, 0);
             this.gamePicture.Name = "gamePicture";
-            this.gamePicture.Size = new System.Drawing.Size(210, 280);
+            this.gamePicture.Size = new System.Drawing.Size(261, 348);
             this.gamePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.gamePicture.TabIndex = 0;
             this.gamePicture.TabStop = false;
@@ -51,12 +51,11 @@
             // 
             // gameTitle
             // 
-            this.gameTitle.AutoSize = true;
-            this.gameTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.gameTitle.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.gameTitle.ForeColor = System.Drawing.Color.White;
-            this.gameTitle.Location = new System.Drawing.Point(18, 320);
+            this.gameTitle.Location = new System.Drawing.Point(5, 342);
             this.gameTitle.Name = "gameTitle";
-            this.gameTitle.Size = new System.Drawing.Size(41, 15);
+            this.gameTitle.Size = new System.Drawing.Size(264, 57);
             this.gameTitle.TabIndex = 1;
             this.gameTitle.Text = "label1";
             this.gameTitle.Click += new System.EventHandler(this.Games_Click);
@@ -66,11 +65,11 @@
             // gamePrice
             // 
             this.gamePrice.AutoSize = true;
-            this.gamePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.gamePrice.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.gamePrice.ForeColor = System.Drawing.Color.White;
-            this.gamePrice.Location = new System.Drawing.Point(20, 351);
+            this.gamePrice.Location = new System.Drawing.Point(6, 406);
             this.gamePrice.Name = "gamePrice";
-            this.gamePrice.Size = new System.Drawing.Size(41, 15);
+            this.gamePrice.Size = new System.Drawing.Size(50, 20);
             this.gamePrice.TabIndex = 2;
             this.gamePrice.Text = "label2";
             this.gamePrice.Click += new System.EventHandler(this.Games_Click);
@@ -86,7 +85,7 @@
             this.Controls.Add(this.gameTitle);
             this.Controls.Add(this.gamePicture);
             this.Name = "Games";
-            this.Size = new System.Drawing.Size(250, 390);
+            this.Size = new System.Drawing.Size(279, 450);
             this.Load += new System.EventHandler(this.Games_Load);
             this.Click += new System.EventHandler(this.Games_Click);
             this.MouseEnter += new System.EventHandler(this.Games_MouseEnter);
