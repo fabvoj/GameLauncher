@@ -25,7 +25,7 @@ namespace GameLauncher
         {
             cboGender.Items.Add("Male");
             cboGender.Items.Add("Female");
-            cboGender.Items.Add("Mental Disorder");
+            cboGender.Items.Add("Other");
 
             con.Open();
             string qry = "SELECT Gender FROM userinfo WHERE Email='" + login.userEmail + "';";
@@ -66,6 +66,36 @@ namespace GameLauncher
             con.Close();
 
             MessageBox.Show("Gender succesfully changed!");
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -32,7 +32,7 @@ namespace GameLauncher
             {
                 qryFName = (string)reader["FirstName"];
                 qryLName = (string)reader["LastName"];
-                changeFNameBtn.PlaceholderText = qryFName;
+                changeFNameBtn.PlaceholderText = "Current first name: '"+qryFName+"'";
                 changeLNameBtn.PlaceholderText = qryLName;
             }
             con.Close();
@@ -50,6 +50,41 @@ namespace GameLauncher
         }
 
         private void changeLNameBtn_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
