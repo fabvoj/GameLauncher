@@ -240,7 +240,7 @@
             this.guna2Panel1.Controls.Add(this.gameGenres);
             this.guna2Panel1.Location = new System.Drawing.Point(608, 627);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(527, 774);
+            this.guna2Panel1.Size = new System.Drawing.Size(527, 715);
             this.guna2Panel1.TabIndex = 15;
             // 
             // gamePrice
@@ -273,7 +273,7 @@
             this.Controls.Add(this.gameCover);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "Game";
-            this.Size = new System.Drawing.Size(1135, 1401);
+            this.Size = new System.Drawing.Size(1135, 1340);
             this.Load += new System.EventHandler(this.Game_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gameCover)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameLogoInPicture)).EndInit();

@@ -40,7 +40,7 @@
             this.guna2CirclePictureBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(30, 30);
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.guna2CirclePictureBox1.TabIndex = 0;
             this.guna2CirclePictureBox1.TabStop = false;
@@ -56,7 +56,7 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.guna2CirclePictureBox1);
             this.Name = "BackBtn";
-            this.Size = new System.Drawing.Size(40, 40);
+            this.Size = new System.Drawing.Size(30, 30);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
