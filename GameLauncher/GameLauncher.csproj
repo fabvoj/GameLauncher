@@ -283,6 +283,15 @@
   <ItemGroup>
     <None Include="assets\icons\arrow.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\pfp\man-pfp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\pfp\woman-pfp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\pfp\other-pfp.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"

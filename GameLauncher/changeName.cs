@@ -56,7 +56,11 @@ namespace GameLauncher
 
         private void changeBtn_Click(object sender, EventArgs e)
         {
-            if(changeLNameBtn.Text == string.Empty)
+            bool fName = char.IsUpper(changeFNameBtn.Text, 0);
+            bool lName = char.IsUpper(changeLNameBtn.Text, 0);
+
+
+            if (changeLNameBtn.Text == string.Empty)
             {
                 changeLNameBtn.Text = qryLName;
             }
@@ -66,21 +70,38 @@ namespace GameLauncher
                 changeFNameBtn.Text = qryFName;
             }
 
-
-            con.Open();
-
-            string qry = "UPDATE userinfo SET FirstName='" + changeFNameBtn.Text + "', LastName='" + changeLNameBtn.Text + "' WHERE Email='" + login.userEmail + "'";
-            MySqlCommand cmd = new MySqlCommand(qry, con);
-
-            MySqlDataReader reader = null;
-            reader = cmd.ExecuteReader();
-            while(reader.Read())
+            if (fName == false)
             {
-
+                changeFNameBtn.BorderColor = Color.Red;
+                MessageBox.Show("Start First Name with an uppercase character!", "Invalid Character", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            con.Close();
 
-            MessageBox.Show("Credentials succesfully changed!");
+            if (lName == false)
+            {
+                changeLNameBtn.BorderColor = Color.Red;
+                MessageBox.Show("Start Last Name with an uppercase character!", "Invalid Character", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            else
+            {
+                con.Open();
+
+                string qry = "UPDATE userinfo SET FirstName='" + changeFNameBtn.Text + "', LastName='" + changeLNameBtn.Text + "' WHERE Email='" + login.userEmail + "'";
+                MySqlCommand cmd = new MySqlCommand(qry, con);
+
+                MySqlDataReader reader = null;
+                reader = cmd.ExecuteReader();
+                while(reader.Read())
+                {
+
+                }
+                con.Close();
+
+                MessageBox.Show("Credentials succesfully changed!");
+            }
+            
         }
     }
 }

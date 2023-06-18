@@ -49,7 +49,7 @@
             this.changeBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.changeBtn.ForeColor = System.Drawing.Color.White;
             this.changeBtn.IndicateFocus = true;
-            this.changeBtn.Location = new System.Drawing.Point(322, 457);
+            this.changeBtn.Location = new System.Drawing.Point(317, 457);
             this.changeBtn.Name = "changeBtn";
             this.changeBtn.Size = new System.Drawing.Size(243, 60);
             this.changeBtn.TabIndex = 16;
@@ -58,6 +58,7 @@
             // 
             // changeCPassBtn
             // 
+            this.changeCPassBtn.Animated = true;
             this.changeCPassBtn.BorderColor = System.Drawing.Color.White;
             this.changeCPassBtn.BorderRadius = 6;
             this.changeCPassBtn.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -71,7 +72,7 @@
             this.changeCPassBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.changeCPassBtn.ForeColor = System.Drawing.Color.White;
             this.changeCPassBtn.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.changeCPassBtn.Location = new System.Drawing.Point(231, 347);
+            this.changeCPassBtn.Location = new System.Drawing.Point(226, 347);
             this.changeCPassBtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.changeCPassBtn.Name = "changeCPassBtn";
             this.changeCPassBtn.PasswordChar = '*';
@@ -87,7 +88,7 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(191, 56);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(186, 56);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(484, 67);
             this.guna2HtmlLabel1.TabIndex = 14;
@@ -97,6 +98,7 @@
             // 
             // changePassBtn
             // 
+            this.changePassBtn.Animated = true;
             this.changePassBtn.BorderColor = System.Drawing.Color.White;
             this.changePassBtn.BorderRadius = 6;
             this.changePassBtn.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -110,7 +112,7 @@
             this.changePassBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.changePassBtn.ForeColor = System.Drawing.Color.White;
             this.changePassBtn.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.changePassBtn.Location = new System.Drawing.Point(231, 259);
+            this.changePassBtn.Location = new System.Drawing.Point(226, 259);
             this.changePassBtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.changePassBtn.Name = "changePassBtn";
             this.changePassBtn.PasswordChar = '*';
@@ -123,6 +125,7 @@
             // 
             // changeOPassBtn
             // 
+            this.changeOPassBtn.Animated = true;
             this.changeOPassBtn.BorderColor = System.Drawing.Color.White;
             this.changeOPassBtn.BorderRadius = 6;
             this.changeOPassBtn.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -136,7 +139,7 @@
             this.changeOPassBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.changeOPassBtn.ForeColor = System.Drawing.Color.White;
             this.changeOPassBtn.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.changeOPassBtn.Location = new System.Drawing.Point(231, 149);
+            this.changeOPassBtn.Location = new System.Drawing.Point(226, 149);
             this.changeOPassBtn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.changeOPassBtn.Name = "changeOPassBtn";
             this.changeOPassBtn.PasswordChar = '*';

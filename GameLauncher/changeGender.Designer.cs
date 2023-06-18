@@ -47,7 +47,7 @@
             this.changeBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.changeBtn.ForeColor = System.Drawing.Color.White;
             this.changeBtn.IndicateFocus = true;
-            this.changeBtn.Location = new System.Drawing.Point(244, 328);
+            this.changeBtn.Location = new System.Drawing.Point(322, 366);
             this.changeBtn.Name = "changeBtn";
             this.changeBtn.Size = new System.Drawing.Size(243, 60);
             this.changeBtn.TabIndex = 11;
@@ -59,7 +59,7 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(155, 163);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(236, 130);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(440, 67);
             this.guna2HtmlLabel1.TabIndex = 8;
@@ -79,8 +79,9 @@
             this.cboGender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cboGender.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cboGender.ForeColor = System.Drawing.Color.White;
+            this.cboGender.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cboGender.ItemHeight = 30;
-            this.cboGender.Location = new System.Drawing.Point(155, 265);
+            this.cboGender.Location = new System.Drawing.Point(247, 225);
             this.cboGender.Name = "cboGender";
             this.cboGender.Size = new System.Drawing.Size(411, 36);
             this.cboGender.TabIndex = 12;

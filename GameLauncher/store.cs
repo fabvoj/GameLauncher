@@ -19,6 +19,7 @@ namespace GameLauncher
         {
             InitializeComponent();
             populateItems();
+            get_pfpPath();
         }
 
         private void store_Load(object sender, EventArgs e)
@@ -163,6 +164,43 @@ namespace GameLauncher
             Console.WriteLine("hotovo");
             reader.Close();
             connection.Close();
+        }
+
+        private void pfpBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            settings nastavenia = new settings();
+            nastavenia.ShowDialog();
+        }
+
+        public void get_pfpPath()
+        {
+            MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=; database=eclipse");
+            connection.Open();
+            string qry = "SELECT Gender FROM userinfo WHERE Email='" + login.userEmail + "';";
+            MySqlCommand cmd = new MySqlCommand(qry, connection);
+            MySqlDataReader reader = null;
+            reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string pfpPath = (string)reader["Gender"];
+
+                if (pfpPath == "Male")
+                {
+                    pfpBtn.Image = GameLauncher.Properties.Resources.man_pfp;
+                }
+
+                else if (pfpPath == "Female")
+                {
+                    pfpBtn.Image = GameLauncher.Properties.Resources.woman_pfp;
+                }
+
+                else if (pfpPath == "Other")
+                {
+                    pfpBtn.Image = GameLauncher.Properties.Resources.other_pfp;
+                }
+            }
         }
     }
 }

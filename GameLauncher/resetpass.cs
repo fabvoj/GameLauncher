@@ -14,12 +14,6 @@ namespace GameLauncher
 {
     public partial class resetpass : Form
     {
-        /*static readonly string server = "127.0.0.1";
-        static readonly string port = "3306";
-        static readonly string user = "root";
-        static readonly string pass = "";
-        public static string connection_str = "server='" + server + "'; user='" + user +"'; password='" + pass +"'";
-        */
         MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=; database=Eclipse");
         string email = sendcode.to;
         public resetpass()
@@ -79,6 +73,26 @@ namespace GameLauncher
         }
 
         private void changeConfirm_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logoName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logoImg_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel4_Click(object sender, EventArgs e)
         {
 
         }

@@ -56,6 +56,7 @@
             // 
             // changeEmailBtn
             // 
+            this.changeEmailBtn.Animated = true;
             this.changeEmailBtn.BorderColor = System.Drawing.Color.White;
             this.changeEmailBtn.BorderRadius = 6;
             this.changeEmailBtn.Cursor = System.Windows.Forms.Cursors.IBeam;

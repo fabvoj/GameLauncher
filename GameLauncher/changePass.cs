@@ -52,84 +52,6 @@ namespace GameLauncher
 
         private void changeBtn_Click(object sender, EventArgs e)
         {
-            /*if (changeOPassBtn.Text != qryPass)
-            {
-                changeOPassBtn.BorderColor = Color.Red;
-                MessageBox.Show("Wrong Old Password!");
-            }
-
-            else
-            {
-                changeOPassBtn.BorderColor= Color.LimeGreen;
-                MessageBox.Show("Old password verified!");
-                changeOPassBtn.BorderColor = Color.White;
-
-                changePassBtn.Enabled = true;
-                changeCPassBtn.Enabled = true;
-
-                if (changePassBtn.Text != changeCPassBtn.Text)
-                {
-                    changePassBtn.BorderColor = Color.Red;
-                    changeCPassBtn.BorderColor = Color.Red;
-                    MessageBox.Show("Password's doesn't match!");
-                }
-                else
-                {
-                    con.Open();
-                    string qry = "UPDATE userinfo SET Password='" + changePassBtn.Text + "' WHERE Email='" + login.userEmail + "';";
-                    MySqlCommand cmd = new MySqlCommand(qry, con);
-
-                    MySqlDataReader reader = null;
-                    reader = cmd.ExecuteReader();
-                    while (reader.Read())
-                    {
-
-                    }
-                    con.Close();
-
-                    MessageBox.Show("Password succesfully changed!");
-                }
-            }*/
-
-            /*if (changeOPassBtn.Text == qryPass)
-            {
-                changeOPassBtn.BorderColor = Color.LimeGreen;
-                MessageBox.Show("Old password verified!");
-                changeOPassBtn.BorderColor = Color.White;
-
-                changePassBtn.Enabled = true;
-                changeCPassBtn.Enabled = true;
-
-                if (changePassBtn.Text == changeCPassBtn.Text)
-                {
-                    con.Open();
-                    string qry = "UPDATE userinfo SET Password='" + changePassBtn.Text + "' WHERE Email='" + login.userEmail + "';";
-                    MySqlCommand cmd = new MySqlCommand(qry, con);
-
-                    MySqlDataReader reader = null;
-                    reader = cmd.ExecuteReader();
-                    while (reader.Read())
-                    {
-
-                    }
-                    con.Close();
-
-                    MessageBox.Show("Password succesfully changed!");
-                }
-
-                else
-                {
-                    changePassBtn.BorderColor = Color.Red;
-                    changeCPassBtn.BorderColor = Color.Red;
-                    MessageBox.Show("Password's doesn't match!");
-                }
-            }
-            else
-            {
-                changeOPassBtn.BorderColor = Color.Red;
-                MessageBox.Show("Wrong Old Password!");
-            }*/
-
             if (changeOPassBtn.Text == qryPass && changePassBtn.Text == changeCPassBtn.Text)
             {
                 con.Open();
@@ -151,6 +73,14 @@ namespace GameLauncher
             {
                 changeOPassBtn.BorderColor = Color.Red;
                 MessageBox.Show("Wrong Old Password!");
+            }
+
+            else if (changePassBtn.TextLength < 7 || changeCPassBtn.TextLength < 7)
+            {
+                changePassBtn.BorderColor = Color.Red;
+                changeCPassBtn.BorderColor = Color.Red;
+                MessageBox.Show("Password too short!", "Error");
+                return;
             }
 
             else

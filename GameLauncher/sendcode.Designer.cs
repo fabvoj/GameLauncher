@@ -40,7 +40,10 @@
             this.rstVerify = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.logoImg = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.logoName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoImg)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2HtmlLabel1
@@ -48,7 +51,7 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(85, 17);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(59, 107);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(321, 42);
             this.guna2HtmlLabel1.TabIndex = 0;
@@ -60,7 +63,7 @@
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(85, 94);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(59, 186);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(32, 17);
             this.guna2HtmlLabel3.TabIndex = 2;
@@ -71,7 +74,7 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(85, 213);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(59, 305);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(67, 17);
             this.guna2HtmlLabel4.TabIndex = 3;
@@ -90,7 +93,7 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(243, 137);
+            this.guna2Button1.Location = new System.Drawing.Point(217, 229);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(93, 25);
             this.guna2Button1.TabIndex = 4;
@@ -113,7 +116,7 @@
             this.rstCode.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.rstCode.ForeColor = System.Drawing.Color.White;
             this.rstCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rstCode.Location = new System.Drawing.Point(177, 202);
+            this.rstCode.Location = new System.Drawing.Point(151, 294);
             this.rstCode.Name = "rstCode";
             this.rstCode.PasswordChar = '\0';
             this.rstCode.PlaceholderForeColor = System.Drawing.Color.White;
@@ -138,7 +141,7 @@
             this.rstEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.rstEmail.ForeColor = System.Drawing.Color.White;
             this.rstEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rstEmail.Location = new System.Drawing.Point(177, 85);
+            this.rstEmail.Location = new System.Drawing.Point(151, 177);
             this.rstEmail.Name = "rstEmail";
             this.rstEmail.PasswordChar = '\0';
             this.rstEmail.PlaceholderForeColor = System.Drawing.Color.White;
@@ -154,17 +157,19 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
             this.guna2Panel1.BorderRadius = 6;
             this.guna2Panel1.Controls.Add(this.guna2Button2);
+            this.guna2Panel1.Controls.Add(this.logoName);
             this.guna2Panel1.Controls.Add(this.rstVerify);
-            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
+            this.guna2Panel1.Controls.Add(this.logoImg);
             this.guna2Panel1.Controls.Add(this.rstCode);
-            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel4);
+            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2Panel1.Controls.Add(this.rstEmail);
-            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel3);
+            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel4);
             this.guna2Panel1.Controls.Add(this.guna2Button1);
+            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel3);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(288, 121);
+            this.guna2Panel1.Location = new System.Drawing.Point(351, 86);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(487, 364);
+            this.guna2Panel1.Size = new System.Drawing.Size(441, 434);
             this.guna2Panel1.TabIndex = 8;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -180,7 +185,7 @@
             this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(313, 260);
+            this.guna2Button2.Location = new System.Drawing.Point(287, 352);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(93, 25);
             this.guna2Button2.TabIndex = 9;
@@ -199,7 +204,7 @@
             this.rstVerify.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
             this.rstVerify.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.rstVerify.ForeColor = System.Drawing.Color.White;
-            this.rstVerify.Location = new System.Drawing.Point(177, 260);
+            this.rstVerify.Location = new System.Drawing.Point(151, 352);
             this.rstVerify.Name = "rstVerify";
             this.rstVerify.Size = new System.Drawing.Size(93, 25);
             this.rstVerify.TabIndex = 8;
@@ -238,6 +243,30 @@
             this.guna2ControlBox2.UseTransparentBackground = true;
             this.guna2ControlBox2.Click += new System.EventHandler(this.guna2ControlBox2_Click);
             // 
+            // logoImg
+            // 
+            this.logoImg.Image = global::GameLauncher.Properties.Resources.eclipse_logo;
+            this.logoImg.ImageRotate = 0F;
+            this.logoImg.Location = new System.Drawing.Point(293, 53);
+            this.logoImg.Name = "logoImg";
+            this.logoImg.Size = new System.Drawing.Size(48, 48);
+            this.logoImg.TabIndex = 17;
+            this.logoImg.TabStop = false;
+            this.logoImg.Click += new System.EventHandler(this.logoImg_Click);
+            // 
+            // logoName
+            // 
+            this.logoName.BackColor = System.Drawing.Color.Transparent;
+            this.logoName.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.logoName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
+            this.logoName.Location = new System.Drawing.Point(99, 53);
+            this.logoName.Name = "logoName";
+            this.logoName.Size = new System.Drawing.Size(154, 42);
+            this.logoName.TabIndex = 16;
+            this.logoName.Text = "E C L I P S E";
+            this.logoName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.logoName.Click += new System.EventHandler(this.logoName_Click);
+            // 
             // sendcode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,6 +283,7 @@
             this.Text = "sendcode";
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoImg)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -271,5 +301,7 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2PictureBox logoImg;
+        private Guna.UI2.WinForms.Guna2HtmlLabel logoName;
     }
 }

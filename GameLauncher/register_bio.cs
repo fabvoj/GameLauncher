@@ -7,16 +7,18 @@ using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 namespace GameLauncher
 {
     public partial class register_bio : Form
     {
         MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=; database=Eclipse");
-        public static string newEmail;
+        public static string newEmail, newAccGender;
         public register_bio()
         {
             InitializeComponent();
@@ -130,10 +132,23 @@ namespace GameLauncher
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            if (!this.txtEmail.Text.Contains('@') || !this.txtEmail.Text.Contains('.'))
+            string forbidden_email1 = @"^[a-zA-Z0-9]+.[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z]{2,}$";
+            string forbidden_email2 = @"^[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z]{2,}$";
+
+            bool fName = char.IsUpper(txtFName.Text , 0);
+            bool lName = char.IsUpper(txtLName.Text, 0);
+
+            if ((!this.txtEmail.Text.Contains('@') || !this.txtEmail.Text.Contains('.')) && txtEmail.TextLength < 3)
             {
                 txtEmail.BorderColor = Color.Red;
                 MessageBox.Show("Please Enter A Valid Email", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!(Regex.IsMatch(txtEmail.Text, forbidden_email1) || Regex.IsMatch(txtEmail.Text, forbidden_email2)))        
+            {
+                txtEmail.BorderColor = Color.Red;
+                MessageBox.Show("Enter valid characters!", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -147,12 +162,25 @@ namespace GameLauncher
                 return;
             }
 
+            if(fName == false)                                                                                  
+            {
+                txtFName.BorderColor = Color.Red;
+                MessageBox.Show("Start First Name with an uppercase character!", "Invalid Character", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (lName == false)                                                                                 
+            {
+                txtLName.BorderColor = Color.Red;
+                MessageBox.Show("Start Last Name with an uppercase character!", "Invalid Character", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             else
             {
                 connection.Open();
 
-                MySqlCommand cmd2 = new MySqlCommand("SELECT * FROM userinfo WHERE Email = @UserEmail", connection);
-                cmd2.Parameters.AddWithValue("@UserEmail", txtEmail.Text);
+                MySqlCommand cmd2 = new MySqlCommand("SELECT * FROM userinfo WHERE Email = '" + txtEmail.Text + "'", connection);
 
                 bool mailExists = false;
 
@@ -172,7 +200,6 @@ namespace GameLauncher
                     }
                     catch (Exception ex)
                     {
-                        // Show any error message.
                         MessageBox.Show(ex.Message);
                     }
 
@@ -182,6 +209,7 @@ namespace GameLauncher
                     txtEmail.BorderColor = Color.LimeGreen;
 
                     newEmail = txtEmail.Text;
+                    newAccGender = cboGender.Text;
 
                 }
 
@@ -210,7 +238,7 @@ namespace GameLauncher
         {
             cboGender.Items.Add("Male");
             cboGender.Items.Add("Female");
-            cboGender.Items.Add("Mental Disorder");
+            cboGender.Items.Add("Other");
         }
 
         private void registerProgressBar_ValueChanged(object sender, EventArgs e)

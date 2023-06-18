@@ -33,7 +33,6 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.homeBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.storeBtn = new Guna.UI2.WinForms.Guna2Button();
             this.libraryBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -42,15 +41,16 @@
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.txtWelcome = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pfpBtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(11)))));
+            this.guna2Panel1.Controls.Add(this.pfpBtn);
             this.guna2Panel1.Controls.Add(this.btnLogout);
             this.guna2Panel1.Controls.Add(this.homeBtn);
-            this.guna2Panel1.Controls.Add(this.guna2ImageButton1);
             this.guna2Panel1.Controls.Add(this.storeBtn);
             this.guna2Panel1.Controls.Add(this.libraryBtn);
             this.guna2Panel1.Controls.Add(this.guna2Button1);
@@ -76,7 +76,7 @@
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.IndicateFocus = true;
-            this.btnLogout.Location = new System.Drawing.Point(66, 560);
+            this.btnLogout.Location = new System.Drawing.Point(109, 563);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(78, 22);
             this.btnLogout.TabIndex = 11;
@@ -85,6 +85,7 @@
             // 
             // homeBtn
             // 
+            this.homeBtn.Animated = true;
             this.homeBtn.BackColor = System.Drawing.Color.Transparent;
             this.homeBtn.BorderColor = System.Drawing.Color.Transparent;
             this.homeBtn.BorderRadius = 6;
@@ -103,24 +104,9 @@
             this.homeBtn.Text = "HOME";
             this.homeBtn.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
-            // guna2ImageButton1
-            // 
-            this.guna2ImageButton1.AnimatedGIF = true;
-            this.guna2ImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Image = global::GameLauncher.Properties.Resources.eclipse_logo1;
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.Location = new System.Drawing.Point(12, 544);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(48, 52);
-            this.guna2ImageButton1.TabIndex = 9;
-            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
-            // 
             // storeBtn
             // 
+            this.storeBtn.Animated = true;
             this.storeBtn.BackColor = System.Drawing.Color.Transparent;
             this.storeBtn.BorderColor = System.Drawing.Color.Transparent;
             this.storeBtn.BorderRadius = 6;
@@ -140,6 +126,7 @@
             // 
             // libraryBtn
             // 
+            this.libraryBtn.Animated = true;
             this.libraryBtn.BackColor = System.Drawing.Color.Transparent;
             this.libraryBtn.BorderColor = System.Drawing.Color.Transparent;
             this.libraryBtn.BorderRadius = 6;
@@ -159,6 +146,7 @@
             // 
             // guna2Button1
             // 
+            this.guna2Button1.Animated = true;
             this.guna2Button1.BorderColor = System.Drawing.Color.Transparent;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -240,6 +228,22 @@
             this.txtWelcome.Size = new System.Drawing.Size(361, 51);
             this.txtWelcome.TabIndex = 9;
             // 
+            // pfpBtn
+            // 
+            this.pfpBtn.BackColor = System.Drawing.Color.Transparent;
+            this.pfpBtn.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.pfpBtn.HoverState.ImageSize = new System.Drawing.Size(55, 55);
+            this.pfpBtn.Image = global::GameLauncher.Properties.Resources.man_pfp;
+            this.pfpBtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.pfpBtn.ImageRotate = 0F;
+            this.pfpBtn.ImageSize = new System.Drawing.Size(50, 50);
+            this.pfpBtn.Location = new System.Drawing.Point(12, 536);
+            this.pfpBtn.Name = "pfpBtn";
+            this.pfpBtn.PressedState.ImageSize = new System.Drawing.Size(55, 55);
+            this.pfpBtn.Size = new System.Drawing.Size(60, 60);
+            this.pfpBtn.TabIndex = 10;
+            this.pfpBtn.Click += new System.EventHandler(this.pfpBtn_Click);
+            // 
             // home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -272,8 +276,8 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private Guna.UI2.WinForms.Guna2TextBox txtWelcome;
+        private Guna.UI2.WinForms.Guna2ImageButton pfpBtn;
     }
 }

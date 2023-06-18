@@ -39,7 +39,10 @@
             this.changePass = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.logoImg = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.logoName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoImg)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -47,7 +50,9 @@
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
             this.guna2Panel1.BorderRadius = 6;
+            this.guna2Panel1.Controls.Add(this.logoImg);
             this.guna2Panel1.Controls.Add(this.guna2Button3);
+            this.guna2Panel1.Controls.Add(this.logoName);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2Panel1.Controls.Add(this.changeConfirm);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel4);
@@ -55,9 +60,9 @@
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel3);
             this.guna2Panel1.Controls.Add(this.changePass);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(309, 120);
+            this.guna2Panel1.Location = new System.Drawing.Point(351, 86);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(487, 350);
+            this.guna2Panel1.Size = new System.Drawing.Size(441, 434);
             this.guna2Panel1.TabIndex = 9;
             // 
             // guna2Button3
@@ -72,7 +77,7 @@
             this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(313, 215);
+            this.guna2Button3.Location = new System.Drawing.Point(297, 344);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(93, 25);
             this.guna2Button3.TabIndex = 8;
@@ -84,11 +89,12 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(85, 17);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(63, 117);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(321, 42);
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Reset Password via Email";
+            this.guna2HtmlLabel1.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
             // 
             // changeConfirm
             // 
@@ -105,7 +111,7 @@
             this.changeConfirm.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.changeConfirm.ForeColor = System.Drawing.Color.White;
             this.changeConfirm.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.changeConfirm.Location = new System.Drawing.Point(177, 154);
+            this.changeConfirm.Location = new System.Drawing.Point(155, 282);
             this.changeConfirm.Name = "changeConfirm";
             this.changeConfirm.PasswordChar = '*';
             this.changeConfirm.PlaceholderText = "Confirm your Password";
@@ -119,12 +125,13 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(65, 164);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(49, 293);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(100, 17);
             this.guna2HtmlLabel4.TabIndex = 3;
             this.guna2HtmlLabel4.Text = "Confirm Password";
             this.guna2HtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.guna2HtmlLabel4.Click += new System.EventHandler(this.guna2HtmlLabel4_Click);
             // 
             // changeNewPass
             // 
@@ -141,7 +148,7 @@
             this.changeNewPass.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.changeNewPass.ForeColor = System.Drawing.Color.White;
             this.changeNewPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.changeNewPass.Location = new System.Drawing.Point(177, 84);
+            this.changeNewPass.Location = new System.Drawing.Point(155, 187);
             this.changeNewPass.Name = "changeNewPass";
             this.changeNewPass.PasswordChar = '*';
             this.changeNewPass.PlaceholderText = "Set a New Password";
@@ -155,7 +162,7 @@
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(85, 94);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(69, 198);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(80, 17);
             this.guna2HtmlLabel3.TabIndex = 2;
@@ -174,7 +181,7 @@
             this.changePass.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
             this.changePass.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.changePass.ForeColor = System.Drawing.Color.White;
-            this.changePass.Location = new System.Drawing.Point(177, 215);
+            this.changePass.Location = new System.Drawing.Point(155, 344);
             this.changePass.Name = "changePass";
             this.changePass.Size = new System.Drawing.Size(130, 25);
             this.changePass.TabIndex = 4;
@@ -213,6 +220,30 @@
             this.guna2ControlBox2.UseTransparentBackground = true;
             this.guna2ControlBox2.Click += new System.EventHandler(this.guna2ControlBox2_Click);
             // 
+            // logoImg
+            // 
+            this.logoImg.Image = global::GameLauncher.Properties.Resources.eclipse_logo;
+            this.logoImg.ImageRotate = 0F;
+            this.logoImg.Location = new System.Drawing.Point(297, 63);
+            this.logoImg.Name = "logoImg";
+            this.logoImg.Size = new System.Drawing.Size(48, 48);
+            this.logoImg.TabIndex = 17;
+            this.logoImg.TabStop = false;
+            this.logoImg.Click += new System.EventHandler(this.logoImg_Click);
+            // 
+            // logoName
+            // 
+            this.logoName.BackColor = System.Drawing.Color.Transparent;
+            this.logoName.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.logoName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
+            this.logoName.Location = new System.Drawing.Point(103, 63);
+            this.logoName.Name = "logoName";
+            this.logoName.Size = new System.Drawing.Size(154, 42);
+            this.logoName.TabIndex = 16;
+            this.logoName.Text = "E C L I P S E";
+            this.logoName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.logoName.Click += new System.EventHandler(this.logoName_Click);
+            // 
             // resetpass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,6 +260,7 @@
             this.Text = "resetpass";
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoImg)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -245,5 +277,7 @@
         private Guna.UI2.WinForms.Guna2Button changePass;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
+        private Guna.UI2.WinForms.Guna2PictureBox logoImg;
+        private Guna.UI2.WinForms.Guna2HtmlLabel logoName;
     }
 }
