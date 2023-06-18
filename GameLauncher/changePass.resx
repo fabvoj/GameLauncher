@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="guna2HtmlLabel4.Text" xml:space="preserve">
+    <value>- Before clicking on the &lt;em&gt;&lt;strong&gt;CHANGE&lt;/strong&gt;&lt;/em&gt; button, make sure that you&lt;br&gt; typed the right &lt;em&gt;&lt;strong&gt;&lt;u&gt;old password&lt;/u&gt;&lt;/strong&gt;&lt;/em&gt; and the &lt;em&gt;&lt;strong&gt;&lt;u&gt;new password textfields&lt;br&gt; matches&lt;/u&gt;&lt;/strong&gt;&lt;/em&gt;. Make sure that your new password is &lt;em&gt;&lt;strong&gt;&lt;u&gt;longer than 7&lt;br&gt; characters&lt;/u&gt;&lt;/strong&gt;&lt;/em&gt; and doesn't consist of &lt;em&gt;&lt;strong&gt;&lt;u&gt;improper words(optional)&lt;/u&gt;&lt;/strong&gt;&lt;/em&gt;!</value>
+  </data>
 </root>

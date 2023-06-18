@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(settings));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pfpBtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.changePassBtn = new Guna.UI2.WinForms.Guna2Button();
             this.changeUsernameBtn = new Guna.UI2.WinForms.Guna2Button();
             this.changeEmailBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -44,13 +45,18 @@
             this.changeEmail1 = new GameLauncher.changeEmail();
             this.changeGender1 = new GameLauncher.changeGender();
             this.changeName1 = new GameLauncher.changeName();
-            this.pfpBtn = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.guna2Panel1.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(11)))));
+            this.guna2Panel1.Controls.Add(this.guna2VSeparator1);
             this.guna2Panel1.Controls.Add(this.pfpBtn);
             this.guna2Panel1.Controls.Add(this.changePassBtn);
             this.guna2Panel1.Controls.Add(this.changeUsernameBtn);
@@ -67,12 +73,29 @@
             this.guna2Panel1.TabIndex = 10;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
+            // pfpBtn
+            // 
+            this.pfpBtn.BackColor = System.Drawing.Color.Transparent;
+            this.pfpBtn.CheckedState.ImageSize = new System.Drawing.Size(50, 50);
+            this.pfpBtn.HoverState.ImageSize = new System.Drawing.Size(50, 50);
+            this.pfpBtn.Image = global::GameLauncher.Properties.Resources.man_pfp;
+            this.pfpBtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.pfpBtn.ImageRotate = 0F;
+            this.pfpBtn.ImageSize = new System.Drawing.Size(50, 50);
+            this.pfpBtn.Location = new System.Drawing.Point(66, 12);
+            this.pfpBtn.Name = "pfpBtn";
+            this.pfpBtn.PressedState.ImageSize = new System.Drawing.Size(50, 50);
+            this.pfpBtn.Size = new System.Drawing.Size(60, 60);
+            this.pfpBtn.TabIndex = 17;
+            this.pfpBtn.Click += new System.EventHandler(this.pfpBtn_Click);
+            // 
             // changePassBtn
             // 
             this.changePassBtn.Animated = true;
             this.changePassBtn.BackColor = System.Drawing.Color.Transparent;
             this.changePassBtn.BorderColor = System.Drawing.Color.Transparent;
             this.changePassBtn.BorderRadius = 6;
+            this.changePassBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.changePassBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.changePassBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.changePassBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -93,6 +116,7 @@
             this.changeUsernameBtn.BackColor = System.Drawing.Color.Transparent;
             this.changeUsernameBtn.BorderColor = System.Drawing.Color.Transparent;
             this.changeUsernameBtn.BorderRadius = 6;
+            this.changeUsernameBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.changeUsernameBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.changeUsernameBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.changeUsernameBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -113,6 +137,7 @@
             this.changeEmailBtn.BackColor = System.Drawing.Color.Transparent;
             this.changeEmailBtn.BorderColor = System.Drawing.Color.Transparent;
             this.changeEmailBtn.BorderRadius = 6;
+            this.changeEmailBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.changeEmailBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.changeEmailBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.changeEmailBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -133,6 +158,7 @@
             this.changeGenderBtn.BackColor = System.Drawing.Color.Transparent;
             this.changeGenderBtn.BorderColor = System.Drawing.Color.Transparent;
             this.changeGenderBtn.BorderRadius = 6;
+            this.changeGenderBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.changeGenderBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.changeGenderBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.changeGenderBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -153,6 +179,7 @@
             this.changeNameBtn.BackColor = System.Drawing.Color.Transparent;
             this.changeNameBtn.BorderColor = System.Drawing.Color.Transparent;
             this.changeNameBtn.BorderRadius = 6;
+            this.changeNameBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.changeNameBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.changeNameBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.changeNameBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -195,6 +222,7 @@
             this.changeHomeBtn.BackColor = System.Drawing.Color.Transparent;
             this.changeHomeBtn.BorderColor = System.Drawing.Color.Transparent;
             this.changeHomeBtn.BorderRadius = 6;
+            this.changeHomeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.changeHomeBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.changeHomeBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.changeHomeBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -212,109 +240,144 @@
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(412, 281);
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(65, 3);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(418, 130);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(469, 171);
             this.guna2HtmlLabel1.TabIndex = 11;
-            this.guna2HtmlLabel1.Text = "SETTINGS";
+            this.guna2HtmlLabel1.Text = "<h1><em>ECLIPSE</em> SETTINGS</h1>\r\n";
             this.guna2HtmlLabel1.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
             // 
             // guna2ImageButton1
             // 
             this.guna2ImageButton1.AnimatedGIF = true;
             this.guna2ImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Image = global::GameLauncher.Properties.Resources.eclipse_logo1;
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(150, 150);
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(150, 150);
+            this.guna2ImageButton1.Image = global::GameLauncher.Properties.Resources.eclipse_logo100x100;
             this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
             this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.Location = new System.Drawing.Point(596, 94);
+            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(150, 150);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(216, 383);
             this.guna2ImageButton1.Name = "guna2ImageButton1";
             this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(48, 52);
+            this.guna2ImageButton1.Size = new System.Drawing.Size(165, 148);
             this.guna2ImageButton1.TabIndex = 9;
             this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
             // 
             // changePass1
             // 
-            this.changePass1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
-            this.changePass1.Location = new System.Drawing.Point(199, 0);
+            this.changePass1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(11)))));
+            this.changePass1.Location = new System.Drawing.Point(-137, -31);
             this.changePass1.Name = "changePass1";
             this.changePass1.Size = new System.Drawing.Size(875, 607);
             this.changePass1.TabIndex = 16;
             // 
             // changeUsername1
             // 
-            this.changeUsername1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
-            this.changeUsername1.Location = new System.Drawing.Point(199, 0);
+            this.changeUsername1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(11)))));
+            this.changeUsername1.Location = new System.Drawing.Point(-137, -32);
             this.changeUsername1.Name = "changeUsername1";
             this.changeUsername1.Size = new System.Drawing.Size(875, 607);
             this.changeUsername1.TabIndex = 15;
+            this.changeUsername1.Load += new System.EventHandler(this.changeUsername1_Load);
             // 
             // changeEmail1
             // 
-            this.changeEmail1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
-            this.changeEmail1.Location = new System.Drawing.Point(193, 0);
+            this.changeEmail1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(11)))));
+            this.changeEmail1.Location = new System.Drawing.Point(-137, -32);
             this.changeEmail1.Name = "changeEmail1";
             this.changeEmail1.Size = new System.Drawing.Size(881, 608);
             this.changeEmail1.TabIndex = 14;
+            this.changeEmail1.Load += new System.EventHandler(this.changeEmail1_Load);
             // 
             // changeGender1
             // 
-            this.changeGender1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
-            this.changeGender1.Location = new System.Drawing.Point(193, 0);
+            this.changeGender1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(11)))));
+            this.changeGender1.Location = new System.Drawing.Point(-131, -32);
             this.changeGender1.Name = "changeGender1";
-            this.changeGender1.Size = new System.Drawing.Size(881, 608);
+            this.changeGender1.Size = new System.Drawing.Size(894, 608);
             this.changeGender1.TabIndex = 13;
             // 
             // changeName1
             // 
-            this.changeName1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
-            this.changeName1.Location = new System.Drawing.Point(193, 0);
+            this.changeName1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(11)))));
+            this.changeName1.Location = new System.Drawing.Point(-131, -32);
             this.changeName1.Name = "changeName1";
-            this.changeName1.Size = new System.Drawing.Size(881, 608);
+            this.changeName1.Size = new System.Drawing.Size(879, 608);
             this.changeName1.TabIndex = 12;
+            this.changeName1.Load += new System.EventHandler(this.changeName1_Load);
             // 
-            // pfpBtn
+            // guna2Panel2
             // 
-            this.pfpBtn.BackColor = System.Drawing.Color.Transparent;
-            this.pfpBtn.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.pfpBtn.HoverState.ImageSize = new System.Drawing.Size(55, 55);
-            this.pfpBtn.Image = global::GameLauncher.Properties.Resources.man_pfp;
-            this.pfpBtn.ImageOffset = new System.Drawing.Point(0, 0);
-            this.pfpBtn.ImageRotate = 0F;
-            this.pfpBtn.ImageSize = new System.Drawing.Size(50, 50);
-            this.pfpBtn.Location = new System.Drawing.Point(66, 12);
-            this.pfpBtn.Name = "pfpBtn";
-            this.pfpBtn.PressedState.ImageSize = new System.Drawing.Size(55, 55);
-            this.pfpBtn.Size = new System.Drawing.Size(60, 60);
-            this.pfpBtn.TabIndex = 17;
-            this.pfpBtn.Click += new System.EventHandler(this.pfpBtn_Click);
+            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
+            this.guna2Panel2.Controls.Add(this.changePass1);
+            this.guna2Panel2.Controls.Add(this.changeUsername1);
+            this.guna2Panel2.Controls.Add(this.changeEmail1);
+            this.guna2Panel2.Controls.Add(this.changeName1);
+            this.guna2Panel2.Controls.Add(this.changeGender1);
+            this.guna2Panel2.Controls.Add(this.guna2HtmlLabel3);
+            this.guna2Panel2.Controls.Add(this.guna2HtmlLabel2);
+            this.guna2Panel2.Controls.Add(this.guna2ImageButton1);
+            this.guna2Panel2.Controls.Add(this.guna2HtmlLabel1);
+            this.guna2Panel2.Location = new System.Drawing.Point(337, 32);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(594, 550);
+            this.guna2Panel2.TabIndex = 17;
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(56, 171);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(489, 100);
+            this.guna2HtmlLabel2.TabIndex = 12;
+            this.guna2HtmlLabel2.Text = "<h2>- In settings, you can change almost every bit of information <br>that you\'ve" +
+    " registered with in your <em>Eclipse account</em></h2>\r\n\r\n";
+            this.guna2HtmlLabel2.Click += new System.EventHandler(this.guna2HtmlLabel2_Click);
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(56, 277);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(477, 100);
+            this.guna2HtmlLabel3.TabIndex = 14;
+            this.guna2HtmlLabel3.Text = "<h2>- You can get started by clicking on a button in the sidebar<br> that has the" +
+    " needs of your desires</h2>\r\n\r\n";
+            this.guna2HtmlLabel3.Click += new System.EventHandler(this.guna2HtmlLabel3_Click);
+            // 
+            // guna2VSeparator1
+            // 
+            this.guna2VSeparator1.FillThickness = 2;
+            this.guna2VSeparator1.Location = new System.Drawing.Point(186, 0);
+            this.guna2VSeparator1.Name = "guna2VSeparator1";
+            this.guna2VSeparator1.Size = new System.Drawing.Size(14, 608);
+            this.guna2VSeparator1.TabIndex = 18;
             // 
             // settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(11)))));
             this.ClientSize = new System.Drawing.Size(1072, 608);
             this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.changePass1);
-            this.Controls.Add(this.changeUsername1);
-            this.Controls.Add(this.changeEmail1);
-            this.Controls.Add(this.changeGender1);
-            this.Controls.Add(this.changeName1);
-            this.Controls.Add(this.guna2HtmlLabel1);
-            this.Controls.Add(this.guna2ImageButton1);
+            this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "settings";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "settings";
             this.Load += new System.EventHandler(this.settings_Load);
             this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -336,5 +399,9 @@
         private changeUsername changeUsername1;
         private changePass changePass1;
         private Guna.UI2.WinForms.Guna2ImageButton pfpBtn;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
     }
 }

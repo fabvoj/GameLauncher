@@ -52,7 +52,7 @@ namespace GameLauncher
 
         private void changeBtn_Click(object sender, EventArgs e)
         {
-            if (changeOPassBtn.Text == qryPass && changePassBtn.Text == changeCPassBtn.Text)
+            if ((changeOPassBtn.Text == qryPass && changePassBtn.Text == changeCPassBtn.Text) && (changePassBtn.TextLength > 7 && changeCPassBtn.TextLength > 7))
             {
                 con.Open();
                 string qry = "UPDATE userinfo SET Password='" + changePassBtn.Text + "' WHERE Email='" + login.userEmail + "';";
@@ -92,6 +92,46 @@ namespace GameLauncher
         }
 
         private void changeOPassBtn_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
 
         }

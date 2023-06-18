@@ -123,4 +123,7 @@
   <metadata name="mySqlCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="guna2HtmlLabel4.Text" xml:space="preserve">
+    <value>- Before clicking on the &lt;em&gt;&lt;strong&gt;CHANGE&lt;/strong&gt;&lt;/em&gt; button, make sure that either&lt;br&gt; information starts with a &lt;em&gt;&lt;u&gt;&lt;strong&gt;capital letter&lt;/strong&gt;&lt;/u&gt;&lt;/em&gt; and doesn't have any&lt;br&gt; &lt;em&gt;&lt;u&gt;&lt;strong&gt;invalid characters&lt;/strong&gt;&lt;/u&gt;&lt;/em&gt;!</value>
+  </data>
 </root>

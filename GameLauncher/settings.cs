@@ -233,7 +233,36 @@ namespace GameLauncher
                 {
                     pfpBtn.Image = GameLauncher.Properties.Resources.other_pfp;
                 }
+                else
+                {
+
+                }
             }
+        }
+
+        private void changeEmail1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void changeUsername1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void changeName1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

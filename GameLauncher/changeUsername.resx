@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="guna2HtmlLabel4.Text" xml:space="preserve">
+    <value>- Before clicking on the &lt;em&gt;&lt;strong&gt;CHANGE&lt;/strong&gt;&lt;/em&gt; button, make sure that your&lt;br&gt; username doen't have any &lt;em&gt;&lt;strong&gt;&lt;u&gt;improper words&lt;/u&gt;&lt;/strong&gt;(optional)&lt;/em&gt; and doesn't&lt;br&gt; have any &lt;em&gt;&lt;strong&gt;&lt;u&gt;invalid characters&lt;/u&gt;&lt;/strong&gt;&lt;/em&gt;!</value>
+  </data>
 </root>
