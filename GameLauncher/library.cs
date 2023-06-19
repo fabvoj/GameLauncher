@@ -151,5 +151,10 @@ namespace GameLauncher
                 }
             }
         }
+
+        private void guna2VScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
     }
 }

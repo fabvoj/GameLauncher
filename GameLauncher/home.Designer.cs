@@ -40,7 +40,8 @@
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.txtWelcome = new Guna.UI2.WinForms.Guna2TextBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.pfpBtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -204,29 +205,31 @@
             this.guna2ControlBox2.UseTransparentBackground = true;
             this.guna2ControlBox2.Click += new System.EventHandler(this.guna2ControlBox2_Click);
             // 
-            // txtWelcome
+            // flowLayoutPanel1
             // 
-            this.txtWelcome.BackColor = System.Drawing.SystemColors.Control;
-            this.txtWelcome.BorderColor = System.Drawing.SystemColors.Control;
-            this.txtWelcome.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtWelcome.DefaultText = "Welcome, nick";
-            this.txtWelcome.DisabledState.BorderColor = System.Drawing.Color.Transparent;
-            this.txtWelcome.DisabledState.FillColor = System.Drawing.SystemColors.Control;
-            this.txtWelcome.DisabledState.ForeColor = System.Drawing.Color.Transparent;
-            this.txtWelcome.DisabledState.PlaceholderForeColor = System.Drawing.Color.Transparent;
-            this.txtWelcome.Enabled = false;
-            this.txtWelcome.FillColor = System.Drawing.SystemColors.Control;
-            this.txtWelcome.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtWelcome.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtWelcome.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtWelcome.Location = new System.Drawing.Point(260, 40);
-            this.txtWelcome.Margin = new System.Windows.Forms.Padding(6);
-            this.txtWelcome.Name = "txtWelcome";
-            this.txtWelcome.PasswordChar = '\0';
-            this.txtWelcome.PlaceholderText = "";
-            this.txtWelcome.SelectedText = "";
-            this.txtWelcome.Size = new System.Drawing.Size(361, 51);
-            this.txtWelcome.TabIndex = 9;
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(198, 52);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(875, 556);
+            this.flowLayoutPanel1.TabIndex = 11;
+            // 
+            // guna2VScrollBar1
+            // 
+            this.guna2VScrollBar1.AutoRoundedCorners = true;
+            this.guna2VScrollBar1.BindingContainer = this.flowLayoutPanel1;
+            this.guna2VScrollBar1.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2VScrollBar1.BorderRadius = 8;
+            this.guna2VScrollBar1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
+            this.guna2VScrollBar1.InUpdate = false;
+            this.guna2VScrollBar1.LargeChange = 556;
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(1055, 52);
+            this.guna2VScrollBar1.Maximum = 558;
+            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
+            this.guna2VScrollBar1.ScrollbarSize = 18;
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 556);
+            this.guna2VScrollBar1.SmallChange = 5;
+            this.guna2VScrollBar1.TabIndex = 0;
+            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.SteelBlue;
             // 
             // pfpBtn
             // 
@@ -248,9 +251,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(11)))));
             this.ClientSize = new System.Drawing.Size(1072, 608);
+            this.Controls.Add(this.guna2VScrollBar1);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.guna2Separator1);
-            this.Controls.Add(this.txtWelcome);
             this.Controls.Add(this.guna2ControlBox3);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2Panel1);
@@ -277,7 +282,8 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
-        private Guna.UI2.WinForms.Guna2TextBox txtWelcome;
         private Guna.UI2.WinForms.Guna2ImageButton pfpBtn;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
     }
 }

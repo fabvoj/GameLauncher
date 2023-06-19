@@ -14,10 +14,11 @@ namespace GameLauncher
 {
     public partial class Game : UserControl
     {
+        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=; database=eclipse");
         public Game()
         {
             InitializeComponent();
-            gameLibrarybtn.Visible = false;
+           
         }
 
         private Image _cover;
@@ -100,7 +101,7 @@ namespace GameLauncher
 
         private void Game_Load(object sender, EventArgs e)
         {
-
+            IsItInLibrary();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -122,41 +123,88 @@ namespace GameLauncher
         {
 
         }
-
-        private void gamePrice_Click(object sender, EventArgs e)
+        
+        private void IsItInLibrary()
         {
-            MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=; database=eclipse");
             connection.Open();
 
             string user_query = "SELECT user_id FROM userinfo WHERE Email='" + login.userEmail + "';";
             MySqlCommand user_command = new MySqlCommand(user_query, connection);
             MySqlDataReader user_reader = user_command.ExecuteReader();
             string user_id = null;
-            while(user_reader.Read())
+            while (user_reader.Read())
             {
                 user_id = user_reader["user_id"].ToString();
             }
             user_reader.Close();
-            
-            string game_query = "SELECT game_id FROM games WHERE game_name='" + this.name + "';";
+
+            string game_query = "SELECT game_id FROM games WHERE game_name='" + gameName.Text + "';";
             MySqlCommand game_command = new MySqlCommand(game_query, connection);
             MySqlDataReader game_reader = game_command.ExecuteReader();
             string game_id = null;
             while (game_reader.Read())
             {
-                 game_id = game_reader["game_id"].ToString();
+                game_id = game_reader["game_id"].ToString();
             }
             game_reader.Close();
+            
 
+            string check_query = "SELECT COUNT(user_id) FROM user_games WHERE game_id=@gameid AND user_id=@userid;";
+            MySqlCommand check_command = new MySqlCommand(check_query, connection);
+            check_command.Parameters.AddWithValue("@gameid", game_id);
+            check_command.Parameters.AddWithValue("@userid", user_id);
+            int fero = Convert.ToInt16(check_command.ExecuteScalar());
+            if (fero == 1)
+            {
+                gameLibrarybtn.Visible = true;
+                gamePrice.Visible = false;
+            }
+            else 
+            {
+                gameLibrarybtn.Visible = false;
+                gamePrice.Visible = true;
+            }
+
+            connection.Close();
+
+
+        }
+
+        private void gamePrice_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+
+            string user_query = "SELECT user_id FROM userinfo WHERE Email='" + login.userEmail + "';";
+            MySqlCommand user_command = new MySqlCommand(user_query, connection);
+            MySqlDataReader user_reader = user_command.ExecuteReader();
+            string user_id = null;
+            while (user_reader.Read())
+            {
+                user_id = user_reader["user_id"].ToString();
+            }
+            user_reader.Close();
+
+            string game_query = "SELECT game_id FROM games WHERE game_name='" + gameName.Text + "';";
+            MySqlCommand game_command = new MySqlCommand(game_query, connection);
+            MySqlDataReader game_reader = game_command.ExecuteReader();
+            string game_id = null;
+            while (game_reader.Read())
+            {
+                game_id = game_reader["game_id"].ToString();
+            }
+            game_reader.Close();
             string buy_query = "INSERT INTO user_games (user_id, game_id) VALUES('" + user_id + "', '" + game_id + "')";
             MySqlCommand buy_command = new MySqlCommand(buy_query, connection);
             buy_command.ExecuteScalar();
             gamePrice.Visible = false;
             gameLibrarybtn.Visible = true;
+
         }
 
         private void gameLibrarybtn_Click(object sender, EventArgs e)
         {
+            store Form = this.FindForm() as store;
+            Form.populateItems();
             this.Hide();
             library kniznica = new library();
             kniznica.ShowDialog();

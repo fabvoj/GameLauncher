@@ -25,6 +25,7 @@ namespace GameLauncher
         private void Form2_Load(object sender, EventArgs e)
         {
             get_pfpPath();
+            HomeLoad();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -114,6 +115,19 @@ namespace GameLauncher
                     pfpBtn.Image = GameLauncher.Properties.Resources.other_pfp;
                 }
             }
+            connection.Close();
+        }
+
+        private void HomeLoad()
+        {
+            HomePage homepage = new HomePage();
+            flowLayoutPanel1.Controls.Add(homepage);
+            connection.Close();
+        }
+
+        private void txtWelcome_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

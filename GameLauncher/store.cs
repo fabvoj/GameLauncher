@@ -98,7 +98,8 @@ namespace GameLauncher
             }
             user_reader.Close();
 
-            string query = "SELECT games.game_name, games.game_picture, games.game_price FROM games LEFT JOIN user_games ON games.game_id = user_games.game_id AND user_games.user_id =" + user_id + " WHERE user_games.user_id IS NULL;";
+            //string query = "SELECT games.game_name, games.game_picture, games.game_price FROM games LEFT JOIN user_games ON games.game_id = user_games.game_id AND user_games.user_id =" + user_id + " WHERE user_games.user_id IS NULL;";
+            string query = "SELECT * FROM games";
             MySqlCommand command = new MySqlCommand(query, connection);
 
             MySqlDataReader reader = command.ExecuteReader();
@@ -124,7 +125,7 @@ namespace GameLauncher
             connection.Close();
         }
 
-        private void GameClicked(object sender, EventArgs e)
+        public void GameClicked(object sender, EventArgs e)
         {
             Games gameclick = (Games)sender;
             string zakliknutahra = gameclick.title;
@@ -176,6 +177,12 @@ namespace GameLauncher
             reader.Close();
             connection.Close();
         }
+
+        public void homeGame()
+        { 
+            
+        }
+
 
         private void pfpBtn_Click(object sender, EventArgs e)
         {
