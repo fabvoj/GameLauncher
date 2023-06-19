@@ -127,7 +127,7 @@ namespace GameLauncher
         private void guna2Button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            register_bio frm3 = new register_bio();
+            register frm3 = new register();
             frm3.ShowDialog();
         }
 

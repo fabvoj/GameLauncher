@@ -158,17 +158,23 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
-    <Compile Include="register_bio.cs">
+    <Compile Include="register.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="register_bio.Designer.cs">
-      <DependentUpon>register_bio.cs</DependentUpon>
+    <Compile Include="register.Designer.cs">
+      <DependentUpon>register.cs</DependentUpon>
     </Compile>
-    <Compile Include="register_info.cs">
-      <SubType>Form</SubType>
+    <Compile Include="register1.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="register_info.Designer.cs">
-      <DependentUpon>register_info.cs</DependentUpon>
+    <Compile Include="register1.Designer.cs">
+      <DependentUpon>register1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="register2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="register2.Designer.cs">
+      <DependentUpon>register2.cs</DependentUpon>
     </Compile>
     <Compile Include="resetpass.cs">
       <SubType>Form</SubType>
@@ -232,11 +238,14 @@
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="register_bio.resx">
-      <DependentUpon>register_bio.cs</DependentUpon>
+    <EmbeddedResource Include="register.resx">
+      <DependentUpon>register.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="register_info.resx">
-      <DependentUpon>register_info.cs</DependentUpon>
+    <EmbeddedResource Include="register1.resx">
+      <DependentUpon>register1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="register2.resx">
+      <DependentUpon>register2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="resetpass.resx">
       <DependentUpon>resetpass.cs</DependentUpon>
