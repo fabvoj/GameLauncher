@@ -193,7 +193,7 @@ namespace GameLauncher
                 game_id = game_reader["game_id"].ToString();
             }
             game_reader.Close();
-            string buy_query = "INSERT INTO user_games (user_id, game_id) VALUES('" + user_id + "', '" + game_id + "')";
+            string buy_query = "INSERT INTO user_games (user_id, game_id, status) VALUES('" + user_id + "', '" + game_id + "', 'Install now')";
             MySqlCommand buy_command = new MySqlCommand(buy_query, connection);
             buy_command.ExecuteScalar();
             gamePrice.Visible = false;

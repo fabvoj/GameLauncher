@@ -99,19 +99,19 @@ namespace GameLauncher
             }
             user_reader.Close();
 
-            string query = "SELECT games.game_name, games.game_picture FROM games INNER JOIN user_games ON games.game_id=user_games.game_id WHERE user_games.user_id =" + user_id + ";";
+            string query = "SELECT games.game_name, games.game_picture, user_games.status FROM games INNER JOIN user_games ON games.game_id=user_games.game_id WHERE user_games.user_id =" + user_id + ";";
             MySqlCommand command = new MySqlCommand(query, connection);
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
                 string title = reader["game_name"].ToString();
-                string price = "Install Now";
+                string price = reader["status"].ToString();
                 string picturePath = reader["game_picture"].ToString();
                 string image = Path.Combine("../../", "assets", "gamePicture", picturePath);
 
                 Image picture = Image.FromFile(image);
 
-                Games game = new Games();
+                LibraryGames game = new LibraryGames();
                 game.title = title;
                 game.price = price;
                 game.picture = picture;

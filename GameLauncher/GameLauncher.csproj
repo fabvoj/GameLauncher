@@ -158,6 +158,12 @@
     <Compile Include="library.Designer.cs">
       <DependentUpon>library.cs</DependentUpon>
     </Compile>
+    <Compile Include="LibraryGames.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LibraryGames.Designer.cs">
+      <DependentUpon>LibraryGames.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="library.resx">
       <DependentUpon>library.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibraryGames.resx">
+      <DependentUpon>LibraryGames.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
