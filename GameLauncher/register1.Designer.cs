@@ -37,7 +37,6 @@
             this.labelFName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtLName = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnBioNext = new Guna.UI2.WinForms.Guna2Button();
-            this.btnBackToLogin = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // txtEmail
@@ -197,33 +196,12 @@
             this.btnBioNext.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBioNext.ForeColor = System.Drawing.Color.White;
             this.btnBioNext.IndicateFocus = true;
-            this.btnBioNext.Location = new System.Drawing.Point(33, 435);
+            this.btnBioNext.Location = new System.Drawing.Point(166, 435);
             this.btnBioNext.Name = "btnBioNext";
             this.btnBioNext.Size = new System.Drawing.Size(131, 36);
             this.btnBioNext.TabIndex = 41;
             this.btnBioNext.Text = "NEXT STEP";
             this.btnBioNext.Click += new System.EventHandler(this.btnBioNext_Click);
-            // 
-            // btnBackToLogin
-            // 
-            this.btnBackToLogin.Animated = true;
-            this.btnBackToLogin.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
-            this.btnBackToLogin.BorderRadius = 6;
-            this.btnBackToLogin.BorderThickness = 1;
-            this.btnBackToLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBackToLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBackToLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBackToLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBackToLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
-            this.btnBackToLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnBackToLogin.ForeColor = System.Drawing.Color.White;
-            this.btnBackToLogin.IndicateFocus = true;
-            this.btnBackToLogin.Location = new System.Drawing.Point(238, 435);
-            this.btnBackToLogin.Name = "btnBackToLogin";
-            this.btnBackToLogin.Size = new System.Drawing.Size(131, 36);
-            this.btnBackToLogin.TabIndex = 40;
-            this.btnBackToLogin.Text = "BACK TO LOGIN";
-            this.btnBackToLogin.Click += new System.EventHandler(this.btnBackToLogin_Click);
             // 
             // register1
             // 
@@ -231,7 +209,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
             this.Controls.Add(this.btnBioNext);
-            this.Controls.Add(this.btnBackToLogin);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.labelEmail);
             this.Controls.Add(this.cboGender);
@@ -259,6 +236,5 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel labelFName;
         private Guna.UI2.WinForms.Guna2TextBox txtLName;
         private Guna.UI2.WinForms.Guna2Button btnBioNext;
-        private Guna.UI2.WinForms.Guna2Button btnBackToLogin;
     }
 }

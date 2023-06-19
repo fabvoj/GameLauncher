@@ -40,7 +40,7 @@
             this.btnCreate = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.shwPass = new Guna.UI2.WinForms.Guna2ToggleSwitch();
-            this.DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.kalendar = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel1.SuspendLayout();
@@ -128,7 +128,7 @@
             this.guna2Panel1.Controls.Add(this.btnCreate);
             this.guna2Panel1.Controls.Add(this.btnLogin);
             this.guna2Panel1.Controls.Add(this.shwPass);
-            this.guna2Panel1.Controls.Add(this.DateTimePicker1);
+            this.guna2Panel1.Controls.Add(this.kalendar);
             this.guna2Panel1.Controls.Add(this.guna2Button2);
             this.guna2Panel1.Controls.Add(this.txtEmail);
             this.guna2Panel1.Controls.Add(this.txtPassword);
@@ -252,26 +252,26 @@
             this.shwPass.UncheckedState.InnerColor = System.Drawing.Color.White;
             this.shwPass.CheckedChanged += new System.EventHandler(this.guna2ToggleSwitch1_CheckedChanged);
             // 
-            // DateTimePicker1
+            // kalendar
             // 
-            this.DateTimePicker1.Checked = true;
-            this.DateTimePicker1.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.DateTimePicker1.Enabled = false;
-            this.DateTimePicker1.FillColor = System.Drawing.Color.Transparent;
-            this.DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.DateTimePicker1.ForeColor = System.Drawing.Color.White;
-            this.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.DateTimePicker1.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.DateTimePicker1.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.DateTimePicker1.HoverState.ForeColor = System.Drawing.Color.White;
-            this.DateTimePicker1.Location = new System.Drawing.Point(126, 360);
-            this.DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.DateTimePicker1.Name = "DateTimePicker1";
-            this.DateTimePicker1.Size = new System.Drawing.Size(199, 22);
-            this.DateTimePicker1.TabIndex = 9;
-            this.DateTimePicker1.Value = new System.DateTime(2023, 5, 25, 9, 18, 59, 890);
-            this.DateTimePicker1.ValueChanged += new System.EventHandler(this.guna2DateTimePicker1_ValueChanged);
+            this.kalendar.Checked = true;
+            this.kalendar.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.kalendar.Enabled = false;
+            this.kalendar.FillColor = System.Drawing.Color.Transparent;
+            this.kalendar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.kalendar.ForeColor = System.Drawing.Color.White;
+            this.kalendar.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.kalendar.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.kalendar.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.kalendar.HoverState.ForeColor = System.Drawing.Color.White;
+            this.kalendar.Location = new System.Drawing.Point(126, 360);
+            this.kalendar.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.kalendar.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.kalendar.Name = "kalendar";
+            this.kalendar.Size = new System.Drawing.Size(199, 22);
+            this.kalendar.TabIndex = 9;
+            this.kalendar.Value = new System.DateTime(2023, 6, 14, 0, 0, 0, 0);
+            this.kalendar.ValueChanged += new System.EventHandler(this.guna2DateTimePicker1_ValueChanged);
             // 
             // guna2Button2
             // 
@@ -339,7 +339,7 @@
         private Guna.UI2.WinForms.Guna2Button btnLogin;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button btnCreate;
-        private Guna.UI2.WinForms.Guna2DateTimePicker DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker kalendar;
         private Guna.UI2.WinForms.Guna2ToggleSwitch shwPass;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;

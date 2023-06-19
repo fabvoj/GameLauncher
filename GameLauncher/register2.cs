@@ -16,6 +16,7 @@ namespace GameLauncher
     {
         MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=; database=Eclipse");
         public static string defaultPfp;
+        public static int closeForm;
         public register2()
         {
             InitializeComponent();
@@ -165,27 +166,11 @@ namespace GameLauncher
                     txtPassword.BorderColor = Color.LimeGreen;
                     txtCPassword.BorderColor = Color.LimeGreen;
                     MessageBox.Show("Account Succesfully Created!");
+                    closeForm = 1;
 
                     this.Hide();
-                    login frm4 = new login();
-                    frm4.ShowDialog();
                 }
             }
-        }
-
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            MySqlConnection connection2 = new MySqlConnection("datasource=localhost;port=3306;username=root;password=; database=Eclipse");
-            connection2.Open();
-            string deleteUserqry = "DELETE FROM userinfo WHERE Email='" + register1.newEmail + "';";
-            MySqlCommand removedUser = new MySqlCommand(deleteUserqry, connection2);
-            removedUser.ExecuteScalar();
-
-            this.Hide();
-            login frm4 = new login();
-            frm4.ShowDialog();
-
-            connection2.Close();
         }
     }
 }

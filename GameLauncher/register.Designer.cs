@@ -31,8 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(register));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.logoName = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.logoImg = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
+            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.register11 = new GameLauncher.register1();
             this.register21 = new GameLauncher.register2();
             this.guna2Panel1.SuspendLayout();
@@ -44,6 +45,7 @@
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
             this.guna2Panel1.BorderRadius = 6;
+            this.guna2Panel1.Controls.Add(this.btnLogout);
             this.guna2Panel1.Controls.Add(this.register11);
             this.guna2Panel1.Controls.Add(this.register21);
             this.guna2Panel1.Controls.Add(this.logoName);
@@ -69,14 +71,6 @@
             this.logoName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.logoName.Click += new System.EventHandler(this.logoName_Click);
             // 
-            // guna2VSeparator1
-            // 
-            this.guna2VSeparator1.Location = new System.Drawing.Point(224, 0);
-            this.guna2VSeparator1.Name = "guna2VSeparator1";
-            this.guna2VSeparator1.Size = new System.Drawing.Size(10, 508);
-            this.guna2VSeparator1.TabIndex = 24;
-            this.guna2VSeparator1.Click += new System.EventHandler(this.guna2VSeparator1_Click);
-            // 
             // logoImg
             // 
             this.logoImg.Image = global::GameLauncher.Properties.Resources.eclipse_logo100x100;
@@ -88,6 +82,35 @@
             this.logoImg.TabStop = false;
             this.logoImg.Click += new System.EventHandler(this.logoImg_Click);
             // 
+            // guna2VSeparator1
+            // 
+            this.guna2VSeparator1.Location = new System.Drawing.Point(224, 0);
+            this.guna2VSeparator1.Name = "guna2VSeparator1";
+            this.guna2VSeparator1.Size = new System.Drawing.Size(10, 508);
+            this.guna2VSeparator1.TabIndex = 24;
+            this.guna2VSeparator1.Click += new System.EventHandler(this.guna2VSeparator1_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Animated = true;
+            this.btnLogout.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
+            this.btnLogout.BorderRadius = 6;
+            this.btnLogout.BorderThickness = 1;
+            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.IndicateFocus = true;
+            this.btnLogout.Location = new System.Drawing.Point(56, 435);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(131, 36);
+            this.btnLogout.TabIndex = 38;
+            this.btnLogout.Text = "BACK TO LOGIN";
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // register11
             // 
             this.register11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
@@ -95,6 +118,7 @@
             this.register11.Name = "register11";
             this.register11.Size = new System.Drawing.Size(405, 507);
             this.register11.TabIndex = 31;
+            this.register11.Load += new System.EventHandler(this.register11_Load);
             // 
             // register21
             // 
@@ -133,5 +157,6 @@
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
         private register1 register11;
         private register2 register21;
+        private Guna.UI2.WinForms.Guna2Button btnLogout;
     }
 }

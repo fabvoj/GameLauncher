@@ -52,7 +52,7 @@ namespace GameLauncher
 
         private void login_Load(object sender, EventArgs e)
         {
-
+            kalendar.Value = DateTime.Now;
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
@@ -83,7 +83,7 @@ namespace GameLauncher
                 if (mdr.Read())
                 {
                     string MyConnection2 = "datasource=localhost;port=3306;username=root;password=; database=Eclipse";
-                    string Query = "UPDATE userinfo SET LastLogin='" + DateTimePicker1.Value + "' WHERE Email='" + txtEmail.Text + "';";
+                    string Query = "UPDATE userinfo SET LastLogin='" + kalendar.Value + "' WHERE Email='" + txtEmail.Text + "';";
                     MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
 
                     MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);

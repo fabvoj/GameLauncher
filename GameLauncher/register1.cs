@@ -16,7 +16,7 @@ namespace GameLauncher
     {
         MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=; database=Eclipse");
         public static string newEmail, newAccGender, barValue;
-        public static bool loadNew;
+        public static bool loadNew, deleteInfo;
         public register1()
         {
             InitializeComponent();
@@ -151,17 +151,12 @@ namespace GameLauncher
                     barValue = "50";
                     newEmail = txtEmail.Text;
                     newAccGender = cboGender.Text;
+                    deleteInfo = true;
+
                 }
                 this.Hide();
                 connection.Close();
             }
-        }
-
-        private void btnBackToLogin_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            login frm4 = new login();
-            frm4.ShowDialog();
         }
     }
 }

@@ -34,7 +34,6 @@
             this.labelPass = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labelUsername = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.txtCPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.SuspendLayout();
@@ -73,7 +72,7 @@
             this.btnCreate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCreate.ForeColor = System.Drawing.Color.White;
             this.btnCreate.IndicateFocus = true;
-            this.btnCreate.Location = new System.Drawing.Point(33, 435);
+            this.btnCreate.Location = new System.Drawing.Point(166, 435);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(131, 36);
             this.btnCreate.TabIndex = 41;
@@ -141,27 +140,6 @@
             this.txtUsername.TabIndex = 34;
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
-            // btnLogout
-            // 
-            this.btnLogout.Animated = true;
-            this.btnLogout.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
-            this.btnLogout.BorderRadius = 6;
-            this.btnLogout.BorderThickness = 1;
-            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
-            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.IndicateFocus = true;
-            this.btnLogout.Location = new System.Drawing.Point(238, 435);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(131, 36);
-            this.btnLogout.TabIndex = 37;
-            this.btnLogout.Text = "BACK TO LOGIN";
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
             // txtCPassword
             // 
             this.txtCPassword.Animated = true;
@@ -227,7 +205,6 @@
             this.Controls.Add(this.labelPass);
             this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.txtCPassword);
             this.Controls.Add(this.txtPassword);
             this.Name = "register2";
@@ -246,7 +223,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel labelPass;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelUsername;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
-        private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Guna.UI2.WinForms.Guna2TextBox txtCPassword;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
     }
