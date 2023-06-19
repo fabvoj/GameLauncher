@@ -1,70 +1,27 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Net;
-using System.Net.Mail;
-using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GameLauncher
 {
-    public partial class register_info : Form
+    public partial class register2 : UserControl
     {
         MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=; database=Eclipse");
         public static string defaultPfp;
-
-        public register_info()
+        public register2()
         {
             InitializeComponent();
         }
 
-        private void register_info_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2ControlBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2ControlBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void logoImg_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void logoName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void registerProgressBar_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2VSeparator2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void stepLabel_Click(object sender, EventArgs e)
+        private void register2_Load(object sender, EventArgs e)
         {
 
         }
@@ -104,21 +61,6 @@ namespace GameLauncher
 
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            MySqlConnection connection2 = new MySqlConnection("datasource=localhost;port=3306;username=root;password=; database=Eclipse");
-            connection2.Open();
-            string deleteUserqry = "DELETE FROM userinfo WHERE Email='" + register_bio.newEmail + "';";
-            MySqlCommand removedUser = new MySqlCommand(deleteUserqry, connection2);
-            removedUser.ExecuteScalar();
-
-            this.Hide();
-            login frm4 = new login();
-            frm4.ShowDialog();
-
-            connection2.Close();
-        }
-
         private void btnCreate_Click(object sender, EventArgs e)
         {
             string forbidden_user = @"^[a-zA-Z0-9_]+$";
@@ -139,7 +81,7 @@ namespace GameLauncher
                 return;
             }
 
-            if(labelTerms.Checked == false)
+            if (labelTerms.Checked == false)
             {
                 labelTerms.ForeColor = Color.Red;
                 labelTerms.UncheckedState.FillColor = Color.Red;
@@ -147,11 +89,10 @@ namespace GameLauncher
                 MessageBox.Show("Please accept our Terms and Conditions");
 
                 labelTerms.ForeColor = Color.White;
-                labelTerms.UncheckedState.FillColor = default;
-                labelTerms.UncheckedState.BorderColor = default;
+                return;
             }
 
-            if (txtPassword.TextLength < 7 ||txtCPassword.TextLength < 7)
+            if (txtPassword.TextLength < 7 || txtCPassword.TextLength < 7)
             {
                 txtPassword.BorderColor = Color.Red;
                 txtCPassword.BorderColor = Color.Red;
@@ -159,17 +100,18 @@ namespace GameLauncher
                 return;
             }
 
-            if(!(Regex.IsMatch(txtUsername.Text, forbidden_user)))
+            if (!(Regex.IsMatch(txtUsername.Text, forbidden_user)))
             {
-                txtUsername.BorderColor= Color.Red;
+                txtUsername.BorderColor = Color.Red;
                 MessageBox.Show("Invalid characters in Username!");
+                return;
             }
 
             else
             {
                 connection.Open();
 
-                MySqlCommand cmd1 = new MySqlCommand("SELECT * FROM userinfo WHERE Username = '"+txtUsername.Text+"'", connection);
+                MySqlCommand cmd1 = new MySqlCommand("SELECT * FROM userinfo WHERE Username = '" + txtUsername.Text + "'", connection);
 
                 bool userExists = false;
                 using (var dr1 = cmd1.ExecuteReader())
@@ -181,25 +123,25 @@ namespace GameLauncher
                 if (!(userExists))
                 {
 
-                    if(register_bio.newAccGender == "Male") 
-                    { 
+                    if (register1.newAccGender == "Male")
+                    {
                         defaultPfp = "man-pfp.jpg";
                     }
 
-                    else if (register_bio.newAccGender == "Female")
+                    else if (register1.newAccGender == "Female")
                     {
                         defaultPfp = "woman-pfp.jpg";
                     }
-                    else if(register_bio.newAccGender == "Other")
+                    else if (register1.newAccGender == "Other")
                     {
                         defaultPfp = "other-pfp.jpg";
                     }
-                    
-                    string iquery = "UPDATE userinfo SET Username='" + txtUsername.Text + "', Password='" + txtPassword.Text + "', ProfilePic='" + defaultPfp + "' WHERE Email='" + register_bio.newEmail + "'";
+
+                    string iquery = "UPDATE userinfo SET Username='" + txtUsername.Text + "', Password='" + txtPassword.Text + "' WHERE Email='" + register1.newEmail + "'";
                     MySqlCommand commandDatabase = new MySqlCommand(iquery, connection);
                     commandDatabase.CommandTimeout = 60;
 
-                    /*MailMessage mail = new MailMessage("eclipse.gethelp@gmail.com", register_bio.newEmail, "Registration in Eclipse", "Thank you for your registration at Eclipse, at eclipse we appreciate every user that register at us and helps create Eclipse a better place for everyone! We hope you will enjoy your time with us and we wish you a good day!");
+                    /*MailMessage mail = new MailMessage("eclipse.gethelp@gmail.com", register1.newEmail, "Registration in Eclipse", "Thank you for your registration at Eclipse, at eclipse we appreciate every user that register at us and helps create Eclipse a better place for everyone! We hope you will enjoy your time with us and we wish you a good day!");
                     using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
                     {
                         smtp.UseDefaultCredentials = false;
@@ -229,6 +171,21 @@ namespace GameLauncher
                     frm4.ShowDialog();
                 }
             }
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            MySqlConnection connection2 = new MySqlConnection("datasource=localhost;port=3306;username=root;password=; database=Eclipse");
+            connection2.Open();
+            string deleteUserqry = "DELETE FROM userinfo WHERE Email='" + register1.newEmail + "';";
+            MySqlCommand removedUser = new MySqlCommand(deleteUserqry, connection2);
+            removedUser.ExecuteScalar();
+
+            this.Hide();
+            login frm4 = new login();
+            frm4.ShowDialog();
+
+            connection2.Close();
         }
     }
 }
