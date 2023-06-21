@@ -31,6 +31,7 @@
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pfpBtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.homeBtn = new Guna.UI2.WinForms.Guna2Button();
             this.storeBtn = new Guna.UI2.WinForms.Guna2Button();
             this.libraryBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -38,7 +39,7 @@
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pfpBtn = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,6 +90,22 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(872, 568);
             this.flowLayoutPanel1.TabIndex = 12;
+            // 
+            // pfpBtn
+            // 
+            this.pfpBtn.BackColor = System.Drawing.Color.Transparent;
+            this.pfpBtn.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.pfpBtn.HoverState.ImageSize = new System.Drawing.Size(55, 55);
+            this.pfpBtn.Image = global::GameLauncher.Properties.Resources.man_pfp;
+            this.pfpBtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.pfpBtn.ImageRotate = 0F;
+            this.pfpBtn.ImageSize = new System.Drawing.Size(50, 50);
+            this.pfpBtn.Location = new System.Drawing.Point(12, 536);
+            this.pfpBtn.Name = "pfpBtn";
+            this.pfpBtn.PressedState.ImageSize = new System.Drawing.Size(55, 55);
+            this.pfpBtn.Size = new System.Drawing.Size(60, 60);
+            this.pfpBtn.TabIndex = 12;
+            this.pfpBtn.Click += new System.EventHandler(this.pfpBtn_Click);
             // 
             // homeBtn
             // 
@@ -200,27 +217,28 @@
             // 
             // flowLayoutPanel2
             // 
+            this.flowLayoutPanel2.AutoScroll = true;
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(11)))));
             this.flowLayoutPanel2.Location = new System.Drawing.Point(200, 40);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(872, 568);
             this.flowLayoutPanel2.TabIndex = 15;
             // 
-            // pfpBtn
+            // guna2VScrollBar1
             // 
-            this.pfpBtn.BackColor = System.Drawing.Color.Transparent;
-            this.pfpBtn.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.pfpBtn.HoverState.ImageSize = new System.Drawing.Size(55, 55);
-            this.pfpBtn.Image = global::GameLauncher.Properties.Resources.man_pfp;
-            this.pfpBtn.ImageOffset = new System.Drawing.Point(0, 0);
-            this.pfpBtn.ImageRotate = 0F;
-            this.pfpBtn.ImageSize = new System.Drawing.Size(50, 50);
-            this.pfpBtn.Location = new System.Drawing.Point(12, 536);
-            this.pfpBtn.Name = "pfpBtn";
-            this.pfpBtn.PressedState.ImageSize = new System.Drawing.Size(55, 55);
-            this.pfpBtn.Size = new System.Drawing.Size(60, 60);
-            this.pfpBtn.TabIndex = 12;
-            this.pfpBtn.Click += new System.EventHandler(this.pfpBtn_Click);
+            this.guna2VScrollBar1.AutoRoundedCorners = true;
+            this.guna2VScrollBar1.BindingContainer = this.flowLayoutPanel2;
+            this.guna2VScrollBar1.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2VScrollBar1.BorderRadius = 8;
+            this.guna2VScrollBar1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
+            this.guna2VScrollBar1.InUpdate = false;
+            this.guna2VScrollBar1.LargeChange = 10;
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(1054, 40);
+            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
+            this.guna2VScrollBar1.ScrollbarSize = 18;
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 568);
+            this.guna2VScrollBar1.TabIndex = 0;
+            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.SteelBlue;
             // 
             // dowloadManager
             // 
@@ -228,6 +246,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(11)))));
             this.ClientSize = new System.Drawing.Size(1072, 608);
+            this.Controls.Add(this.guna2VScrollBar1);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2ControlBox3);
@@ -254,5 +273,6 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
     }
 }

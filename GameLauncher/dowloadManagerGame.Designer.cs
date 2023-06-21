@@ -110,7 +110,7 @@
             this.Controls.Add(this.gamePicture);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "dowloadManagerGame";
-            this.Size = new System.Drawing.Size(852, 153);
+            this.Size = new System.Drawing.Size(848, 153);
             ((System.ComponentModel.ISupportInitialize)(this.gamePicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -272,7 +272,7 @@
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.Controls.Add(this.backBtn1);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(8, 3);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(8, 5);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(30, 30);
             this.flowLayoutPanel3.TabIndex = 0;

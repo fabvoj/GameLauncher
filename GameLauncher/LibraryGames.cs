@@ -87,6 +87,7 @@ namespace GameLauncher
             {
                 connection.Open();
                 this.gamePrice.Text = "Installing";
+                this.gamePrice.ForeColor = System.Drawing.Color.Green;
                 string install_query = "UPDATE user_games SET status='Installing' WHERE user_id=" + user_id + " AND game_id=" + game_id + ";";
                 MySqlCommand install_command = new MySqlCommand(install_query, connection);
                 install_command.ExecuteScalar();
@@ -96,6 +97,7 @@ namespace GameLauncher
             {
                 connection.Open();
                 this.gamePrice.Text = "Install now";
+                this.gamePrice.ForeColor = System.Drawing.Color.White;
                 string install_query = "UPDATE user_games SET status='Install now' WHERE user_id=" + user_id + " AND game_id=" + game_id + ";";
                 MySqlCommand install_command = new MySqlCommand(install_query, connection);
                 install_command.ExecuteScalar();

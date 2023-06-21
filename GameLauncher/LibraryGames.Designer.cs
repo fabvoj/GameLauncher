@@ -72,12 +72,12 @@
             // 
             this.gamePrice.AutoSize = true;
             this.gamePrice.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gamePrice.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.gamePrice.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.gamePrice.ForeColor = System.Drawing.Color.White;
             this.gamePrice.Location = new System.Drawing.Point(4, 330);
             this.gamePrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gamePrice.Name = "gamePrice";
-            this.gamePrice.Size = new System.Drawing.Size(38, 15);
+            this.gamePrice.Size = new System.Drawing.Size(40, 15);
             this.gamePrice.TabIndex = 3;
             this.gamePrice.Text = "label2";
             this.gamePrice.Click += new System.EventHandler(this.LibraryGames_Click);

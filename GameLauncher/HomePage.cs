@@ -175,7 +175,8 @@ namespace GameLauncher
 
         private void guna2Panel1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            home Form = this.FindForm() as home;
+            Form.Hide();
             store storeForm = new store();
             storeForm.Show();
 
@@ -186,7 +187,8 @@ namespace GameLauncher
 
         private void guna2Panel2_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            home Form = this.FindForm() as home;
+            Form.Hide();
             store storeForm = new store();
             storeForm.Show();
 
@@ -197,7 +199,8 @@ namespace GameLauncher
 
         private void guna2Panel3_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            home Form = this.FindForm() as home;
+            Form.Hide();
             store storeForm = new store();
             storeForm.Show();
 
@@ -208,7 +211,8 @@ namespace GameLauncher
 
         private void guna2Panel4_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            home Form = this.FindForm() as home;
+            Form.Hide();
             store storeForm = new store();
             storeForm.Show();
 
