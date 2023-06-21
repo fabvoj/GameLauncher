@@ -30,7 +30,10 @@ namespace GameLauncher
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-
+            homeBtn.Checked = false;
+            this.Hide();
+            dowloadManager dowload = new dowloadManager();
+            dowload.ShowDialog();
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)

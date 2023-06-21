@@ -163,7 +163,8 @@ namespace GameLauncher
 
         private void gameBuy_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            home Form = this.FindForm() as home;
+            Form.Hide();
             store storeForm = new store();
             storeForm.Show();
 

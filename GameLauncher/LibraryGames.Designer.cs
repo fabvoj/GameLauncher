@@ -56,7 +56,7 @@
             // gameTitle
             // 
             this.gameTitle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gameTitle.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.gameTitle.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.gameTitle.ForeColor = System.Drawing.Color.White;
             this.gameTitle.Location = new System.Drawing.Point(4, 278);
             this.gameTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);

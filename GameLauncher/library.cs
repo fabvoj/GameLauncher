@@ -28,7 +28,10 @@ namespace GameLauncher
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-
+            libraryBtn.Checked = false;
+            this.Hide();
+            dowloadManager dowload = new dowloadManager();
+            dowload.ShowDialog();
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)

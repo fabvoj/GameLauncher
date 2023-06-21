@@ -67,11 +67,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(53, 74);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 37);
+            this.label1.Size = new System.Drawing.Size(179, 37);
             this.label1.TabIndex = 4;
             this.label1.Text = "Popular now";
             // 
@@ -100,11 +100,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(55, 585);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(183, 25);
+            this.label2.Size = new System.Drawing.Size(188, 25);
             this.label2.TabIndex = 6;
             this.label2.Text = "The cheapest games";
             // 
@@ -165,7 +165,7 @@
             // 
             this.label33.AutoSize = true;
             this.label33.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label33.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label33.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label33.ForeColor = System.Drawing.Color.White;
             this.label33.Location = new System.Drawing.Point(8, 269);
             this.label33.Name = "label33";
@@ -226,7 +226,7 @@
             // 
             this.label44.AutoSize = true;
             this.label44.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label44.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label44.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label44.ForeColor = System.Drawing.Color.White;
             this.label44.Location = new System.Drawing.Point(7, 269);
             this.label44.Name = "label44";
@@ -286,7 +286,7 @@
             // 
             this.label55.AutoSize = true;
             this.label55.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label55.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label55.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label55.ForeColor = System.Drawing.Color.White;
             this.label55.Location = new System.Drawing.Point(7, 269);
             this.label55.Name = "label55";
@@ -345,7 +345,7 @@
             // 
             this.label66.AutoSize = true;
             this.label66.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label66.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label66.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label66.ForeColor = System.Drawing.Color.White;
             this.label66.Location = new System.Drawing.Point(7, 269);
             this.label66.Name = "label66";

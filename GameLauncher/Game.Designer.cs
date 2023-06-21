@@ -58,7 +58,7 @@
             this.gameCover.Image = ((System.Drawing.Image)(resources.GetObject("gameCover.Image")));
             this.gameCover.ImageRotate = 0F;
             this.gameCover.Location = new System.Drawing.Point(0, 0);
-            this.gameCover.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gameCover.Margin = new System.Windows.Forms.Padding(2);
             this.gameCover.Name = "gameCover";
             this.gameCover.Size = new System.Drawing.Size(851, 518);
             this.gameCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -72,7 +72,7 @@
             this.GameLogoInPicture.Image = ((System.Drawing.Image)(resources.GetObject("GameLogoInPicture.Image")));
             this.GameLogoInPicture.ImageRotate = 0F;
             this.GameLogoInPicture.Location = new System.Drawing.Point(298, 100);
-            this.GameLogoInPicture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GameLogoInPicture.Margin = new System.Windows.Forms.Padding(2);
             this.GameLogoInPicture.Name = "GameLogoInPicture";
             this.GameLogoInPicture.Size = new System.Drawing.Size(255, 300);
             this.GameLogoInPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -98,7 +98,7 @@
             this.gameLogo.FillColor = System.Drawing.Color.Transparent;
             this.gameLogo.ImageRotate = 0F;
             this.gameLogo.Location = new System.Drawing.Point(22, 28);
-            this.gameLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gameLogo.Margin = new System.Windows.Forms.Padding(2);
             this.gameLogo.Name = "gameLogo";
             this.gameLogo.Size = new System.Drawing.Size(352, 271);
             this.gameLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -255,10 +255,10 @@
             this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Controls.Add(this.gameFeatures);
             this.guna2Panel1.Controls.Add(this.gameGenres);
-            this.guna2Panel1.Location = new System.Drawing.Point(456, 509);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Location = new System.Drawing.Point(456, 480);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(395, 581);
+            this.guna2Panel1.Size = new System.Drawing.Size(395, 610);
             this.guna2Panel1.TabIndex = 15;
             // 
             // gameLibrarybtn
@@ -276,7 +276,7 @@
             this.gameLibrarybtn.ForeColor = System.Drawing.Color.White;
             this.gameLibrarybtn.IndicateFocus = true;
             this.gameLibrarybtn.Location = new System.Drawing.Point(28, 495);
-            this.gameLibrarybtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gameLibrarybtn.Margin = new System.Windows.Forms.Padding(2);
             this.gameLibrarybtn.Name = "gameLibrarybtn";
             this.gameLibrarybtn.Size = new System.Drawing.Size(352, 53);
             this.gameLibrarybtn.TabIndex = 15;
@@ -298,7 +298,7 @@
             this.gamePrice.ForeColor = System.Drawing.Color.White;
             this.gamePrice.IndicateFocus = true;
             this.gamePrice.Location = new System.Drawing.Point(28, 495);
-            this.gamePrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gamePrice.Margin = new System.Windows.Forms.Padding(2);
             this.gamePrice.Name = "gamePrice";
             this.gamePrice.Size = new System.Drawing.Size(352, 53);
             this.gamePrice.TabIndex = 14;
@@ -308,7 +308,7 @@
             // gameName
             // 
             this.gameName.BackColor = System.Drawing.Color.Transparent;
-            this.gameName.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.gameName.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.gameName.ForeColor = System.Drawing.Color.White;
             this.gameName.Location = new System.Drawing.Point(11, 537);
             this.gameName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -327,7 +327,7 @@
             this.Controls.Add(this.GameLogoInPicture);
             this.Controls.Add(this.gameCover);
             this.Controls.Add(this.guna2Panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Game";
             this.Size = new System.Drawing.Size(851, 1089);
             this.Load += new System.EventHandler(this.Game_Load);

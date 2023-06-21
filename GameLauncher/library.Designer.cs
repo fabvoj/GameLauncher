@@ -33,13 +33,13 @@
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pfpBtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.homeBtn = new Guna.UI2.WinForms.Guna2Button();
             this.storeBtn = new Guna.UI2.WinForms.Guna2Button();
             this.libraryBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pfpBtn = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -96,10 +96,26 @@
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(200, 40);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(872, 568);
             this.flowLayoutPanel1.TabIndex = 12;
+            // 
+            // pfpBtn
+            // 
+            this.pfpBtn.BackColor = System.Drawing.Color.Transparent;
+            this.pfpBtn.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.pfpBtn.HoverState.ImageSize = new System.Drawing.Size(55, 55);
+            this.pfpBtn.Image = global::GameLauncher.Properties.Resources.man_pfp;
+            this.pfpBtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.pfpBtn.ImageRotate = 0F;
+            this.pfpBtn.ImageSize = new System.Drawing.Size(50, 50);
+            this.pfpBtn.Location = new System.Drawing.Point(12, 536);
+            this.pfpBtn.Name = "pfpBtn";
+            this.pfpBtn.PressedState.ImageSize = new System.Drawing.Size(55, 55);
+            this.pfpBtn.Size = new System.Drawing.Size(60, 60);
+            this.pfpBtn.TabIndex = 12;
+            this.pfpBtn.Click += new System.EventHandler(this.pfpBtn_Click);
             // 
             // btnLogout
             // 
@@ -134,7 +150,7 @@
             this.homeBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.homeBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.homeBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
-            this.homeBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.homeBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.homeBtn.ForeColor = System.Drawing.Color.White;
             this.homeBtn.Location = new System.Drawing.Point(12, 117);
             this.homeBtn.Name = "homeBtn";
@@ -154,7 +170,7 @@
             this.storeBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.storeBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.storeBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
-            this.storeBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.storeBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.storeBtn.ForeColor = System.Drawing.Color.White;
             this.storeBtn.Location = new System.Drawing.Point(12, 178);
             this.storeBtn.Name = "storeBtn";
@@ -175,7 +191,7 @@
             this.libraryBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.libraryBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.libraryBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
-            this.libraryBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.libraryBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.libraryBtn.ForeColor = System.Drawing.Color.White;
             this.libraryBtn.Location = new System.Drawing.Point(12, 238);
             this.libraryBtn.Name = "libraryBtn";
@@ -193,7 +209,7 @@
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(11)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Location = new System.Drawing.Point(3, 3);
             this.guna2Button1.Name = "guna2Button1";
@@ -207,26 +223,10 @@
             this.flowLayoutPanel2.AutoScroll = true;
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(11)))));
             this.flowLayoutPanel2.Location = new System.Drawing.Point(200, 40);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(872, 568);
             this.flowLayoutPanel2.TabIndex = 12;
-            // 
-            // pfpBtn
-            // 
-            this.pfpBtn.BackColor = System.Drawing.Color.Transparent;
-            this.pfpBtn.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.pfpBtn.HoverState.ImageSize = new System.Drawing.Size(55, 55);
-            this.pfpBtn.Image = global::GameLauncher.Properties.Resources.man_pfp;
-            this.pfpBtn.ImageOffset = new System.Drawing.Point(0, 0);
-            this.pfpBtn.ImageRotate = 0F;
-            this.pfpBtn.ImageSize = new System.Drawing.Size(50, 50);
-            this.pfpBtn.Location = new System.Drawing.Point(12, 536);
-            this.pfpBtn.Name = "pfpBtn";
-            this.pfpBtn.PressedState.ImageSize = new System.Drawing.Size(55, 55);
-            this.pfpBtn.Size = new System.Drawing.Size(60, 60);
-            this.pfpBtn.TabIndex = 12;
-            this.pfpBtn.Click += new System.EventHandler(this.pfpBtn_Click);
             // 
             // guna2VScrollBar1
             // 

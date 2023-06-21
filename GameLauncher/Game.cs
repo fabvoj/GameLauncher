@@ -198,14 +198,14 @@ namespace GameLauncher
             buy_command.ExecuteScalar();
             gamePrice.Visible = false;
             gameLibrarybtn.Visible = true;
+            MessageBox.Show("Stali ste sa vyvolenim a preto si zasluzite kazdu hru zcela zdarma!!!");
 
         }
 
         private void gameLibrarybtn_Click(object sender, EventArgs e)
         {
             store Form = this.FindForm() as store;
-            Form.populateItems();
-            this.Hide();
+            Form.Hide();
             library kniznica = new library();
             kniznica.ShowDialog();
         }

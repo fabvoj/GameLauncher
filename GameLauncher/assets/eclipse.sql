@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hostiteľ: 127.0.0.1
--- Čas generovania: Sun 18.Jún 2023, 23:14
--- Verzia serveru: 10.4.27-MariaDB
--- Verzia PHP: 8.2.0
+-- Čas generovania: St 21.Jún 2023, 18:58
+-- Verzia serveru: 10.4.25-MariaDB
+-- Verzia PHP: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,7 +40,7 @@ CREATE TABLE `games` (
   `game_developer` varchar(255) NOT NULL,
   `game_publisher` varchar(255) NOT NULL,
   `game_release` varchar(24) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Sťahujem dáta pre tabuľku `games`
@@ -89,7 +89,7 @@ CREATE TABLE `userinfo` (
   `Password` varchar(50) NOT NULL,
   `DateCreated` varchar(50) NOT NULL DEFAULT current_timestamp(),
   `LastLogin` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Sťahujem dáta pre tabuľku `userinfo`
@@ -100,7 +100,7 @@ INSERT INTO `userinfo` (`user_id`, `FirstName`, `LastName`, `Gender`, `Birthday`
 (4, 'Patrik', 'Nemčok', 'Male', '23. 1. 2001 ', 'patkonemcok@gmail.com', 'TW_PatoN', 'konecnetoide', '2023-06-03 19:27:58', '25. 5. 2023 9:18:59'),
 (5, 'Fabián', 'Vojár', 'Male', '27. 1. 2006 ', 'fabvoj@gmail.com', 'fabvoj', 'Jebemkaleradoriti', '2023-06-06 07:38:16', '25. 5. 2023 9:18:59'),
 (6, 'Fabian', 'Vojar', 'Mental Disorder', '31. 1. 2001 ', 'zjedzmikar@gmail.com', 'fabvojjesuper', 'Somsuper', '2023-06-08 09:33:23', '25. 5. 2023 9:18:59'),
-(7, 'Amater', 'Jozeg', 'Male', '', 'test@guna.sk', '', '123', '2023-06-17 10:09:39', '25. 5. 2023 9:18:59');
+(7, 'Amater', 'Jozeg', 'Male', '', 'test@guna.sk', 'Ferko3233', '123', '2023-06-17 10:09:39', '21.06.2023 18:46:43');
 
 -- --------------------------------------------------------
 
@@ -110,20 +110,26 @@ INSERT INTO `userinfo` (`user_id`, `FirstName`, `LastName`, `Gender`, `Birthday`
 
 CREATE TABLE `user_games` (
   `user_id` int(11) NOT NULL,
-  `game_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `game_id` int(11) NOT NULL,
+  `status` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Sťahujem dáta pre tabuľku `user_games`
 --
 
-INSERT INTO `user_games` (`user_id`, `game_id`) VALUES
-(2, 1),
-(7, 1),
-(7, 2),
-(7, 3),
-(7, 4),
-(7, 5);
+INSERT INTO `user_games` (`user_id`, `game_id`, `status`) VALUES
+(2, 1, 'Install now'),
+(7, 1, 'Installing'),
+(7, 2, 'Install now'),
+(7, 3, 'Install now'),
+(7, 4, 'Install now'),
+(7, 5, 'Installing'),
+(7, 6, 'Install now'),
+(7, 10, 'Install now'),
+(7, 12, 'Install now'),
+(7, 22, 'Install now'),
+(7, 24, 'Installing');
 
 -- --------------------------------------------------------
 
@@ -135,7 +141,7 @@ CREATE TABLE `verifycodes` (
   `id` int(11) NOT NULL,
   `Email` varchar(255) NOT NULL,
   `Code` varchar(6) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Kľúče pre exportované tabuľky
