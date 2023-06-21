@@ -337,6 +337,42 @@
   <ItemGroup>
     <None Include="assets\pfp\other-pfp.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icons\store.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icons\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icons\library.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icons\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icons\settings-home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icons\name.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icons\gender.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icons\username.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icons\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icons\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icons\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\icons\login.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"

@@ -223,6 +223,19 @@ namespace GameLauncher
                 }
             }
         }
+
+        private void guna2Button2_Click_1(object sender, EventArgs e)
+        {
+            storeBtn.Checked = false;
+            this.Hide();
+            dowloadManager dowload = new dowloadManager();
+            dowload.ShowDialog();
+        }
+
+        private void guna2VSeparator1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

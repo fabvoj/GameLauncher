@@ -33,20 +33,25 @@
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pfpBtn = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.homeBtn = new Guna.UI2.WinForms.Guna2Button();
             this.storeBtn = new Guna.UI2.WinForms.Guna2Button();
             this.libraryBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.backBtn1 = new GameLauncher.BackBtn();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.kalendar = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.logoImg = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.logoName = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoImg)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2ControlBox3
@@ -86,12 +91,15 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(11)))));
+            this.guna2Panel1.Controls.Add(this.guna2VSeparator1);
+            this.guna2Panel1.Controls.Add(this.kalendar);
+            this.guna2Panel1.Controls.Add(this.logoImg);
+            this.guna2Panel1.Controls.Add(this.logoName);
+            this.guna2Panel1.Controls.Add(this.guna2Button2);
             this.guna2Panel1.Controls.Add(this.pfpBtn);
-            this.guna2Panel1.Controls.Add(this.btnLogout);
             this.guna2Panel1.Controls.Add(this.homeBtn);
             this.guna2Panel1.Controls.Add(this.storeBtn);
             this.guna2Panel1.Controls.Add(this.libraryBtn);
-            this.guna2Panel1.Controls.Add(this.guna2Button1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(11)))));
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
@@ -110,34 +118,12 @@
             this.pfpBtn.ImageOffset = new System.Drawing.Point(0, 0);
             this.pfpBtn.ImageRotate = 0F;
             this.pfpBtn.ImageSize = new System.Drawing.Size(50, 50);
-            this.pfpBtn.Location = new System.Drawing.Point(12, 536);
+            this.pfpBtn.Location = new System.Drawing.Point(76, 470);
             this.pfpBtn.Name = "pfpBtn";
             this.pfpBtn.PressedState.ImageSize = new System.Drawing.Size(55, 55);
-            this.pfpBtn.Size = new System.Drawing.Size(60, 60);
+            this.pfpBtn.Size = new System.Drawing.Size(48, 48);
             this.pfpBtn.TabIndex = 12;
             this.pfpBtn.Click += new System.EventHandler(this.pfpBtn_Click);
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Animated = true;
-            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogout.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
-            this.btnLogout.BorderRadius = 6;
-            this.btnLogout.BorderThickness = 1;
-            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
-            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.IndicateFocus = true;
-            this.btnLogout.Location = new System.Drawing.Point(109, 563);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(78, 22);
-            this.btnLogout.TabIndex = 11;
-            this.btnLogout.Text = "LOG OUT";
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // homeBtn
             // 
@@ -152,7 +138,12 @@
             this.homeBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
             this.homeBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.homeBtn.ForeColor = System.Drawing.Color.White;
-            this.homeBtn.Location = new System.Drawing.Point(12, 117);
+            this.homeBtn.HoverState.BorderColor = System.Drawing.Color.SteelBlue;
+            this.homeBtn.HoverState.FillColor = System.Drawing.Color.SteelBlue;
+            this.homeBtn.HoverState.ForeColor = System.Drawing.Color.White;
+            this.homeBtn.Image = global::GameLauncher.Properties.Resources.home;
+            this.homeBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.homeBtn.Location = new System.Drawing.Point(12, 145);
             this.homeBtn.Name = "homeBtn";
             this.homeBtn.Size = new System.Drawing.Size(175, 45);
             this.homeBtn.TabIndex = 2;
@@ -166,6 +157,9 @@
             this.storeBtn.BorderColor = System.Drawing.Color.Transparent;
             this.storeBtn.BorderRadius = 6;
             this.storeBtn.Checked = true;
+            this.storeBtn.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.storeBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
+            this.storeBtn.CheckedState.ForeColor = System.Drawing.Color.White;
             this.storeBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.storeBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.storeBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -173,7 +167,9 @@
             this.storeBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
             this.storeBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.storeBtn.ForeColor = System.Drawing.Color.White;
-            this.storeBtn.Location = new System.Drawing.Point(12, 178);
+            this.storeBtn.Image = global::GameLauncher.Properties.Resources.store;
+            this.storeBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.storeBtn.Location = new System.Drawing.Point(12, 205);
             this.storeBtn.Name = "storeBtn";
             this.storeBtn.Size = new System.Drawing.Size(175, 45);
             this.storeBtn.TabIndex = 3;
@@ -193,31 +189,17 @@
             this.libraryBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
             this.libraryBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.libraryBtn.ForeColor = System.Drawing.Color.White;
-            this.libraryBtn.Location = new System.Drawing.Point(12, 238);
+            this.libraryBtn.HoverState.BorderColor = System.Drawing.Color.SteelBlue;
+            this.libraryBtn.HoverState.FillColor = System.Drawing.Color.SteelBlue;
+            this.libraryBtn.HoverState.ForeColor = System.Drawing.Color.White;
+            this.libraryBtn.Image = global::GameLauncher.Properties.Resources.library;
+            this.libraryBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.libraryBtn.Location = new System.Drawing.Point(12, 267);
             this.libraryBtn.Name = "libraryBtn";
             this.libraryBtn.Size = new System.Drawing.Size(175, 45);
             this.libraryBtn.TabIndex = 4;
             this.libraryBtn.Text = "LIBRARY";
             this.libraryBtn.Click += new System.EventHandler(this.guna2Button4_Click);
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(11)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(2, 2);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(194, 74);
-            this.guna2Button1.TabIndex = 1;
-            this.guna2Button1.Text = "Download manager";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // mySqlCommand1
             // 
@@ -239,6 +221,7 @@
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(11)))));
+            this.guna2Panel2.Controls.Add(this.guna2Separator2);
             this.guna2Panel2.Controls.Add(this.guna2VScrollBar1);
             this.guna2Panel2.Controls.Add(this.flowLayoutPanel3);
             this.guna2Panel2.Controls.Add(this.guna2ControlBox3);
@@ -259,15 +242,15 @@
             this.guna2VScrollBar1.BorderRadius = 8;
             this.guna2VScrollBar1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
             this.guna2VScrollBar1.InUpdate = false;
-            this.guna2VScrollBar1.LargeChange = 569;
+            this.guna2VScrollBar1.LargeChange = 552;
             this.guna2VScrollBar1.Location = new System.Drawing.Point(856, 37);
-            this.guna2VScrollBar1.Maximum = 573;
+            this.guna2VScrollBar1.Maximum = 583;
             this.guna2VScrollBar1.Name = "guna2VScrollBar1";
             this.guna2VScrollBar1.ScrollbarSize = 18;
             this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 569);
             this.guna2VScrollBar1.SmallChange = 5;
             this.guna2VScrollBar1.TabIndex = 0;
-            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.SteelBlue;
+            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
             // 
             // flowLayoutPanel3
             // 
@@ -286,13 +269,98 @@
             this.backBtn1.Size = new System.Drawing.Size(22, 24);
             this.backBtn1.TabIndex = 0;
             // 
+            // guna2Button2
+            // 
+            this.guna2Button2.Animated = true;
+            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.BorderRadius = 6;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.BorderColor = System.Drawing.Color.SteelBlue;
+            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.SteelBlue;
+            this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.Image = global::GameLauncher.Properties.Resources.download;
+            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button2.Location = new System.Drawing.Point(12, 327);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(175, 45);
+            this.guna2Button2.TabIndex = 13;
+            this.guna2Button2.Text = "DOWNLOAD";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click_1);
+            // 
+            // kalendar
+            // 
+            this.kalendar.BackColor = System.Drawing.Color.Transparent;
+            this.kalendar.Checked = true;
+            this.kalendar.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.kalendar.Enabled = false;
+            this.kalendar.FillColor = System.Drawing.Color.Transparent;
+            this.kalendar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.kalendar.ForeColor = System.Drawing.Color.White;
+            this.kalendar.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.kalendar.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.kalendar.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.kalendar.HoverState.ForeColor = System.Drawing.Color.White;
+            this.kalendar.Location = new System.Drawing.Point(3, 574);
+            this.kalendar.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.kalendar.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.kalendar.Name = "kalendar";
+            this.kalendar.Size = new System.Drawing.Size(194, 22);
+            this.kalendar.TabIndex = 24;
+            this.kalendar.Value = new System.DateTime(2023, 6, 14, 0, 0, 0, 0);
+            // 
+            // logoImg
+            // 
+            this.logoImg.BackColor = System.Drawing.Color.Transparent;
+            this.logoImg.Image = global::GameLauncher.Properties.Resources.eclipse_logo;
+            this.logoImg.ImageRotate = 0F;
+            this.logoImg.Location = new System.Drawing.Point(76, 60);
+            this.logoImg.Name = "logoImg";
+            this.logoImg.Size = new System.Drawing.Size(48, 48);
+            this.logoImg.TabIndex = 23;
+            this.logoImg.TabStop = false;
+            // 
+            // logoName
+            // 
+            this.logoName.BackColor = System.Drawing.Color.Transparent;
+            this.logoName.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.logoName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
+            this.logoName.Location = new System.Drawing.Point(24, 12);
+            this.logoName.Name = "logoName";
+            this.logoName.Size = new System.Drawing.Size(154, 42);
+            this.logoName.TabIndex = 22;
+            this.logoName.Text = "E C L I P S E";
+            this.logoName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2Separator2
+            // 
+            this.guna2Separator2.Location = new System.Drawing.Point(0, 33);
+            this.guna2Separator2.Name = "guna2Separator2";
+            this.guna2Separator2.Size = new System.Drawing.Size(879, 11);
+            this.guna2Separator2.TabIndex = 15;
+            // 
+            // guna2VSeparator1
+            // 
+            this.guna2VSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2VSeparator1.Location = new System.Drawing.Point(191, 38);
+            this.guna2VSeparator1.Name = "guna2VSeparator1";
+            this.guna2VSeparator1.Size = new System.Drawing.Size(10, 570);
+            this.guna2VSeparator1.TabIndex = 25;
+            this.guna2VSeparator1.Click += new System.EventHandler(this.guna2VSeparator1_Click);
+            // 
             // store
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1072, 608);
-            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2Panel2);
+            this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -301,8 +369,10 @@
             this.Text = "store";
             this.Load += new System.EventHandler(this.store_Load);
             this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.logoImg)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -315,14 +385,18 @@
         private Guna.UI2.WinForms.Guna2Button homeBtn;
         private Guna.UI2.WinForms.Guna2Button storeBtn;
         private Guna.UI2.WinForms.Guna2Button libraryBtn;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Guna.UI2.WinForms.Guna2ImageButton pfpBtn;
         private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private BackBtn backBtn1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2DateTimePicker kalendar;
+        private Guna.UI2.WinForms.Guna2PictureBox logoImg;
+        private Guna.UI2.WinForms.Guna2HtmlLabel logoName;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
+        private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
     }
 }

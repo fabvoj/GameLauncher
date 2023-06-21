@@ -30,10 +30,7 @@ namespace GameLauncher
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            homeBtn.Checked = false;
-            this.Hide();
-            dowloadManager dowload = new dowloadManager();
-            dowload.ShowDialog();
+
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -58,9 +55,7 @@ namespace GameLauncher
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            login frm1 = new login();
-            frm1.ShowDialog();
+
         }
 
         private void guna2ImageButton1_Click(object sender, EventArgs e)
@@ -129,6 +124,28 @@ namespace GameLauncher
         }
 
         private void txtWelcome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void downloadBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            dowloadManager dowload = new dowloadManager();
+            dowload.ShowDialog();
+        }
+
+        private void logoName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logoImg_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kalendar_ValueChanged(object sender, EventArgs e)
         {
 
         }

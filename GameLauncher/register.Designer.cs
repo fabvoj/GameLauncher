@@ -30,12 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(register));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.logoName = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.logoImg = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.register11 = new GameLauncher.register1();
             this.register21 = new GameLauncher.register2();
+            this.logoName = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.logoImg = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
+            this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoImg)).BeginInit();
             this.SuspendLayout();
@@ -57,6 +59,49 @@
             this.guna2Panel1.Size = new System.Drawing.Size(646, 508);
             this.guna2Panel1.TabIndex = 10;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Animated = true;
+            this.btnLogout.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
+            this.btnLogout.BorderRadius = 6;
+            this.btnLogout.BorderThickness = 1;
+            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Image = global::GameLauncher.Properties.Resources.login;
+            this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.ImageOffset = new System.Drawing.Point(-4, 0);
+            this.btnLogout.ImageSize = new System.Drawing.Size(15, 15);
+            this.btnLogout.IndicateFocus = true;
+            this.btnLogout.Location = new System.Drawing.Point(56, 435);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnLogout.Size = new System.Drawing.Size(131, 36);
+            this.btnLogout.TabIndex = 38;
+            this.btnLogout.Text = "BACK TO LOGIN";
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // register11
+            // 
+            this.register11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
+            this.register11.Location = new System.Drawing.Point(241, 0);
+            this.register11.Name = "register11";
+            this.register11.Size = new System.Drawing.Size(405, 507);
+            this.register11.TabIndex = 31;
+            this.register11.Load += new System.EventHandler(this.register11_Load);
+            // 
+            // register21
+            // 
+            this.register21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
+            this.register21.Location = new System.Drawing.Point(240, 0);
+            this.register21.Name = "register21";
+            this.register21.Size = new System.Drawing.Size(412, 508);
+            this.register21.TabIndex = 32;
             // 
             // logoName
             // 
@@ -90,43 +135,35 @@
             this.guna2VSeparator1.TabIndex = 24;
             this.guna2VSeparator1.Click += new System.EventHandler(this.guna2VSeparator1_Click);
             // 
-            // btnLogout
+            // guna2ControlBox3
             // 
-            this.btnLogout.Animated = true;
-            this.btnLogout.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
-            this.btnLogout.BorderRadius = 6;
-            this.btnLogout.BorderThickness = 1;
-            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
-            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.IndicateFocus = true;
-            this.btnLogout.Location = new System.Drawing.Point(56, 435);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(131, 36);
-            this.btnLogout.TabIndex = 38;
-            this.btnLogout.Text = "BACK TO LOGIN";
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox3.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox3.CustomIconSize = 8F;
+            this.guna2ControlBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(11)))));
+            this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox3.Location = new System.Drawing.Point(994, 12);
+            this.guna2ControlBox3.Name = "guna2ControlBox3";
+            this.guna2ControlBox3.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
+            this.guna2ControlBox3.Size = new System.Drawing.Size(30, 22);
+            this.guna2ControlBox3.TabIndex = 40;
+            this.guna2ControlBox3.UseTransparentBackground = true;
             // 
-            // register11
+            // guna2ControlBox2
             // 
-            this.register11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
-            this.register11.Location = new System.Drawing.Point(241, 0);
-            this.register11.Name = "register11";
-            this.register11.Size = new System.Drawing.Size(405, 507);
-            this.register11.TabIndex = 31;
-            this.register11.Load += new System.EventHandler(this.register11_Load);
-            // 
-            // register21
-            // 
-            this.register21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
-            this.register21.Location = new System.Drawing.Point(240, 0);
-            this.register21.Name = "register21";
-            this.register21.Size = new System.Drawing.Size(412, 508);
-            this.register21.TabIndex = 32;
+            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2.CustomIconSize = 8F;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(11)))));
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1030, 12);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(23)))), ((int)(((byte)(28)))));
+            this.guna2ControlBox2.Size = new System.Drawing.Size(30, 22);
+            this.guna2ControlBox2.TabIndex = 39;
+            this.guna2ControlBox2.UseTransparentBackground = true;
             // 
             // register
             // 
@@ -135,7 +172,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(9)))), ((int)(((byte)(11)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1072, 608);
+            this.Controls.Add(this.guna2ControlBox3);
             this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.guna2ControlBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "register";
@@ -158,5 +197,7 @@
         private register1 register11;
         private register2 register21;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
     }
 }

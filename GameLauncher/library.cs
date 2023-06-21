@@ -159,5 +159,13 @@ namespace GameLauncher
         {
 
         }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            libraryBtn.Checked = false;
+            this.Hide();
+            dowloadManager dowload = new dowloadManager();
+            dowload.ShowDialog();
+        }
     }
 }

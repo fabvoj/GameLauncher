@@ -264,5 +264,12 @@ namespace GameLauncher
         {
 
         }
+
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            login frm1 = new login();
+            frm1.ShowDialog();
+        }
     }
 }

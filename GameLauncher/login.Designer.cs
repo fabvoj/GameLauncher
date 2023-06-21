@@ -33,16 +33,16 @@
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.logoImg = new Guna.UI2.WinForms.Guna2PictureBox();
             this.logoName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnCreate = new Guna.UI2.WinForms.Guna2Button();
-            this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.shwPass = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.kalendar = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.logoImg = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnCreate = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoImg)).BeginInit();
             this.SuspendLayout();
@@ -139,17 +139,6 @@
             this.guna2Panel1.TabIndex = 5;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
-            // logoImg
-            // 
-            this.logoImg.Image = global::GameLauncher.Properties.Resources.eclipse_logo;
-            this.logoImg.ImageRotate = 0F;
-            this.logoImg.Location = new System.Drawing.Point(288, 49);
-            this.logoImg.Name = "logoImg";
-            this.logoImg.Size = new System.Drawing.Size(48, 48);
-            this.logoImg.TabIndex = 15;
-            this.logoImg.TabStop = false;
-            this.logoImg.Click += new System.EventHandler(this.logoImg_Click);
-            // 
             // logoName
             // 
             this.logoName.BackColor = System.Drawing.Color.Transparent;
@@ -186,52 +175,6 @@
             this.guna2HtmlLabel1.TabIndex = 11;
             this.guna2HtmlLabel1.Text = "Show Password";
             this.guna2HtmlLabel1.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
-            // 
-            // btnCreate
-            // 
-            this.btnCreate.Animated = true;
-            this.btnCreate.BackColor = System.Drawing.Color.Transparent;
-            this.btnCreate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
-            this.btnCreate.BorderRadius = 6;
-            this.btnCreate.BorderThickness = 1;
-            this.btnCreate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCreate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCreate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCreate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCreate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
-            this.btnCreate.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
-            this.btnCreate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.HoverState.BorderColor = System.Drawing.Color.White;
-            this.btnCreate.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
-            this.btnCreate.IndicateFocus = true;
-            this.btnCreate.Location = new System.Drawing.Point(206, 318);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(130, 36);
-            this.btnCreate.TabIndex = 8;
-            this.btnCreate.Text = "CREATE ACCOUNT";
-            this.btnCreate.Click += new System.EventHandler(this.guna2Button3_Click);
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.Animated = true;
-            this.btnLogin.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
-            this.btnLogin.BorderRadius = 6;
-            this.btnLogin.BorderThickness = 1;
-            this.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
-            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.IndicateFocus = true;
-            this.btnLogin.Location = new System.Drawing.Point(94, 318);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(106, 36);
-            this.btnLogin.TabIndex = 6;
-            this.btnLogin.Text = "SIGN IN";
-            this.btnLogin.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // shwPass
             // 
@@ -308,6 +251,76 @@
             this.guna2ControlBox3.Size = new System.Drawing.Size(30, 22);
             this.guna2ControlBox3.TabIndex = 6;
             this.guna2ControlBox3.UseTransparentBackground = true;
+            // 
+            // logoImg
+            // 
+            this.logoImg.Image = global::GameLauncher.Properties.Resources.eclipse_logo;
+            this.logoImg.ImageRotate = 0F;
+            this.logoImg.Location = new System.Drawing.Point(288, 49);
+            this.logoImg.Name = "logoImg";
+            this.logoImg.Size = new System.Drawing.Size(48, 48);
+            this.logoImg.TabIndex = 15;
+            this.logoImg.TabStop = false;
+            this.logoImg.Click += new System.EventHandler(this.logoImg_Click);
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.Animated = true;
+            this.btnCreate.BackColor = System.Drawing.Color.Transparent;
+            this.btnCreate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
+            this.btnCreate.BorderRadius = 6;
+            this.btnCreate.BorderThickness = 1;
+            this.btnCreate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCreate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCreate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCreate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCreate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
+            this.btnCreate.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
+            this.btnCreate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCreate.ForeColor = System.Drawing.Color.White;
+            this.btnCreate.HoverState.BorderColor = System.Drawing.Color.White;
+            this.btnCreate.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
+            this.btnCreate.Image = global::GameLauncher.Properties.Resources.username1;
+            this.btnCreate.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCreate.ImageOffset = new System.Drawing.Point(-4, 0);
+            this.btnCreate.ImageSize = new System.Drawing.Size(15, 15);
+            this.btnCreate.IndicateFocus = true;
+            this.btnCreate.Location = new System.Drawing.Point(197, 318);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnCreate.Size = new System.Drawing.Size(139, 36);
+            this.btnCreate.TabIndex = 8;
+            this.btnCreate.Text = "CREATE ACCOUNT";
+            this.btnCreate.Click += new System.EventHandler(this.guna2Button3_Click);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Animated = true;
+            this.btnLogin.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
+            this.btnLogin.BorderRadius = 6;
+            this.btnLogin.BorderThickness = 1;
+            this.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.HoverState.BorderColor = System.Drawing.Color.SteelBlue;
+            this.btnLogin.HoverState.FillColor = System.Drawing.Color.SteelBlue;
+            this.btnLogin.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Image = global::GameLauncher.Properties.Resources.login;
+            this.btnLogin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogin.ImageOffset = new System.Drawing.Point(-4, 0);
+            this.btnLogin.ImageSize = new System.Drawing.Size(15, 15);
+            this.btnLogin.IndicateFocus = true;
+            this.btnLogin.Location = new System.Drawing.Point(94, 318);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnLogin.Size = new System.Drawing.Size(97, 36);
+            this.btnLogin.TabIndex = 6;
+            this.btnLogin.Text = "SIGN IN";
+            this.btnLogin.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // login
             // 

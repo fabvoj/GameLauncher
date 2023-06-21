@@ -95,5 +95,15 @@ namespace GameLauncher
             reader.Close();
             connection.Close();
         }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dowloadManagerBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
