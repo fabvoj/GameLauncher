@@ -168,7 +168,12 @@ namespace GameLauncher
                     MessageBox.Show("Account Succesfully Created!");
                     closeForm = 1;
 
-                    this.Hide();
+
+                    register rgr = this.FindForm() as register;
+                    rgr.Hide();
+
+                    login lgn = new login();
+                    lgn.ShowDialog();
                 }
             }
         }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dowloadManager));
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -153,7 +154,6 @@
             this.libraryBtn.BackColor = System.Drawing.Color.Transparent;
             this.libraryBtn.BorderColor = System.Drawing.Color.Transparent;
             this.libraryBtn.BorderRadius = 6;
-            this.libraryBtn.Checked = true;
             this.libraryBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.libraryBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.libraryBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -252,6 +252,7 @@
             this.Controls.Add(this.guna2ControlBox3);
             this.Controls.Add(this.guna2ControlBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "dowloadManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "dowloadManager";

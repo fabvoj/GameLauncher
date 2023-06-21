@@ -235,6 +235,7 @@
             // 
             // shwPass
             // 
+            this.shwPass.Animated = true;
             this.shwPass.BackColor = System.Drawing.Color.Transparent;
             this.shwPass.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
             this.shwPass.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(73)))), ((int)(((byte)(236)))));
