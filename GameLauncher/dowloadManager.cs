@@ -12,14 +12,19 @@ using System.Windows.Forms;
 
 namespace GameLauncher
 {
+
     public partial class dowloadManager : Form
     {
+        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=; database=eclipse");
+
+        public static string pfp_path;
         public dowloadManager()
         {
             InitializeComponent();
             populateItems();
+            get_pfpPath();
         }
-        public static string pfp_path;
+        
 
         private void homeBtn_Click(object sender, EventArgs e)
         {
@@ -104,6 +109,36 @@ namespace GameLauncher
         private void dowloadManagerBtn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void get_pfpPath()
+        {
+            connection.Open();
+            string qry = "SELECT Gender FROM userinfo WHERE Email='" + login.userEmail + "';";
+            MySqlCommand cmd = new MySqlCommand(qry, connection);
+            MySqlDataReader reader = null;
+            reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string pfpPath = (string)reader["Gender"];
+
+                if (pfpPath == "Male")
+                {
+                    pfpBtn.Image = GameLauncher.Properties.Resources.man_pfp;
+                }
+
+                else if (pfpPath == "Female")
+                {
+                    pfpBtn.Image = GameLauncher.Properties.Resources.woman_pfp;
+                }
+
+                else if (pfpPath == "Other")
+                {
+                    pfpBtn.Image = GameLauncher.Properties.Resources.other_pfp;
+                }
+            }
+            connection.Close();
         }
     }
 }
